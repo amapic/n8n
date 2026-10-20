@@ -1,0 +1,452 @@
+﻿id,title,description,labels,state,created_at,updated_at,url,source
+GH-51333,增加翻译功能,"### Description of the new feature / enhancement
+
+1.视频实时翻译；
+2.屏幕翻译；
+3.游戏翻译；
+
+### Scenario when this would be used?
+
+1.看视频
+2.看文献
+3.玩游戏
+
+### Supporting information
+
+_No response_",Needs-Author-Feedback; Needs-Triage,open,2026-10-15T12:30:04Z,2026-10-15T12:36:01Z,https://github.com/microsoft/PowerToys/issues/51333,github_public
+GH-16531,[Mouse Utilities] Crosshairs: Don't end lines on monitor,"### Description of the new feature / enhancement
+
+The lines of Crosshairs are shown on all monitors.
+
+### Now
+![image](https://user-images.githubusercontent.com/61519853/155316544-4d446932-e07d-441f-a6ad-637a36bf4366.png)
+
+### Suggestion
+![image](https://user-images.githubusercontent.com/61519853/155316724-259d6e4d-30a3-4a46-80fc-bf213a81f523.png)
+
+
+### Scenario when this would be used?
+
+When mouse isn't on the monitor your are looking at.
+
+Maybe we can add a arrow at the end of the lines to indicate in which direction the user has to follow the line to find the cursor.
+
+### Supporting information
+
+_No response_",Idea-Enhancement; Help Wanted; Product-Mouse Utilities; Product-Mouse Pointer Crosshairs,open,2022-02-23T12:11:02Z,2026-10-15T12:17:33Z,https://github.com/microsoft/PowerToys/issues/16531,github_public
+GH-13023,NinjaTrader 8 will not snap to FancyZones,"I am using NinjaTrader 8 and have found the NT8 windows will not snap to zones. When 'Shift' dragging NT8 windows, the zones do not even 'Light' up.",Needs-Author-Feedback; Product-FancyZones; Area-App Compat,closed,2021-09-03T13:15:04Z,2026-10-15T12:16:29Z,https://github.com/microsoft/PowerToys/issues/13023,github_public
+GH-28769,🚧 Would you like to contribute to PowerToys? 🚧,"Please make us aware with a comment in this thread **linking to the issue** on which you would like to help us on. We will reach out to you asap.
+
+It doesn't matter if it's a bug fix, a new PowerToys or just a small change. Every contribution is welcome.
+
+### What do I have to consider?
+
+* Please make yourself familiar with our [contribution guidelines](https://github.com/microsoft/PowerToys/blob/main/CONTRIBUTING.md). 
+* Wait until we say you're good to work on the issue, as we don't want to reject your contribution, if we don't think it fits, after you have already done all the work.
+
+### Where can I find good issues to contribute to?
+
+Searching for issues having a [help-wanted](https://github.com/microsoft/PowerToys/issues?q=is%3Aopen+is%3Aissue+label%3A%22Help+Wanted%22) or a [good first issue](https://github.com/microsoft/PowerToys/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+first+issue%22+sort%3Aupdated-desc+) label will show you some that we consider easy for beginners.
+
+### Where can I find more information on the source code?
+
+Some of the of the source code is documented in the [devdocs folder](https://github.com/microsoft/PowerToys/tree/main/doc/devdocs). Besides that most of the source code is docuemented with comments.
+
+If you have any further questions don't hesitate to ask them on the issue thread of the issue you're working on.",Product-General,open,2023-09-26T03:37:17Z,2026-10-15T12:13:06Z,https://github.com/microsoft/PowerToys/issues/28769,github_public
+GH-51332,[New PowerToy] Lock Screen Notes — Display custom reminders on the Windows lock screen,"### Description of the new feature / enhancement
+
+I would like to propose a lightweight PowerToys utility called **Lock Screen Notes**, allowing users to display a short, user-defined note directly on the Windows lock screen (Win + L).
+
+Unlike desktop Sticky Notes or conventional widgets, the primary goal is to make personal reminders visible **before unlocking the computer**.
+
+The proposed MVP would include:
+
+- A simple text editor for one short note.
+- Display on the actual Windows lock screen.
+- Automatic content updates without manually generating wallpapers.
+- An option to enable or disable the feature.
+- Local storage without requiring cloud services.
+- A privacy warning, since lock-screen content is visible to others.
+- Graceful handling of unsupported Windows versions.
+
+This is not intended to become a complete sticky-notes application or a general-purpose lock-screen customization tool.
+
+### Scenario when this would be used
+
+Examples include:
+
+- “Remember to bring the documents before leaving.”
+- “Review the open PR before the meeting.”
+- “Pick up the parcel on the way home.”
+
+Currently, these reminders are usually placed on the desktop, where they are hidden when Windows is locked.
+
+### Possible technical implementation
+
+Windows 11 supports third-party widgets on the lock screen. A potential implementation could use a Windows App SDK widget provider with a small Adaptive Card.
+
+However, this approach requires further investigation, particularly regarding:
+
+- Actual visibility and refresh behavior after Win + L.
+- Supported Windows versions and editions.
+- Widget registration and packaging compatibility with PowerToys.
+- Privacy, security, and lifecycle management.
+
+The implementation should rely on documented Windows APIs rather than injecting into system processes or bypassing lock-screen security.
+
+### Questions for maintainers
+
+1. Would a focused utility like this fit the PowerToys project?
+2. Would a small proof of concept be welcome before implementing a complete module?
+3. Would the team prefer this as a standalone Windows widget rather than an integrated PowerToy?
+
+### Related issues
+
+- #33066 — Personalization Lockscreen
+- #37836 — Add Live Widgets to Windows 11 Desktop
+- #25299 — Adding video wallpaper and widgets
+
+I would be interested in contributing to the implementation if the maintainers consider this an appropriate direction.",Product-New+,open,2026-10-15T11:31:04Z,2026-10-15T11:37:15Z,https://github.com/microsoft/PowerToys/issues/51332,github_public
+GH-51330,Mouse without borders is not working-not connecting,"### Microsoft PowerToys version and release channel
+
+0.99.1
+
+### Installation method
+
+PowerToys auto-update
+
+### Area(s) with issue?
+
+Mouse Without Borders
+
+### Steps to reproduce
+
+enter key and pc name and click on connect
+
+### ✔️ Expected Behavior
+
+connecting the 2 pc and letting the mouse move freely between the 2 pc
+
+### ❌ Actual Behavior
+
+does not connect, just the pc logo flashes in red or yellow and then stops
+
+### Upload Bug Report ZIP-file
+
+_No response_
+
+### Additional Information
+
+_No response_
+
+### Other Software
+
+_No response_",Issue-Bug; Needs-Triage; Product-Mouse Without Borders,open,2026-10-15T09:52:16Z,2026-10-15T09:58:07Z,https://github.com/microsoft/PowerToys/issues/51330,github_public
+GH-51329,Support switching between light and dark wallpapers in Light Switch,"### Description of the new feature / enhancement
+
+Customize light and dark wallpapers while switching light and dark mode.
+
+### Scenario when this would be used?
+
+Daily use for those who prefer different wallpapers between light mode and dark mode.
+
+Examples:
+In day time, I prefer more serious and formal wallpapers to show my conscientiousness.
+After work, I prefer private wallpapers which convey messages and spirits of my own.
+
+### Supporting information
+
+Wallpapers need to switch at the moment the light/dark mode switches.",Needs-Triage,open,2026-10-15T09:34:16Z,2026-10-15T09:49:43Z,https://github.com/microsoft/PowerToys/issues/51329,github_public
+GH-46232,Allow all system tray icons to be displayed on the dock.,"### Description of the new feature / enhancement
+
+Allow all system tray icons to be displayed on the dock.
+
+### Scenario when this would be used?
+
+Currently, it’s all hidden inside the system tray, and if we expand it, it takes up the entire taskbar space, so it would be better to have it on the dock.
+
+### Supporting information
+
+_No response_",Help Wanted; Product-Command Palette; CmdPal - Dock,open,2026-03-18T12:11:29Z,2026-10-15T09:30:16Z,https://github.com/microsoft/PowerToys/issues/46232,github_public
+GH-51328,[Mouse Without Borders] Input events arrive out of order: two concurrent MainTCPRoutine threads inject via SendInput without ordering guarantees,"### Microsoft PowerToys version and release channel
+
+0.101.2362.0
+
+### Installation method
+
+PowerToys auto-update, GitHub
+
+### Area(s) with issue?
+
+Mouse Without Borders
+
+### Steps to reproduce
+
+Two machines, **both running the same PowerToys version 0.101.2362.0**:
+
+- `MACHINE-A` — has the physical keyboard and mouse (controller / sender)
+- `MACHINE-B` — receives input (Windows 11 Enterprise 10.0.26200, 1920x1200 @ 120 DPI)
+- Connected over Wi-Fi, same /24 subnet, direct on-link route (no VPN in path)
+- `UseService: true` on `MACHINE-B`
+
+Move the mouse from `MACHINE-A` to `MACHINE-B` and type a sentence at normal speed.
+
+### ✔️ Expected Behavior
+
+Characters arrive in the order they were typed.
+
+
+### ❌ Actual Behavior
+
+**Adjacent input events swap places.** Transposition affects characters *and* spaces equally, i.e. it is order-blind rather than character-specific — so this is not a keyboard-layout problem (the characters themselves are always correct):
+
+| typed | received |
+|---|---|
+| `buchstaben` | `bcuhstaben` |
+| `nicht` | `incht` |
+| `schreiben` | `schrieben` |
+| `es ist` | `e sist` |
+| `ich weiß` | `ic hweiß` |
+| `zeug an` | `zeu gan` |
+
+Roughly 4–6 transpositions per sentence, continuously — not only during reconnects.
+
+---
+
+### Root cause
+
+MWB maintains **two concurrent TCP connections** to the same peer (one outbound as client, one inbound as server). Both are owned by the *same* MWB process:
+
+```
+State        LocalAddress  LocalPort  RemoteAddress  RemotePort  OwningProcess
+Established  10.x.x.B      65516      10.x.x.A       15101       13704
+Established  10.x.x.B      15101      10.x.x.A       53676       13704
+```
+
+`SocketStuff.MainTCPRoutine` runs **per socket**, and input injection happens inside it — confirmed by this stack trace from the module log:
+
+```
+System.Runtime.InteropServices.COMException (0x8007007A)
+   at WinRT.ExceptionHelpers.<ThrowExceptionForHR>g__Throw|38_0(Int32 hr)
+   at MouseWithoutBorders.Class.InputSimulation.SendInputEx(INPUT input)
+   at MouseWithoutBorders.Class.InputSimulation.SendMouse(MOUSEDATA md)
+   at MouseWithoutBorders.Core.Receiver.ProcessPackage(DATA package, TcpSk tcp)
+   at MouseWithoutBorders.Class.SocketStuff.MainTCPRoutine(TcpSk tcp, String machineName, Boolean isClient)
+```
+
+So two independent receive threads call `ProcessPackage` → `SendInputEx` concurrently. Nothing serialises them, so two input events that were sent in order can be injected in the opposite order. The observed swap rate matches that.
+
+### Decisive test — forcing a single socket fixes it
+
+Blocking the inbound channel on the receiving machine collapses MWB to one socket and therefore one receive thread:
+
+```powershell
+New-NetFirewallRule -DisplayName ""MWB-SingleSocket"" -Direction Inbound -Action Block `
+  -Protocol TCP -LocalPort 15100,15101 -RemoteAddress <peer-ip> -Profile Any
+```
+
+- Established connections drop from 2 → 1 within ~30 s.
+- **Input still works in both directions** (TCP is bidirectional; the remaining socket carries the input).
+- Typed text then arrives **verbatim correct** — zero transpositions for the whole duration of the test.
+- Removing the rule restores the second socket, and the transposition returns immediately.
+
+This is a reliable on/off reproduction of the defect.
+
+> Note: this is only a diagnostic, not a usable workaround. Windows Firewall filters connection *setup* only, so after MWB tears down both sockets on a reconnect, both come back during any window in which the rule is absent.
+
+### Suggested fix
+
+Either serialise injection across all receive threads (a single injection queue or a lock around `SendInputEx`), or route all input packets over one designated socket and keep the second connection for control/clipboard traffic only.
+
+---
+
+### Second, related defect: unhandled `SendInputEx` failure tears down the connection
+
+`SendInputEx` fails with `COMException 0x8007007A` (`ERROR_INSUFFICIENT_BUFFER`) — **105 occurrences in a single day's log**. The exception is not caught in `ProcessPackage`/`SendMouse`, so it propagates into `MainTCPRoutine` and kills the receive loop. The log shows the same sequence every time, within 1–2 seconds:
+
+```
+16:17:21  !Exception!: COMException (0x8007007A)   (x2)
+16:17:23  SocketStuff.cs::AddSocket::767  New connection from client: [MACHINE-A]
+16:17:23  SettingsUtils.cs::SaveSettings::224  Exception encountered while saving settings  (x2)
+```
+
+Reconnects per hour from one day's log:
+
+| hour | reconnects | `SendInput` failures |
+|---|---|---|
+| 11:00 | 7 | 11 |
+| 12:00 | 29 | 58 |
+| 13:00 | 12 | 23 |
+| 14:00 | 4 | 2 |
+| 15:00 | 5 | 5 |
+| 16:00 | 6 | 6 |
+
+(Clipboard sharing and file transfer were disabled between 13:00 and 14:00 — see ""Interaction with existing issues"" below.)
+
+Note the failing call is on the **mouse** path (`SendMouse`), yet the user-visible damage is to **typing**, because the connection teardown discards whatever keystrokes are in flight.
+
+A `try`/`catch` around the injection call would stop a single faile",Issue-Bug; Needs-Triage; Product-Mouse Without Borders,open,2026-10-15T08:40:20Z,2026-10-15T08:45:41Z,https://github.com/microsoft/PowerToys/issues/51328,github_public
+GH-51296,[Dedupe Digest] 2026-10-14,"<!-- dedupe-digest:v1 -->
+## 🧭 Daily Duplicate Digest — 2026-10-14
+
+AI Issue Triage flagged **43** open issue(s) as possible duplicates, grouped under **43** canonical issue(s) below. Triage may have already filed a duplicate-close suggestion on each one — open the linked triage summary and accept or decline it on the issue itself.
+
+---
+
+### ✅ Keep #50782 — \[Shortcut Guide\] Make window freely movable
+
+The following issue looks like a duplicate of #50782 and can be closed:
+
+- **#50824 — Shortcut Guide Window Dragability** — Explicitly requests the same feature: make Shortcut Guide window freely movable and resizable \\\(minimizable, etc\\\.\\\) ([triage summary](https://github.com/microsoft/PowerToys/issues/50824#issuecomment-5859684592))
+
+---
+
+### ✅ Keep #50584 — Feature Request: Custom Keyboard Shortcuts for Volume Control
+
+The following issue looks like a duplicate of #50584 and can be closed:
+
+- **#50715 — Allow F13\+ shortcuts** — Mentions F13/F14/F15 for a specific volume control feature; related but narrower in scope than the general shortcut restriction\\\. ([triage summary](https://github.com/microsoft/PowerToys/issues/50715#issuecomment-5778063501))
+
+---
+
+### ✅ Keep #50455 — \[Feature\]: App\-level Alt\+Tab — the other half of Window Hopper \(working MIT reference implementation\)
+
+The following issue looks like a duplicate of #50455 and can be closed:
+
+- **#50975 — Adding an App Hopper** — Requests the same app\\\-level Alt\\\+Tab / application switcher feature to complement Window Hopper, using the same overlay UI and application\\\-identity contract ([triage summary](https://github.com/microsoft/PowerToys/issues/50975#issuecomment-5970155452))
+
+---
+
+### ✅ Keep #50244 — \[Peek\] Image previews are not sized to native pixel dimensions on scaled displays
+
+The following issue looks like a duplicate of #50244 and can be closed:
+
+- **#50447 — \[Peek\] Images not centered on display** — Related scaling issue where image previews are not sized correctly on scaled displays; both involve display\\\-scaling math in Peek window positioning _(also similar to #50445)_ ([triage summary](https://github.com/microsoft/PowerToys/issues/50447#issuecomment-5576309676))
+
+---
+
+### ✅ Keep #50193 — \[Peek\] Incorrect window/content scaling when re\-triggering Peek on a different display
+
+The following issue looks like a duplicate of #50193 and can be closed:
+
+- **#50244 — \[Peek\] Image previews are not sized to native pixel dimensions on scaled displays** — Related issue about window scaling when re\\\-triggering Peek on different displays, but this issue focuses on native pixel sizing while \\\#50193 addresses cross\\\-display transition behavior\\\. _(also similar to #50243)_ ([triage summary](https://github.com/microsoft/PowerToys/issues/50244#issuecomment-5465358139))
+
+---
+
+### ✅ Keep #50038 — Username path gets truncated, causing PowerToys to create config files in a wrong C:\\Users\\&lt;truncated\_name&gt; folder
+
+The following issue looks like a duplicate of #50038 and can be closed:
+
+- **#50111 — Failed to remove PowerToys folder when updating from stable to Preview** — Retrieved candidate about path truncation, but describes different issue \\\(config file location vs installer upgrade failure\\\) ([triage summary](https://github.com/microsoft/PowerToys/issues/50111#issuecomment-5411121372))
+
+---
+
+### ✅ Keep #49789 — File Locksmith: Handle enumeration can freeze the system and crash with heap corruption
+
+The following issue looks like a duplicate of #49789 and can be closed:
+
+- **#50105 — File Locksmith Crush and Working Issue** — Same version 0\\\.100\\\.2, crashes with heap corruption during handle enumeration in File Locksmith, similar crash pattern _(also similar to #39112, #39152)_ ([triage summary](https://github.com/microsoft/PowerToys/issues/50105#issuecomment-5406643669))
+
+---
+
+### ✅ Keep #49497 — Display multi\-GPU and multi\-core usage in docked performance monitor
+
+The following issue looks like a duplicate of #49497 and can be closed:
+
+- **#50792 — Can we add GPU specs to the dock?** — Feature request for enhanced GPU metrics \\\(per\\\-GPU and per\\\-core utilization\\\) in docked performance monitor ([triage summary](https://github.com/microsoft/PowerToys/issues/50792#issuecomment-5841272980))
+
+---
+
+### ✅ Keep #48466 — \[0\.100\] Command Palette: incorrect dock position on 2nd display
+
+The following issue looks like a duplicate of #48466 and can be closed:
+
+- **#50697 — Bug in the location of the command palette dock** — Dock position settings not respected on secondary monitor _(also similar to #49856, #46527, #49480)_ ([triage summary](https://github.com/microsoft/PowerToys/issues/50697#issuecomment-5851919591))
+
+---
+
+### ✅ Keep #48442 — \[Mouse Pointer Crosshairs\] Crosshair freezes and detaches from cursor when underlying window becomes unresponsive/loading
+
+The following issue looks like a duplicate of #48442 and can be closed:
+
+- **#50848 — Mouse Pointer Crosshairs freezes/locks position",dedupe-digest,closed,2026-10-14T08:19:50Z,2026-10-15T08:19:25Z,https://github.com/microsoft/PowerToys/issues/51296,github_public
+GH-51327,[Dedupe Digest] 2026-10-15,"<!-- dedupe-digest:v1 -->
+## 🧭 Daily Duplicate Digest — 2026-10-15
+
+AI Issue Triage flagged **45** open issue(s) as possible duplicates, grouped under **45** canonical issue(s) below. Triage may have already filed a duplicate-close suggestion on each one — open the linked triage summary and accept or decline it on the issue itself.
+
+---
+
+### ✅ Keep #50782 — \[Shortcut Guide\] Make window freely movable
+
+The following issue looks like a duplicate of #50782 and can be closed:
+
+- **#50824 — Shortcut Guide Window Dragability** — Explicitly requests the same feature: make Shortcut Guide window freely movable and resizable \\\(minimizable, etc\\\.\\\) ([triage summary](https://github.com/microsoft/PowerToys/issues/50824#issuecomment-5859684592))
+
+---
+
+### ✅ Keep #50584 — Feature Request: Custom Keyboard Shortcuts for Volume Control
+
+The following issue looks like a duplicate of #50584 and can be closed:
+
+- **#50715 — Allow F13\+ shortcuts** — Mentions F13/F14/F15 for a specific volume control feature; related but narrower in scope than the general shortcut restriction\\\. ([triage summary](https://github.com/microsoft/PowerToys/issues/50715#issuecomment-5778063501))
+
+---
+
+### ✅ Keep #50455 — \[Feature\]: App\-level Alt\+Tab — the other half of Window Hopper \(working MIT reference implementation\)
+
+The following issue looks like a duplicate of #50455 and can be closed:
+
+- **#50975 — Adding an App Hopper** — Requests the same app\\\-level Alt\\\+Tab / application switcher feature to complement Window Hopper, using the same overlay UI and application\\\-identity contract ([triage summary](https://github.com/microsoft/PowerToys/issues/50975#issuecomment-5970155452))
+
+---
+
+### ✅ Keep #50244 — \[Peek\] Image previews are not sized to native pixel dimensions on scaled displays
+
+The following issue looks like a duplicate of #50244 and can be closed:
+
+- **#50447 — \[Peek\] Images not centered on display** — Related scaling issue where image previews are not sized correctly on scaled displays; both involve display\\\-scaling math in Peek window positioning _(also similar to #50445)_ ([triage summary](https://github.com/microsoft/PowerToys/issues/50447#issuecomment-5576309676))
+
+---
+
+### ✅ Keep #50193 — \[Peek\] Incorrect window/content scaling when re\-triggering Peek on a different display
+
+The following issue looks like a duplicate of #50193 and can be closed:
+
+- **#50244 — \[Peek\] Image previews are not sized to native pixel dimensions on scaled displays** — Related issue about window scaling when re\\\-triggering Peek on different displays, but this issue focuses on native pixel sizing while \\\#50193 addresses cross\\\-display transition behavior\\\. _(also similar to #50243)_ ([triage summary](https://github.com/microsoft/PowerToys/issues/50244#issuecomment-5465358139))
+
+---
+
+### ✅ Keep #50038 — Username path gets truncated, causing PowerToys to create config files in a wrong C:\\Users\\&lt;truncated\_name&gt; folder
+
+The following issue looks like a duplicate of #50038 and can be closed:
+
+- **#50111 — Failed to remove PowerToys folder when updating from stable to Preview** — Retrieved candidate about path truncation, but describes different issue \\\(config file location vs installer upgrade failure\\\) ([triage summary](https://github.com/microsoft/PowerToys/issues/50111#issuecomment-5411121372))
+
+---
+
+### ✅ Keep #49789 — File Locksmith: Handle enumeration can freeze the system and crash with heap corruption
+
+The following issue looks like a duplicate of #49789 and can be closed:
+
+- **#50105 — File Locksmith Crush and Working Issue** — Same version 0\\\.100\\\.2, crashes with heap corruption during handle enumeration in File Locksmith, similar crash pattern _(also similar to #39112, #39152)_ ([triage summary](https://github.com/microsoft/PowerToys/issues/50105#issuecomment-5406643669))
+
+---
+
+### ✅ Keep #49497 — Display multi\-GPU and multi\-core usage in docked performance monitor
+
+The following issue looks like a duplicate of #49497 and can be closed:
+
+- **#50792 — Can we add GPU specs to the dock?** — Feature request for enhanced GPU metrics \\\(per\\\-GPU and per\\\-core utilization\\\) in docked performance monitor ([triage summary](https://github.com/microsoft/PowerToys/issues/50792#issuecomment-5841272980))
+
+---
+
+### ✅ Keep #48512 — \[Feature Request\] Please allow for New\+ compatibility with the classic context menu in Windows 11
+
+The following issue looks like a duplicate of #48512 and can be closed:
+
+- **#51307 — Add feature to turn on/off old Windows 10 context menu in Windows 11** — Directly related request for New\\\+ shell extension compatibility with the classic Windows 11 context menu enabled via the same registry path \\\(HKEY\\\_CURRENT\\\_USER\\\\Software\\\\Classes\\\\CLSID\\\\\\\{86ca1aa0\\\-34aa\\\-4e8b\\\-a509\\\-50c905bae2a2\\\}\\\) ([triage summary](https://github.com/microsoft/PowerToys/issues/51307#issuecomment-6176797934))
+
+---
+
+### ✅ Keep #48466 — \[0\.100\] Command Palette: incorrect",dedupe-digest,open,2026-10-15T08:19:22Z,2026-10-15T08:19:24Z,https://github.com/microsoft/PowerToys/issues/51327,github_public

@@ -1,0 +1,11 @@
+﻿id,title,description,labels,source
+SYN-001,Abandon du formulaire d'inscription,Plusieurs utilisateurs signalent un blocage à l'étape de vérification de l'adresse e-mail. 18 signalements par semaine.,activation,synthetic
+SYN-002,Ajouter un thème sombre,Quelques utilisateurs demandent un thème sombre. Aucun impact sur la rétention n'est documenté.,experience-utilisateur,synthetic
+SYN-003,Automatiser le rapport mensuel,Une équipe consacre environ six heures par mois à compiler manuellement trois fichiers CSV.,automatisation,synthetic
+SYN-004,Connexion SSO demandée par un prospect,Un prospect important souhaite le SSO avant de signer. L'effort technique et la probabilité de signature sont inconnus.,vente,synthetic
+SYN-005,Suspicion d'accès aux données d'un autre compte,Un signalement suggère qu'un utilisateur pourrait voir des données d'un autre compte. Le problème n'est pas encore reproduit.,securite,synthetic
+SYN-006,Export Excel demandé par plusieurs clients,"Quatre clients demandent l'export Excel. Deux l'ont évoqué lors d'une discussion de renouvellement, sans risque confirmé.",fonctionnalite,synthetic
+SYN-007,Import de données créant des doublons,Relancer un import après un délai d'attente peut créer des doublons. La fréquence exacte est inconnue.,fiabilite,synthetic
+SYN-008,Rapport de direction à enrichir,"La direction demande quinze indicateurs supplémentaires, mais les décisions que ces indicateurs doivent éclairer ne sont pas définies.",reporting,synthetic
+SYN-009,Recherche très lente sur les gros comptes,La recherche peut dépasser huit secondes pour les comptes volumineux. Douze tickets ont été remontés ce mois-ci.,performance,synthetic
+SYN-010,Suppression de compte en libre-service,Les utilisateurs ne trouvent pas d'option pour supprimer leur compte. Les obligations et règles de conservation doivent être vérifiées.,conformite,synthetic

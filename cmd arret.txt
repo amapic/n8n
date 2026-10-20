@@ -1,0 +1,2 @@
+cd "C:\Users\amo\Documents\projet dev\ia\ai-product-ops-copilot"
+docker compose down
