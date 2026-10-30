@@ -1,0 +1,7 @@
+ gh search issues "automatically closed" --state closed --repo microsoft/PowerToys --json number --sort created --order asc --no-assignee --limit 100 > "cacsggfdsqgjga.json"
+ ça prouve que les bots fermant automatiquement on été lancé y a pas longtemps (tres per ude résultat)
+
+ca marche
+ gh search issues --repo microsoft/PowerToys --state closed --created ">2026-01-01" --limit 1000 --json number,title,url,createdAt,closedAt --jq "length"
+
+dedupe digest traque les doublons tous les jours. ca existe depuis aout 2026

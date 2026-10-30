@@ -1,0 +1,1087 @@
+[
+  {
+    "number": 42236,
+    "title": "ZoomIt - Alt+5 triggers screen recording even when pressing 5 alone",
+    "body": "### Microsoft PowerToys version\n\n0.94.2\n\n### Installation method\n\nMicrosoft Store\n\n### Area(s) with issue?\n\nZoomIt\n\n### Steps to reproduce\n\nWhen I set the screen recording shortcut to Alt+5 (tried also with Alt+8; Alt+9), ZoomIt activates recording even if you press only 5 (or 8 or 9), ignoring the Alt modifier. (it works both with or without pressing Alt). The problem does not occur with other shortcuts such as Alt+6 (capture) or Alt+1 (zoom)\n\n### ✔️ Expected Behavior\n\nScreen recording to start only with assigned combo keys (Alt+5) not only pressing 5.\n\n### ❌ Actual Behavior\n\nScreen recording starting when pressing key 5; or Alt+5. \n\n### Additional Information\n\nWin 11 Pro 24H2 26100.6584\nPowerToys and system language: Italiano\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/42236",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-ZoomIt",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 40502,
+    "title": "[cmpal] calculator - scientific notation not working as expected",
+    "body": "### Microsoft PowerToys version\n\n0.92.1\n\n### Installation method\n\nPowerToys auto-update, GitHub\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\n(installed with user installer)\nTry to calculate `1*10^(-5)` in cmpal's calc, after triggering it with an equals sign.\n\n<img width=\"474\" height=\"148\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/362b1e4c-6baa-44a3-99a8-c18555a00336\" />\n\n### ✔️ Expected Behavior\n\nThe scientific notation should be parsed and calculated.\n\n### ❌ Actual Behavior\n\nThrows an error\n\n### Additional Information\n\nNA\n\n### Other Software\n\nNA",
+    "url": "https://github.com/microsoft/PowerToys/issues/40502",
+    "state": "CLOSED",
+    "current_labels": [
+      "CmdPal - Calculator",
+      "CmdPal-Inbox Extensions",
+      "Help Wanted",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 40255,
+    "title": "[Settings] Quick Accent language list does not wrap",
+    "body": "### Microsoft PowerToys version\n\nmain\n\n### Installation method\n\nGitHub\n\n### Area(s) with issue?\n\nQuick Accent\n\n### Steps to reproduce\n\nOpen Quick Accent settings page\n\n### ✔️ Expected Behavior\n\n_No response_\n\n### ❌ Actual Behavior\n\n![Image](https://github.com/user-attachments/assets/c59e64ba-0b6e-45ba-8b85-5c09f0b2a005)\n\n![Image](https://github.com/user-attachments/assets/ffff084d-8fff-47ea-ab6c-c52d3501bd65)\n\n### Additional Information\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/40255",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Accessibility",
+      "Help Wanted",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Settings"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 39299,
+    "title": "Cmdpal can not be launched from quick access",
+    "body": "### Microsoft PowerToys version\n\n0.91.0\n\n### Installation method\n\nGitHub\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\nQuit cmdpal with \"alt\" + \"f4\", try launch it from \"quick access\"\n\n### ✔️ Expected Behavior\n\ncmdpal launch\n\n### ❌ Actual Behavior\n\ncmdpal not launch\n\n### Additional Information\n\nOS Version: Microsoft Windows NT 10.0.26411.0 \n.NET Version: .NET 9.0.4\nPowerToys is running as admin (elevated)\nInstall scope: per machine (system)\nOperating System Language: English (United States)\nSystem locale: en-US\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/39299",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 39096,
+    "title": "CmdPal maximizes unexpectedly and the steps to minimize it aren't clear",
+    "body": "### Microsoft PowerToys version\n\nCmdPal 0.2.0.0\n\n### Installation method\n\nOther (please specify in \"Steps to Reproduce\")\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\nFrom rc_build 0.2.0.0 msix\n1. Bring up Command Palette\n2. Double click the top of the screen\n3. Once maximized, double click the upper left corner near the lightning bolt\n\n### ✔️ Expected Behavior\n\nNothing or if maximized, a cue to know how to bring CmdPal back to its original size.\n\n### ❌ Actual Behavior\n\nCmdPal maximized unexpectedly. After clicking around randomly, I found that double clicking the upper left corner near the lightning bolt brought it back to its original size.\n\n### Additional Information\n\nx64: Version 24H2 Build 26403.1001\n\nARM64: Windows 24H2 26404.1000\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/39096",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 38969,
+    "title": "[CmdPal] Use empty content for search web plugin",
+    "body": "### Microsoft PowerToys version\n\nLatest\n\n### Installation method\n\nMicrosoft Store\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Issue\n\n![Image](https://github.com/user-attachments/assets/ce7882aa-4d72-4eb5-8cb9-837c53670c2f)\n\nWe should be able to use the empty content property here, right @zadjii-msft ? This looks a bit weird\n",
+    "url": "https://github.com/microsoft/PowerToys/issues/38969",
+    "state": "CLOSED",
+    "current_labels": [
+      "CmdPal - Web Search",
+      "CmdPal-HostUX",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 38967,
+    "title": "[CmdPal] Incorrect search string in Add Bookmark plugin",
+    "body": "### Microsoft PowerToys version\n\nLatest\n\n### Installation method\n\nMicrosoft Store\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Issue\n\n![Image](https://github.com/user-attachments/assets/a543b428-cb77-4e48-b6d6-20df6a3aaabd)\n\nWe can't search anything on this screen.. we should fix the label.\n",
+    "url": "https://github.com/microsoft/PowerToys/issues/38967",
+    "state": "CLOSED",
+    "current_labels": [
+      "CmdPal-HostUX",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 38879,
+    "title": "Command Palette Start Menu Entry",
+    "body": "### Microsoft PowerToys version\n\n0.90+\n\n### Installation method\n\nPowerToys auto-update\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\nI have no interest in Command Palette, have it disabled in PowerToys, and removed the entry from the Start Menu.  Yet every time I update PowerToys, the Start Menu entry comes back.  This is the only app in PowerToys that I have this issue with.\n\n### ✔️ Expected Behavior\n\nWith Command Palette disabled, there should be no entry in the Start Menu.\n\n### ❌ Actual Behavior\n\nA Start Menu entry is added for Command Palette each time PowerToys is updated/installed, regardless of the toggle being disabled.\n\n### Additional Information\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38879",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Setup/Install",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette",
+      "Resolution-Duplicate"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 38858,
+    "title": "CmdPal: Details view has weird gap between body and tags",
+    "body": "### Microsoft PowerToys version\n\n0.90.1\n\n### Installation method\n\nWinGet\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\n1. Open Command Palette\n2. Navigate to \"install command palette extensions\"\n3. Click an extension\n4. Make CmdPal pane taller\n\n### ✔️ Expected Behavior\n\nThe details should stay just below the description, maybe leaving a blank at the bottom. They should be tethered relative to the description.\n\n### ❌ Actual Behavior\n\nThe details are instead tethered to the bottom, creating a weird gap.\n\n![Image](https://github.com/user-attachments/assets/82ed1029-bf71-43ed-b368-cece8c3df72e)\n\n### Additional Information\n\nWindows 11 24H2\n\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38858",
+    "state": "CLOSED",
+    "current_labels": [
+      "Help Wanted",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 38756,
+    "title": "How to disable Command Palette with DSC installation",
+    "body": "### Microsoft PowerToys version\n\n0.90.1\n\n### Installation method\n\nWinGet\n\n### Area(s) with issue?\n\nGeneral\n\n### Steps to reproduce\n\nI've tried to deploy PT with DSC after 0.90.1 became available on winget, but I'm not sure how to define it in DSC, as I'm getting errors:\n\n![Image](https://github.com/user-attachments/assets/b7c62974-92df-4ee1-b938-57b272f3839f)\n\nI've tried _CommandPalette_ and _CmdPal_ and neither worked.\n\n![Image](https://github.com/user-attachments/assets/15ff9d88-2aa8-4449-9552-2046743f6524)\n\n_configurationVersion_ is 0.2.0\n\n### ✔️ Expected Behavior\n\nDefine Command Palette tool in DSC, so it won't be enabled during PT installation with DSC.\n\n### ❌ Actual Behavior\n\n_No response_\n\n### Additional Information\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38756",
+    "state": "OPEN",
+    "current_labels": [
+      "Area-Setup/Install",
+      "Help Wanted",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 38732,
+    "title": "CmdPal input issues with 3dp extensions",
+    "body": "### Microsoft PowerToys version\n\n0.90.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\n1. Install a external extension like ECP, or visual studio, then using that extension to do the following:\n2a. Type in a syllabic typing method (pinying, bopomofo, korean?)\n2b. Type some word, then try to type infront of that word\n\n### ✔️ Expected Behavior\n\n2a. To be able to type and construct the word normally\n2b. To be able to type at anywhere instead of just at the end\n\n### ❌ Actual Behavior\n\n2a. the syllabic/parts are forced into the query before the user has a chance to finish the word (https://github.com/lin-ycv/EverythingCommandPalette/issues/2)  \nHere i'm typing in bopomofo, in order to type 我們，i need to construct it by typing (ㄨㄛˇ) and (ㄇㄣ˙), but each part is forcibly commited by cmdpal\n![](https://private-user-images.githubusercontent.com/60565737/432414430-5d7a6fa0-dc37-4bbd-bda4-796616eef1aa.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDQzMDcyNTAsIm5iZiI6MTc0NDMwNjk1MCwicGF0aCI6Ii82MDU2NTczNy80MzI0MTQ0MzAtNWQ3YTZmYTAtZGMzNy00YmJkLWJkYTQtNzk2NjE2ZWVmMWFhLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA0MTAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDEwVDE3NDIzMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTlhOTdlZDJhMjljYzIyOWE0Zjk5Mjc0MzFjYjcyYjAxNjJlMzRiYmZkMTc3MjJiMjk4M2E2ODhkZDljODMwNWEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.CIvFdPIs9r8Ym7Dcq01c8J8JwyrHYaEmwmCpf7o_9V4)\n\n2b. cursor jumps to the end of the query\n\n### Additional Information\n\nThe interesting thing that I've found is that this only happens with 3dp extensions, with native extension, this isn't an issue.\nThis is quite functionally breaking for some users, as they cannot type in their native language with 3dp extensions.\n\n### Other Software\n\nEverythingCommandPalette",
+    "url": "https://github.com/microsoft/PowerToys/issues/38732",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 38718,
+    "title": "CmdPal not finding a extension (winget)",
+    "body": "### Microsoft PowerToys version\n\n0.90.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\nOpen `Install Command Palette extensions`\n\n### ✔️ Expected Behavior\n\nsee ECP listed\nhttps://github.com/microsoft/winget-pkgs/blob/master/manifests/l/lin-ycv/EverythingCmdPal/0.1.0.0/lin-ycv.EverythingCmdPal.locale.en-US.yaml\n\n### ❌ Actual Behavior\n\nECP is missing\n![Image](https://github.com/user-attachments/assets/7d18e2c1-0fed-4118-a4ef-005d633d86d9)\n\nBased on the logs, CmdPal only found 9 packages with `windows-commandpalette-extension` tag\n<details>\n<summary>Log</summary>\n<pre>\n[14:42:01.7584277] [Debug] ListPage.xaml.cs::OnViewModelChanged::241\n    cleared viewmodel\n[14:42:01.7630276] [Debug] WinGetExtensionPage.cs::DoSearchAsync::179\n    Starting search for '+windows-commandpalette-extension'\n[14:42:01.9948097] [Debug] WinGetExtensionPage.cs::DoSearchAsync::222\n      Searching  ()\n[14:42:02.1955146] [Debug] WinGetExtensionPage.cs::DoSearchAsync::239\n        got results for ()\n[14:42:02.2093448] [Debug] WinGetExtensionPage.cs::DoSearchAsync::250\n        (+windows-commandpalette-extension): count: 9\n[14:42:02.2094312] [Debug] WinGetExtensionPage.cs::DoSearchAsync::255\n    Search \"+windows-commandpalette-extension\" took 446ms\n[14:42:02.2096762] [Debug] WinGetExtensionPage.cs::UpdateWithResults::155\n    Completed search for ''\n</pre>\n</details>\n\nbut ECP also have this tag among other tags\nhttps://github.com/microsoft/winget-pkgs/blob/4df61bf3fb413eb468fba9c2de824df933a993d0/manifests/l/lin-ycv/EverythingCmdPal/0.1.0.0/lin-ycv.EverythingCmdPal.locale.en-US.yaml#L17-L27\n\n@zadjii-msft \nLooking at the packages that shows up against ECP, `windows-commandpalette-extension` has to be the only tag? or is there something else that's wrong?\n\n### Additional Information\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38718",
+    "state": "OPEN",
+    "current_labels": [
+      "Help Wanted",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 38620,
+    "title": "Backup folder created even without a backup",
+    "body": "### Microsoft PowerToys version\n\n0.90.0\n\n### Installation method\n\nGitHub\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nSettings\n\n### Steps to reproduce\n\n1. Make sure the backup folder doesn't exist (defaults to `~/Documents/PowerToys`)\n2. Install and launch PowerToys\n3. Check that the backup folder is now created, even if no backup has been triggered at all\n\n### ✔️ Expected Behavior\n\nBackup folder should not be created until a backup is actually triggered.\n\n### ❌ Actual Behavior\n\nThe backup folder is created. \n\nThis can get annoying when setting up a new device and I'm using a different path for backup from the default one, because I will always always need to manually clean it up after changing it in the settings. There's no point of creating this folder before the user does a backup.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38620",
+    "state": "CLOSED",
+    "current_labels": [
+      "Help Wanted",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Settings",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 38526,
+    "title": "Command Palette: Custom window size does not persist on utility restart",
+    "body": "### Microsoft PowerToys version\n\n0.90.0\n\n### Installation method\n\nGitHub\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\nCommand Palette by default has a pre-defined window size at first launch, which is slightly too much for users with lower resolutions. It can be customized by resizing it through corners of the window. However, these changes get reverted whenever the utility is fully restarted or relaunched.\n\n### ✔️ Expected Behavior\n\n- User launches Command Palette and customizes the size of the window.\n- The user restarts Command Palette. (either by disabling and re-enabling the module through PowerToys settings or by restarting PowerToys)\n- The window size will remain as to what the user chose it to be.\n\n### ❌ Actual Behavior\n\n- User launches Command Palette and customizes the size of the window.\n- The user restarts Command Palette. (either by disabling and re-enabling the module through PowerToys settings or by restarting PowerToys)\n- The window size resets to the default pre-defined size.\n\nVideo:\n\nhttps://github.com/user-attachments/assets/6ed92670-cd74-4252-b4a1-97deac6e1700\n\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38526",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 38522,
+    "title": "command palette extension creator doesnt validate project names",
+    "body": "### Microsoft PowerToys version\n\n0.90.0\n\n### Installation method\n\nGitHub, PowerToys auto-update\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\ntool allows you to create project with dash (-) in its name but it wont build since its not a valid dotnet namespace \n\n### ✔️ Expected Behavior\n\n_No response_\n\n### ❌ Actual Behavior\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38522",
+    "state": "CLOSED",
+    "current_labels": [
+      "Help Wanted",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette",
+      "Status-In progress"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 38487,
+    "title": "Chinese descriptions for apps in English Systems",
+    "body": "### Microsoft PowerToys version\n\n0.90.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\nsearching for items in command palette\n\n### ✔️ Expected Behavior\n\nMy system is configured to use english as display language. Therefore descriptions of apps should all be in english\n\n### ❌ Actual Behavior\n\ndescription of some apps are in Mandarin\n\n![Image](https://github.com/user-attachments/assets/f2a8e3e8-acc9-49e3-af9d-79e31717606d)\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38487",
+    "state": "OPEN",
+    "current_labels": [
+      "CmdPal - All Apps",
+      "Help Wanted",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 38417,
+    "title": "I hope that add Pinyin search in Command Palette.",
+    "body": "### Description of the new feature / enhancement\n\nIn PowerToys Run, there is Pinyin search feature. As the successor of PowerToys Run, I hope that add Pinyin search in CmdPal. \n\n### Scenario when this would be used?\n\nCommand Palette. \n\n### Supporting information\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38417",
+    "state": "CLOSED",
+    "current_labels": [
+      "CmdPal-Feature Parity",
+      "Help Wanted",
+      "Idea-Enhancement",
+      "Priority-2",
+      "Product-Command Palette",
+      "Status-In progress"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 38387,
+    "title": "[Command Palette]: When the focus is not on the search box, pressing the `ESC` key does not function.",
+    "body": "### Microsoft PowerToys version\n\n0.90.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\nhttps://github.com/user-attachments/assets/a7ec6275-24f4-4e4f-bb48-a002b9d5b690\n\n### ✔️ Expected Behavior\n\nFocus anywhere on the Command Palette and press `ESC` to perform the corresponding function.\n\n### ❌ Actual Behavior\n\nPressing `ESC` only works if the focus is on the search box.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38387",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette",
+      "Resolution-Duplicate",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 38379,
+    "title": "CmdPal: Extensions retain their last input after relaunch",
+    "body": "### Microsoft PowerToys version\n\n0.90.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\n1. Activate CmdPal.\n2. Type \"??\" to activate Search.\n3. Enter the query and press Enter.\n4. Repeat 1 and 2 to relaunch CmdPal Search.\n\n### ✔️ Expected Behavior\n\nThe last query is cleared.\n\n### ❌ Actual Behavior\n\nThe last query is not cleared.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38379",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Command Palette",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 37864,
+    "title": "Mouse Without Borders: Excessive Logging",
+    "body": "### Microsoft PowerToys version\n\n0.89.0\n\n### Installation method\n\nWinGet\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nMouse Without Borders\n\n### Steps to reproduce\n\nCoincidentally, I noticed that MWB creates log files in three different locations:\n\n1. One log file per day named `Log_YYYY-MM-DD.txt` in the folder `~\\AppData\\Local\\Microsoft\\PowerToys\\MouseWithoutBorders\\Logs\\0.89.0.0`\n2. Another log file per day named `mouseWithoutBorders-log_YYYY-MM-DD.txt` in the folder `~\\AppData\\Local\\Microsoft\\PowerToys\\MouseWithoutBorders\\LogsModuleInterface`\n3. Several log files per day in the folder `C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Microsoft\\PowerToys\\MouseWithoutBorders\\Logs\\0.89.0.0\\`\n\nAlso, there doesn't seem to be a process that cleans up these logs from time to time, so I had already collected several hundred of these files.\n\nThe files that I checked contained only INFO level messages, so it is questionable whether they should be logged by default anyway.\n\n### ✔️ Expected Behavior\n\n1. MWB should write logs to only one folder (ideally not the `Windows` system folder?)\n2. MWB should have some cleanup process that removes logs periodically (e. g. logs older than 30 days are removed at startup?)\n\n### ❌ Actual Behavior\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/37864",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Mouse Without Borders",
+      "Resolution-Already Fixed/Doesn't Apply"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 37801,
+    "title": "Color Picker UI is visible when zooming",
+    "body": "### Microsoft PowerToys version\n\n0.88.0\n\n### Installation method\n\nGitHub\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nColorPicker\n\n### Steps to reproduce\n\nActivate Color Picker with Win+Shift+C, then use the mouse wheel to zoom in on a section. The UI is visible in the zoomed-in box.\n\n![Image](https://github.com/user-attachments/assets/3af19f6c-e4a7-49fa-8090-495fce768c42)\n\n### ✔️ Expected Behavior\n\nThe UI element showing the color should not be visible while zooming.\n\n### ❌ Actual Behavior\n\nWhen zooming, the edge of the color picker is shown.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/37801",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Color Picker",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 37387,
+    "title": "[MouseWithoutBorders] Default key Ctrl+Alt+E breaks AltGr+E (Euro sign) on German keyboareds",
+    "body": "### Microsoft PowerToys version\n\n0.88.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nMouse Without Borders\n\n### Steps to reproduce\n\nThe default shortcut for \"Switch to simple mouse\" in MWB breaks Euro sign on German keyboards.\n\n![Image](https://github.com/user-attachments/assets/43493735-eaa8-4393-af0d-98227547169c)\n\n### ✔️ Expected Behavior\n\nOther shortcut or STRG+ALT+E not acts on ALTGR+E.\n\n### ❌ Actual Behavior\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/37387",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Mouse Without Borders",
+      "Resolution-Duplicate",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 36731,
+    "title": "Turn off admin?",
+    "body": "### Microsoft PowerToys version\n\n0.87-1\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nMouse Without Borders\n\n### Steps to reproduce\n\nClicked 'run as admin' on both machines, now realize I need to be just 'user' to re=position screens but can't figure out how to re-start w/o 'admin' selected\n\n### ✔️ Expected Behavior\n\nRe-start as 'user'.-\n\n### ❌ Actual Behavior\n\nCan't de-select 'admin.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/36731",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Mouse Without Borders"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 36322,
+    "title": "Add greater than to the possible key remapping",
+    "body": "### Description of the new feature / enhancement\n\nHi,\nin **Powertoys Keyboard Manager** remaping the  \"<\" key is straghtforward but \">\" must be done by using SHIFT+ combination for \"<\". (not very intuitive)\n\nI am writing this from a laptop keyboard that (for some strange reason) does not have \"<\" nor \">\" but i have seen  some keyboards where the combination is exactly AltGr +z for \"<\" and AltGr+x for \">\".\n\nFor ease of use \">\" should be added to the possible key mappings, this way people could map AltGr +z for \"<\" and AltGr+x for \">\" and possibly use stickers to show the mappings on the keyboard. \n\n\nPS:Congrats on the powertoys tools.\n\n### Scenario when this would be used?\n\n\"<\" and \">\" are keys that need to be easily acessible for coding, math formulas, teaching...\n\nThis change would make it possible to use keyboard stykers in the usual place reserved for the AltGr combination and visually help users find the keys.\n\n### Supporting information\n\nSeen numerous post on this subject missing \"<\" and \">\" on keyboard many people seem to never even find the SHIFT \"trick\" in powertoys to get the \">\" sign.\n\nOther tools seem to offer this possibility but if anything is altering keyboard related, i think Microsoft should be the (safest) way.\n ",
+    "url": "https://github.com/microsoft/PowerToys/issues/36322",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Keyboard Manager"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 36208,
+    "title": "[Power toys-Image resizer]: Edit Buttons in Image Resizer Not Associated with Their Names and Dimensions.",
+    "body": "### Microsoft PowerToys version\n\n0.86.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nImage Resizer\n\n### Steps to reproduce\n\n**Test environment:**\nOS Build: Windows 11 Enterprise Insider Preview 24H2 (26120.1340)\nPower toys version: v0.86.0\nScreen Reader: Narrator\n\n**Repro Steps:**\n\n1. Open the Power Toys app in the desktop.\n2. Select the Image Resizer option from left navigation pane.\n3. Turn on narrator using Ctrl + Win + Enter.\n4. Now navigate to the Edit buttons present below the Add new buttons.\n5. Observe the issue.\n\n**User Experience:**\nScreen reader users will be unable to understand which button controls which dimension, making it difficult or impossible to resize images effectively.\n\n**Note:**\nSame issue is also repro for delete button.\n\n**Attachments:**\n![Image](https://github.com/user-attachments/assets/cb3417f7-7170-4f02-84d2-e15833643443)\n\nhttps://github.com/user-attachments/assets/465eb498-0f60-413f-80a0-e66c58b38ff8\n\n**Guideline reference:**\nhttps://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships\n\n\n### ✔️ Expected Behavior\n\nEach edit button in the image resizer should have a descriptive label, either visually or programmatically, that clearly identifies its function and the dimensions it controls (e.g., \"Set Width to 500px\", \"Set Height to 300px\").\n\n### ❌ Actual Behavior\n\nThe edit buttons in the image resizer tool are not properly labeled or associated with the corresponding image dimensions (e.g., width, height).\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/36208",
+    "state": "CLOSED",
+    "current_labels": [
+      "A11yE+D",
+      "A11ySev2",
+      "A11yWCAG",
+      "Area-Accessibility",
+      "Issue-Bug",
+      "PowerToys_Win32",
+      "Priority-2",
+      "Product-Image Resizer",
+      "Resolution-Already Fixed/Doesn't Apply"
+    ],
+    "historical_priority_labels": [
+      "Priority-1",
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 35884,
+    "title": "FanzyZones Issues with Multiple Adobe Apps",
+    "body": "### Microsoft PowerToys version\n\n0.86.0\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nFancyZones\n\n### Steps to reproduce\n\n**_This bug is triggered ONLY if the \"Move Newly Created Windows to their Last Known Zone\" option is turned on in FancyZones._**\n\nAdobe Audition:\nProblem: Certain UI interfaces will not open if Audition is snapped to a zone\nSteps to reproduce:\nOpen Adobe Audition. Snap to a zone. Open an audio file. Go to Effects>Time and Pitch>Stretch and Pitch. UI interface for Stretch and Pitch will open blacked-out and unsuable. Unsnap from zone, repeat. UI interface will now open. \n\nAdobe Illustrator: \nProblem: Project files will not display on initial launch of Illustrator if Illustrator is snapped to a zone. \nSteps to reproduce:\nOpen Adobe Illustrator. Snap to a zone. Click on a recently opened file in the inital Illustrator welcome screen. File will attempt to open, but it will not display the file contents in Illustrator (work canvas will appear to be blank). If multiple attempts to open the file are performed, usually the file will eventually open.\n\n\n\n\n\n\n### ✔️ Expected Behavior\n\nIllustrator: Expected behavior is for projects to load in Illustrator when opened.\nAudition: Expected behavior is for all UI interfaces to open when selected. \n\n### ❌ Actual Behavior\n\nIllustrator: Project files will not load if Illustrator is snapped to a zone on initial Illustrator launch\nAudition: Some UI interfaces will not open if Audition is snapped to a zone. \n\n### Other Software\n\nIllustrator 2024, 2025\nAudition 2024, 2025",
+    "url": "https://github.com/microsoft/PowerToys/issues/35884",
+    "state": "OPEN",
+    "current_labels": [
+      "Area-App Compat",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-FancyZones"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 34124,
+    "title": "Does NOT work on Powerpoint: (left) Alt + A -> (left) Ctrl + A",
+    "body": "### Microsoft PowerToys version\n\n0.83.0\n\n### Installation method\n\nMicrosoft Store, Other (please specify in \"Steps to Reproduce\")\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nKeyboard Manager\n\n### Steps to reproduce\n\n1. Set remap of combination keys as\r\nleft Alt + A -> left Ctrl + A\r\n2. Open Microsoft PowerPoint and type the key: left Alt + A\r\n3. It triggers original Alt- commands \n\n### ✔️ Expected Behavior\n\n(left) Ctrl + A should be executed.\n\n### ❌ Actual Behavior\n\n(left) Alt + A is executed, and the \"Animation\" tab is highlighted.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/34124",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Keyboard Manager",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 33098,
+    "title": "Powertoys run opens app twice when running as administrator",
+    "body": "### Microsoft PowerToys version\n\n0.81.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nPowerToys Run\n\n### Steps to reproduce\n\n1) Launch Powertoys Run,\r\n2) Type Terminal (the Windows Terminal App),\r\n3) Run the Terminal App as administrator by pressing Ctrl + Shift + Enter.\n\n### ✔️ Expected Behavior\n\nOne instance of the Terminal App in administrator mode.\n\n### ❌ Actual Behavior\n\nTwo instances of the Terminal App, one in administrator mode and one in normal mode.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/33098",
+    "state": "OPEN",
+    "current_labels": [
+      "Area-Quality",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-PowerToys Run",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 32015,
+    "title": "[Settings]Improve PowerToys Run page plugins performance",
+    "body": "### Description of the new feature / enhancement\n\nAccording to https://github.com/microsoft/PowerToys/pull/31967#issuecomment-2004228551 , the performance of the PowerToys Run page is getting worse with every addition to the types of settings plugins can declare.\r\n\r\n> I think we should consider refactoring the Plugins settings XAML. There's so much XAML that's being loaded at all times now for every plugin, but half of these would not use something like CheckboxAndMultilineTextBox. The Run settings page is already pretty slow to load.\r\nWe should add an ItemsControls / ListView and use a DataTemplateSelector to swap out the template that a specific setting would need: this would also make it easier to maintain and easier to further extend in the future. We are doing the same thing for the Dashboard page where cards have can have different templates.\n\n### Scenario when this would be used?\n\nMakes it easier to maintain and improves UI performance.\n\n### Supporting information\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/32015",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Quality",
+      "Idea-Enhancement",
+      "Priority-2",
+      "Product-Settings",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 31837,
+    "title": "some $-patterns shift counter {} by one character in renamed filename",
+    "body": "### Microsoft PowerToys version\r\n\r\n0.79.0\r\n\r\n### Installation method\r\n\r\nPowerToys auto-update\r\n\r\n### Running as admin\r\n\r\nNo\r\n\r\n### Area(s) with issue?\r\n\r\nPowerRename\r\n\r\n### Steps to reproduce\r\n\r\nsearch: ```.*``` + enable use regex\r\nreplace: ```<patterns as described below>```\r\n\r\n### ✔️ Expected Behavior\r\n\r\nAll examples for file created March 10th 2024. File is first file in batch (```{}```->```0```)\r\nreplace: ``` <pattern>``` -> ```<result>```\r\nreplace: ```$YY${}ABC``` -> ```240ABC```\r\nreplace: ```$YYYY${}ABC``` -> ```20240ABC```\r\nreplace: ```$MM${}ABC``` -> ```030ABC```\r\nreplace: ```$MMM${}ABC``` -> ```Mar0ABC```\r\nreplace: ```$DD${}ABC``` -> ```100ABC```\r\nreplace: ```$DDD${}ABC``` -> ```Sun0ABC```\r\nreplace: ```$DDDD${}ABC``` -> ```Sunday0ABC```\r\nreplace: ```$YY$MM$DD${}ABC``` -> ```2403100ABC```\r\n\r\n### ❌ Actual Behavior\r\n\r\nfor each of the named $ pattern the counter is shifted back by one character.\r\nreplace: ```$YY${}ABC``` -> ```24A0BC```\r\nreplace: ```$YYYY${}ABC``` -> ```2024A0BC```\r\nreplace: ```$MM${}ABC``` -> ```03A0BC```\r\nreplace: ```$MMM${}ABC``` -> ```MarA0BC```\r\nreplace: ```$DD${}ABC``` -> ```10A0BC```\r\nreplace: ```$DDD${}ABC``` -> ```SunA0BC```\r\nreplace: ```$DDDD${}ABC``` -> ```Sunda0yABC```\r\nreplace: ```$YY$MM$DD${}ABC``` -> ```240310ABC0```\r\n\r\n### Other Software\r\n\r\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/31837",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Quality",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-PowerRename"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 31741,
+    "title": "Can't use Powershell 7.5.0 Preview for command not found",
+    "body": "### Microsoft PowerToys version\n\n0.79.0\n\n### Installation method\n\nGitHub\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nCommand not found\n\n### Steps to reproduce\n\nInstalled PowerShell 7.5.0 Preview in default directory but PowerToys won't detected it.\r\n\n\n### ✔️ Expected Behavior\n\nPowerShell 7.5 Preview detected\n\n### ❌ Actual Behavior\n\nPowerShell not detected\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/31741",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-App Compat",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-CommandNotFound",
+      "Resolution-Fix Committed",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 31714,
+    "title": "Change action of update notification \"see more\" button",
+    "body": "### Microsoft PowerToys version\n\n0.78\n\n### Installation method\n\nGitHub\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nGeneral\n\n### Steps to reproduce\n\n1. Wait until a windows notification about a new version update pops up\r\n2. Click the \"See more\" button\r\n3. It just opens the Powertoys settings\n\n### ✔️ Expected Behavior\n\nIf I click the \"see more\" button I expect it to open the changelog page with information about the update\n\n### ❌ Actual Behavior\n\nit brings me to the powertoys settings page, where I have to click in the upper-left update item to jump to the update page, then click on \"see what's new\" to finally open the changelog.\r\n\r\nInstead of what's supposed to be a single click to \"see more\", you now have to perform 3 different steps to finally get the same result.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/31714",
+    "state": "CLOSED",
+    "current_labels": [
+      "Idea-Enhancement",
+      "Issue-DCR",
+      "Priority-2",
+      "Product-Settings"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 30989,
+    "title": "ps1 scripts in \\PowerToys\\WinUI3Apps\\Assets\\Settings\\Scripts not signed ",
+    "body": "### Microsoft PowerToys version\n\n0.77.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nGeneral\n\n### Steps to reproduce\n\nhi,\r\nany questions, please let me know. cheers\r\n\r\ninstall PowerToys 0.77.0 (not sure when exactly these scripts were introduced sorry)\r\n\r\ncheck these files, observe no code signing signature\r\n(can use Get-AuthenticodeSignature or manually see no signature block)\r\n  - \"C:\\Program Files\\PowerToys\\WinUI3Apps\\Assets\\Settings\\Scripts\\CheckCmdNotFoundRequirements.ps1\"\r\n  - \"C:\\Program Files\\PowerToys\\WinUI3Apps\\Assets\\Settings\\Scripts\\DisableModule.ps1\"\r\n  - \"C:\\Program Files\\PowerToys\\WinUI3Apps\\Assets\\Settings\\Scripts\\EnableModule.ps1\"\r\n  - \"C:\\Program Files\\PowerToys\\WinUI3Apps\\Assets\\Settings\\Scripts\\InstallPowerShell7.ps1\"\r\n  - \"C:\\Program Files\\PowerToys\\WinUI3Apps\\Assets\\Settings\\Scripts\\InstallWinGetClientModule.ps1\"\r\n\n\n### ✔️ Expected Behavior\n\nSuggest they be signed with the same cert as the binaries are, such as PowerToys.exe\n\n### ❌ Actual Behavior\n\nWith host hardening enforcing code signing requirements on PowerShell, those scripts will fail to execute, even with the pwsh.exe parameter \"ExecutionPolicy\" set to \"Bypass\"\n\n### Other Software\n\nAirlock Digital (https://www.airlockdigital.com/)\r\n\r\nBut the same would also be true with equivalent policy set by Windows native things Group Policy, AppLocker, Windows Defender Application Control, plus other third party solutions",
+    "url": "https://github.com/microsoft/PowerToys/issues/30989",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Build",
+      "Issue-Bug",
+      "Priority-2",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 30297,
+    "title": "[Run] Blur / Transparency effect does not work all the time",
+    "body": "### Microsoft PowerToys version\r\n\r\nv0.76.1\r\n\r\n### Installation method\r\n\r\nMicrosoft Store\r\n\r\n### Running as admin\r\n\r\nYes\r\n\r\n### Area(s) with issue?\r\n\r\nPowerToys Run\r\n\r\n### Steps to reproduce\r\n\r\nTry opening it on a dark background and then open it on any other background. (Just After booting)\r\n\r\n### ✔️ Expected Behavior\r\n\r\n![image](https://github.com/microsoft/PowerToys/assets/112795252/3fed60d1-8164-43d3-b43c-efaae931cf0c)\r\n\r\n\r\n### ❌ Actual Behavior\r\n\r\n![image](https://github.com/microsoft/PowerToys/assets/112795252/167660f2-cb68-4512-ab8e-854a3e2f7393)\r\n\r\n\r\n### Other Software\r\n\r\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/30297",
+    "state": "OPEN",
+    "current_labels": [
+      "Area-User Interface",
+      "External Dependency",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-PowerToys Run"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 29975,
+    "title": "[CodeQuality]Remove error suppressions that were introduced with .NET 8",
+    "body": "### Description of the new feature / enhancement\n\nWith the .NET 8 upgrade, we adopted some dotnet diagnostic error suppressions: https://github.com/microsoft/PowerToys/commit/b2b2856e5292767214239c2fb0517a9083129ac2#diff-8e113cdf6f7c10005985905922c1c2cbbdf6f4bb755e71eb48e043d2027760b2\r\n\r\nThese should be reviewed and cleared out.\n\n### Scenario when this would be used?\n\nWe should have as few suppressions as possible.\n\n### Supporting information\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/29975",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Quality",
+      "Priority-2"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 29516,
+    "title": "Clicking on control to select color activates control",
+    "body": "### Microsoft PowerToys version\n\n0.75.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nColorPicker\n\n### Steps to reproduce\n\nActivate the color picker (Win + Shift + c)\r\nClick on color picker enable/disable toggle in the power toys dashboard.\n\n### ✔️ Expected Behavior\n\nI expect the click event to be consumed by the color picker and not passed on to the window that is clicked on.\n\n### ❌ Actual Behavior\n\nThe color picker toggle was toggled, disabling the color picker.  \r\n\r\nOther behaviors\r\n* if I click on a tool on the left navigation list, the color picker dialog is displayed\r\n* if I click on the window minimize icon, the window is iconified AND the color picker dialog is displayed\r\n* if I click on the minimize icon on a window other than the power toys window, the color picker dialog is displayed, and the target window is NOT minimized\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/29516",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Color Picker",
+      "Resolution-Duplicate",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 29227,
+    "title": "Paste as Plain Text would stick combination keys like shift, start, alt, ctrl. ",
+    "body": "### Microsoft PowerToys version\n\n0.74.1\n\n### Installation method\n\nGitHub\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nPaste as Plain Text\n\n### Steps to reproduce\n\nSet the hotkey for Paste as Plain Text as Shift + Start + V or Stat + Alt + V and copy some text and paste it into Excel.\n\n### ✔️ Expected Behavior\n\nPaste would be done with no issue.\n\n### ❌ Actual Behavior\n\nPaste would be done but the combination keys are stuck forever.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/29227",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Advanced Paste",
+      "Resolution-Duplicate"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 29067,
+    "title": "[BugReport Tool] Update GPO reports to include new PT Run plugin GPOs",
+    "body": "### Description of the new feature / enhancement\n\nAfter implementing #25438 (#27468) we have to update the GPO report in BugReport tool. Because this policies are not static we can't simply query their method in gpo.h as we don't have a list of plugin IDs.\r\n\r\nI suggest to simply do a Registry export of the following keys:\r\n- HKCU\\Software\\Policies\\PowerToys\r\n- HKLM\\Software\\Policies\\PowerToys\r\n\r\nWe need the following keys / values included in the report:\r\n- The value \"PowerLauncherAllPluginsEnabledState\" in \"HKCU\\Software\\Policies\\PowerToys\" and \"HKLM\\Software\\Policies\\PowerToys\".\r\n- All entries with name and value in \"HKCU\\Software\\Policies\\PowerToys\\PowerLauncherIndividualPluginEnabledList\" and \"HKLM\\Software\\Policies\\PowerToys\\PowerLauncherIndividualPluginEnabledList\".\n\n### Scenario when this would be used?\n\nHaving problems with policies.\n\n### Supporting information\n\n_Note: Because we log the policy state of the plugins in the log file of PT Run this enhancement is no must have for the v0.75.0 release._",
+    "url": "https://github.com/microsoft/PowerToys/issues/29067",
+    "state": "OPEN",
+    "current_labels": [
+      "Area-Bug Report Tool",
+      "Idea-Enhancement",
+      "Priority-2",
+      "Product-PowerToys Run"
+    ],
+    "historical_priority_labels": [
+      "Priority-1",
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 28948,
+    "title": "Recovery doesn't work as expected",
+    "body": "### Microsoft PowerToys version\n\n0.74.0\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nKeyboard Manager\n\n### Steps to reproduce\n\n![螢幕擷取畫面 (1)](https://github.com/microsoft/PowerToys/assets/88383587/674cc364-e7b4-44a3-ae6e-e25beaa6cdf0)\r\n\n\n### ✔️ Expected Behavior\n\nI have settings for my notebook and PC,  I backed up my keyboard settings in PC\r\nWhen I open the notebook and recover it, it should cover all my old setting\n\n### ❌ Actual Behavior\n\nwhile I did that, it didn't cover my old settings, it just add my new settings to the bottom\r\nthe old and new settings just had conflicts\r\nfor example, I used to set \"win + O\" as \"alt + Tab\"\r\nbut I recently change it to \"-\" in PC\r\nnow, I open the notebook to recover the setting, it show two settings for \"win + O\"\r\nand it only work as \"alt + Tab\"\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/28948",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Keyboard Manager",
+      "Product-Settings"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 28726,
+    "title": "[Peek] How do I un-fullscreen a PDF?",
+    "body": "### Microsoft PowerToys version\n\n0.73.0\n\n### Installation method\n\nGitHub\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nPeek\n\n### Steps to reproduce\n\n1. Preview a PDF file with Peek\r\n2. Click the full screen button\r\n3. You can't un-fullscreen it now.\n\n### ✔️ Expected Behavior\n\nClicking the full screen button should maximize the Peek window and <kbd>Esc</kbd> should revert it to the original size and show the toolbar.\n\n### ❌ Actual Behavior\n\nThe only way to get the toolbar back is by pressing <kbd>Esc</kbd> and then manually maximizing the window.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/28726",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Peek",
+      "Status-In progress",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 28589,
+    "title": "Mouse Without Borders disabling keyboard shortcuts",
+    "body": "### Microsoft PowerToys version\n\n0.73.0\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nMouse Without Borders\n\n### Steps to reproduce\n\nHave Mouse Without Borders enabled\n\n### ✔️ Expected Behavior\n\nCombinatins like altgr + e for € working\n\n### ❌ Actual Behavior\n\nCombinatins like altgr + e for € not working (QWERTZ keyboard)\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/28589",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Mouse Without Borders",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 28533,
+    "title": "\"Clear\" appears twice on key list in keyboard manager",
+    "body": "### Microsoft PowerToys version\n\n0.73.0\n\n### Installation method\n\nGitHub\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nKeyboard Manager\n\n### Steps to reproduce\n\nOpen Keyboard Manager, Remap a Key.\r\nOpen the drop down list with key names.\r\nNotice there are two items named \"Clear\".\n\n### ✔️ Expected Behavior\n\nKeys having unique and appropriate names.\r\n\r\nOne of the \"Clear\" items should probably be called \"Clear (Numpad)\" since it is the numpad 5 key in NumLock off state on a standard keyboard. Other NumLock-off items are named \"Delete (Numpad)\", \"Up (Numpad)\" etc.\r\n\n\n### ❌ Actual Behavior\n\nTwo identically named keys (Clear) that refer to different keystrokes.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/28533",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Keyboard Manager",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 28509,
+    "title": "PowerRename cannot rename ß to ss",
+    "body": "### Microsoft PowerToys version\r\n\r\n0.73.0\r\n\r\n### Installation method\r\n\r\nWinGet\r\n\r\n### Running as admin\r\n\r\nNo\r\n\r\n### Area(s) with issue?\r\n\r\nPowerRename\r\n\r\n### Steps to reproduce\r\n\r\nCreate some files that use the ß character example:\r\n`Daliah Lavi - Weißt du, was du für mich bist？.mp3`\r\n\r\nIn the PowerRename utility, enter the character to search `ß` and the character to replace with `ss`.\r\n\r\n\r\n\r\n\r\n### ✔️ Expected Behavior\r\n\r\nThe renaming window should show the result as:\r\n`Daliah Lavi - Weisst du, was du für mich bist？.mp3`\r\n\r\nWith the option to apply the rename.\r\n\r\n### ❌ Actual Behavior\r\n\r\nNo renaming result is shown and the action to apply does not become available.\r\nUsing some other combination of characters to replace with seems to work.\r\n\r\n### Other Software\r\n\r\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/28509",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-PowerRename",
+      "Status-In progress",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 28486,
+    "title": "[Crop and Lock] Thumbnail mode stretches content when too small",
+    "body": "### Microsoft PowerToys version\n\n0.73.0\n\n### Installation method\n\nGitHub, PowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nCrop and Lock\n\n### Steps to reproduce\n\n1. Press <kbd>Ctrl</kbd>+<kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd>\r\n2. Select a small region\n\n### ✔️ Expected Behavior\n\nThe window should show the area you selected\n\n### ❌ Actual Behavior\n\nThe content is stretched (see video)\r\n\r\n\r\nhttps://github.com/microsoft/PowerToys/assets/127593627/9ffca6ab-ab1b-40d9-b4d9-e2f8872dc7a9\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/28486",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-CropAndLock",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 28348,
+    "title": "[Crop and Lock]: Does not inherit default windows 11 theme background in new window titlebar",
+    "body": "### Microsoft PowerToys version\r\n\r\n0.73.0\r\n\r\n### Installation method\r\n\r\nGitHub\r\n\r\n### Running as admin\r\n\r\nYes\r\n\r\n### Area(s) with issue?\r\n\r\nCrop and Lock\r\n\r\n### Steps to reproduce\r\n\r\n1. Create a crop window with Win+Ctrl+Shift+R.\r\n2. Observe the new windows  titlebar is that of a light theme despite windows setting being set to a dark theme in both WIndows 11 theme and PowerToys theme itself.\r\nThis makes the Crop and Lock windows titlebar look out of place in background colour compared to all other windows.\r\n\r\n### ✔️ Expected Behavior\r\n\r\nCrop and Lock Reparent Window titlebar background should be the same as the windows theme/ powertoys theme.\r\nIf not possible then have an option to set it to dark mode titlebar\r\n\r\n### ❌ Actual Behavior\r\n\r\nWindow titlebar is always light theme background even though Powertoys theme is dark and Windows 11 theme is dark.\r\n\r\n### Other Software\r\n\r\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/28348",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-CropAndLock",
+      "Status-In progress",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 28275,
+    "title": "[Crop and Lock] Reparent doesn't restore all window properties after closing",
+    "body": "### Microsoft PowerToys version\n\n0.73\n\n### Installation method\n\nGitHub\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nCrop and Lock\n\n### Steps to reproduce\n\n1. Use Crop and Lock - reparent on a maximized window\r\n2. Close the Crop and Lock window to restore the original window\n\n### ✔️ Expected Behavior\n\nThe original window should be the same as before using Crop and Lock.\n\n### ❌ Actual Behavior\n\nThe window is no longer maximized and is moved a bit up (see video).\r\n\r\n\r\nhttps://github.com/microsoft/PowerToys/assets/127593627/429ff29c-eced-44dc-8a6f-217b8fcfe8a0\r\n\r\n\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/28275",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-CropAndLock",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 27730,
+    "title": "edit: skill issue. scroll bar too small for my rheumy eyes. leaving this up for my shame, feel free to delete.",
+    "body": "### Microsoft PowerToys version\n\n0.72.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nMouse Utilities\n\n### Steps to reproduce\n\nRepro: Try to change the opacity of any of the three mouse marker colors (LMB, RMB, Pointer). \n\n### ✔️ Expected Behavior\n\nThe opacity should be changeable\n\n### ❌ Actual Behavior\n\nThe opacity cannot be changed.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/27730",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-User Interface",
+      "Issue-Bug",
+      "Priority-2"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 27332,
+    "title": "run command in cmd",
+    "body": "### Microsoft PowerToys version\n\n0.71.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nPowerToys Run\n\n### Steps to reproduce\n\nwhen I run power toys run and write a commend for cmd like ping and then enter it\n\n### ✔️ Expected Behavior\n\ncmd comes up for a second and then closed\n\n### ❌ Actual Behavior\n\nso I can not see the answer of that\n\n### Other Software\n\nwindows 10 ",
+    "url": "https://github.com/microsoft/PowerToys/issues/27332",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-PowerToys Run",
+      "Run-Plugin",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 27289,
+    "title": "Bad calculation, it cannot add numbers with dots",
+    "body": "### Microsoft PowerToys version\n\n0.71.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nPowerToys Run\n\n### Steps to reproduce\n\nyou need to look at your calculator\r\nshe can't count!\r\n\r\n123.01+52.30 = 175.4 there's a bug on numbers with dots\n\n### ✔️ Expected Behavior\n\na good calculation\r\n\r\n123.01+52.30 = 175.**31**\n\n### ❌ Actual Behavior\n\na bad calculation\r\n\r\n123.01+52.30 = 175.**40**\r\n![image](https://github.com/microsoft/PowerToys/assets/62285954/27106277-9f49-4654-8095-c9ecbbcc0e13)\r\n\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/27289",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Resolution-Fix Committed",
+      "Run-Plugin"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 26745,
+    "title": "Close system tray Shortcuts flyout when choosing a visual powertoy (Color Picker, Text Extractor, etc.)",
+    "body": "### Description of the new feature / enhancement\n\nFor powertoys that involve selecting an area visible on the screen (for example, Color Picker and Text Extractor), when the powertoy is launched from the system tray Shortcuts flyout, the flyout _should automatically close_. Otherwise, a portion of the screen is hidden behind it.\n\n### Scenario when this would be used?\n\nWhen using any visual-based powertoy. For consistency's sake, it might be worth making this the default behavior for any powertoy launched from the system tray flyout.\n\n### Supporting information\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/26745",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Flyout",
+      "Area-User Interface",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Settings",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 26741,
+    "title": "\"Find My Mouse\" is *very* surprising and confusing",
+    "body": "### Description of the new feature / enhancement\n\nI'm not sure if this is a bug or an enhancement, but \"Find My Mouse\" creating a circle when you accidentally double-pless ctrl is very surprising, especially if you *triple* press ctrl and it vanishes before you can see what it's doing - you just momentarily see a circle and your screen flashes.  It's not obvious it's coming from the mouse and at first I thought it was some accidental screenshot utility or something.  Powertools installs a large suite of software and so it would not have occurred to me that this circle comes from one of the many tools it brought in -- I installed Powertools for the image-resizer explorer extension, which has a much more discoverable and explicit UI.  \r\n\r\nSee replies here of various users that were similarly surprised and confused (and one absolutely terrible person who **suggested a system restore to correct the issue**):\r\n\r\nhttps://answers.microsoft.com/en-us/windows/forum/all/when-pressing-ctrl-randomly-a-white-circle-thing/4cdadca7-e011-4679-9f1b-567ea1790365?rtAction=1686237774031\r\n\r\nOr just google \"ctrl white circle\" and you'll see countless people confused where this came from and asking how to remove it.\r\n\r\n\"Find my mouse\" is a good feature now that I understand it and I like using it, but it's easy to trigger accidentally and is worrying when I don't know what it is or what action I performed to cause it.  I don't have a specific request on how to fix the problem, but I would definitely like the feature to re-thought to be less surprising.\r\n\r\nMaybe improve the triple press behavor?  Or have it *start* from the mouse and pulse outwards instead of zooming in from the outside?  At least then it would be clear that this is a mouse-related utility.  Or maybe launch a toast notification when it's used with an option to remove the toast notification?\n\n### Scenario when this would be used?\n\nAny new user of PowerTools who did not explicitly review every tool within it or choose it specifically for Find My Mouse and who frequently taps the ctrl key would probably find this useful and less confusing.\n\n### Supporting information\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/26741",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-User Interface",
+      "Idea-Enhancement",
+      "Priority-2"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 26546,
+    "title": "Windows loosing attachement to canvas on virtual desktop change",
+    "body": "### Microsoft PowerToys version\n\n0.70.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nFancyZones\n\n### Steps to reproduce\n\nSetup at least 2 Virtual Desktops.\r\nSetup a fancy zone with canvas.\r\nStack at least 2 windows in the canvas zone (app doesn't matter, I opened vscode, Edge, notepad, Windows Terminal).\r\nCycle between windows snapped to the same zone to validate the windows are attached to the canvas zone. (⊞ Win+PgUp/PgDn).\r\n\r\nNow switch to another virtual desktop using ⊞ Win+Ctrl+Left/Right or ⊞ Win+Tab and then come back to desktop where you stacked your windows.\r\n\r\nCycling between windows won't work.\n\n### ✔️ Expected Behavior\n\nUsing multiple VDs as workspaces, I would expect no to have to reattach windows to zones while I'm context switching between VDs\n\n### ❌ Actual Behavior\n\nCanvas feature is not usable in multiple VD context.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/26546",
+    "state": "OPEN",
+    "current_labels": [
+      "FancyZones-Hotkeys",
+      "FancyZones-VirtualDesktop",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-FancyZones"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 26530,
+    "title": "PowerToys does not appear in Startup App Settings or Task Manager",
+    "body": "### Microsoft PowerToys version\n\n0.70.0\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nGeneral\n\n### Steps to reproduce\n\nPowerToys does not appears in Windows Settings under Apps > Startup Apps or Startup section under Task Manager. Afaik PowerToys starts up with using Task Scheduler, but it should still extend an entry under these two endpoints like it shows entry in PowerToys Settings Page.\n\n### ✔️ Expected Behavior\n\nAn app entry for PowerToys in Windows Settings > Apps > Startup or Task Manager\n\n### ❌ Actual Behavior\n\nNo entry appears under the above mentioned points.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/26530",
+    "state": "OPEN",
+    "current_labels": [
+      "Area-Setup/Install",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Settings"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 26410,
+    "title": "trouble remapping \"End\" key",
+    "body": "### Microsoft PowerToys version\n\nv0.70.0\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nKeyboard Manager\n\n### Steps to reproduce\n\nWhen I try to remap the right alt button to the END button, the button does change, but instead of moving the cursor to the end of the line - it moves it to the end of the document. It's very frustrating.\n\n### ✔️ Expected Behavior\n\nEND button should move the cursor to the end of the current line\n\n### ❌ Actual Behavior\n\nThe cursor moves to the end of the document\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/26410",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Keyboard Manager",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 26146,
+    "title": "Peek doesn't work for files in a ZIP archive.",
+    "body": "### Microsoft PowerToys version\n\n0.70\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nGeneral\n\n### Steps to reproduce\n\nCtrl-space while a file (foo.h) was selected from w/in a ZIP archive being viewed w/Exploerer.\n\n### ✔️ Expected Behavior\n\nExxtract file and display in viewer.\n\n### ❌ Actual Behavior\n\nError in viewer.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/26146",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Peek",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 25693,
+    "title": "Shortcut Win + Shift + D not working for Always On Top",
+    "body": "### Microsoft PowerToys version\n\n0.69.1\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nAlways on Top\n\n### Steps to reproduce\n\nPut Win + Shift + D as the shortcut for Always On Top\n\n### ✔️ Expected Behavior\n\nIt should enable Always On Top for the window\n\n### ❌ Actual Behavior\n\nIt does nothing but the same shortcut worked before\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/25693",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Always On Top",
+      "Resolution-Duplicate",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 25636,
+    "title": "Plugin: Shell fails to run some commands",
+    "body": "### Microsoft PowerToys version\n\n0.69.1\n\n### Installation method\n\nWinGet\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nPowerToys Run\n\n### Steps to reproduce\n\nOpen powertoys run and type:\r\n\r\n```\r\n> echo YES\r\n```\r\n\n\n### ✔️ Expected Behavior\n\nTerminal opens briefly, prints \"YES\" and closes\n\n### ❌ Actual Behavior\n\nThe following error appears:\r\n\r\n![image](https://user-images.githubusercontent.com/6493651/233329094-da7c1be5-90ef-4253-9db6-37e8e6c67c0d.png)\r\n\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/25636",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-PowerToys Run",
+      "Run-Plugin",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 25621,
+    "title": "FancyZones not restoring windows when I switch virtual desktops",
+    "body": "### Microsoft PowerToys version\n\n0.69.1\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nFancyZones\n\n### Steps to reproduce\n\nI am connecting to the machine running PowerToys via RemoteDesktop using a 4K monitor.  When I disconnect from this machine, all my windows are moved as if a smaller monitor were connected.  When I reconnect, FancyZones restores all the windows on the current virtual desktop, but when I switch to another desktop, the windows are not restored to their zones.\r\n[PowerToysReport_2023-04-19-10-03-08.zip](https://github.com/microsoft/PowerToys/files/11275883/PowerToysReport_2023-04-19-10-03-08.zip)\r\n\n\n### ✔️ Expected Behavior\n\nI was expecting the windows to be restored to their zones when I switched to the 2nd virtual desktop.\n\n### ❌ Actual Behavior\n\nThe windows were not restored to their zones.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/25621",
+    "state": "OPEN",
+    "current_labels": [
+      "FancyZones-VirtualDesktop",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-FancyZones"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 25063,
+    "title": "[Color Picker] Long color format names are cut off, including default DECIMAL",
+    "body": "### Microsoft PowerToys version\n\n0.68.1\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nColorPicker\n\n### Steps to reproduce\n\n* Enable a color format with a long name, such as Decimal.\r\n* Use the color picker to pick a color and open the editor.\r\n* Observe the name being cut off. With Decimal, this makes the label look like \"DECIMAI\".\r\n![image](https://user-images.githubusercontent.com/37044997/228034015-714a50aa-e2e0-4ed9-9f26-c7c7f24110fe.png)\r\n\n\n### ✔️ Expected Behavior\n\nThe format names shouldn't be cut off.\r\n\r\nI think there's a couple ways this could be solved:\r\n* Make the column wide enough to fit some number of the widest (ascii?) character and limit the field length\r\n* Dynamically grow the column (and the window? currently the editor can't be resized)\r\n* Truncate with an ellipsis or something\n\n### ❌ Actual Behavior\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/25063",
+    "state": "OPEN",
+    "current_labels": [
+      "Cost-Small",
+      "Help Wanted",
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Color Picker",
+      "Product-Tweak UI Design",
+      "Status-In progress"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 24939,
+    "title": "Text Extractor - Show language and keyboard shortcut",
+    "body": "### Description of the new feature / enhancement\n\n1. Show the language that Text Extractor currently uses, e.g. in a small movable square in the corner.\r\n2. Allow us to switch the language by using a keyboard shortcut, e.g. the one Windows already uses for that (Ctrl+Shift for me, Alt+Shift by default).\n\n### Scenario when this would be used?\n\nWhen user wants to extract some text not in the default language, he needs to remember to use RMB -> switch language. Often, if TE is not used often, user can forget about it, which leads to bad output. First requested feature will help user with remembering to switch by providing a clear indication of the current TE language setting. Second is just a quality of life feature for those that don't want to use the mouse while already having hands on the keyboard.\n\n### Supporting information\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/24939",
+    "state": "CLOSED",
+    "current_labels": [
+      "Idea-Enhancement",
+      "Priority-2",
+      "Product-Text Extractor",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 24888,
+    "title": "PowerToy Runs bug when selecting apps using arrow keys",
+    "body": "### Microsoft PowerToys version\n\n0.68.1\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nPowerToys Run\n\n### Steps to reproduce\n\nQuickly use up/down arrow keys to select apps cause selection to \"lock\" at that app. It could be shown in this video. Hold the arrow keys doesn't seem to cause the problem. Consecutively press the button does.\r\n\r\nhttps://user-images.githubusercontent.com/79463793/226107087-32b5d79e-1d59-42aa-ba6f-2054d9e03d87.mp4\r\n\r\n\n\n### ✔️ Expected Behavior\n\n_No response_\n\n### ❌ Actual Behavior\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/24888",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Needs-Triage",
+      "Priority-2",
+      "Product-PowerToys Run"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 24312,
+    "title": "Numpad shortcuts that switch layouts whilst dragging a window no longer work - Ruining FancyZones",
+    "body": "### Microsoft PowerToys version\r\n\r\n0.67.1\r\n\r\n### Installation method\r\n\r\nMicrosoft Store\r\n\r\n### Running as admin\r\n\r\nYes\r\n\r\n### Area(s) with issue?\r\n\r\nFancyZones\r\n\r\n### Steps to reproduce\r\n\r\nThis just stopped working. No idea why - version 0.59.0 works on my laptop still - this latest update autodownloaded and I must've clicked install. It ruined FancyZones completely.\r\n\r\nWhen dragging a window using the titlebar, FancyZones used to show the custom setups (or any setup assigned to a numpad key for that matter). So I could switch between layouts without having to remember a ridiculous shortcut combination - just move the window and hit Numpad keys until I the best layout flashed up. This has stopped working and I don't know if you have removed this ability since an auto-update? This feature was brilliant. Without it, FancyZones becomes a total pain in the butt to use.\r\n\r\n### ✔️ Expected Behavior\r\n\r\nFancy Zone layouts flash up whilst dragging a window and hitting the numpad shortcut keys - brilliant in its simplicity.\r\n\r\n### ❌ Actual Behavior\r\n\r\nHitting the numpad buttons to switch between the layouts whilst dragging a window now does absolutely nothing.\r\n\r\nFancy Zones / Powertoys is now nowhere near as usable for me.\r\n\r\n### Other Software\r\n\r\n_No response_\r\n\r\n### ✔️ Quick Fix for Others\r\n\r\nI went through the GitHub repository and found the download for 0.59.0, after backing up settings I uninstalled 0.67.1, re-installed 0.59.0 from the downloaded exe - it automatically found all my settings.\r\n\r\n[https://github.com/microsoft/PowerToys/releases/download/v0.59.0/PowerToysSetup-0.59.0-x64.exe](url)\r\n\r\nOther versions here for anyone else wanting to go back: [https://github.com/microsoft/PowerToys/releases/](url)\r\nJust open up the \"Assets\" drop down for each release and the exe should be there.\r\n\r\nIt works perfectly again. 0.67.2 really needs this window dragging shortcut back - I've had to turn off all auto-update/download features.",
+    "url": "https://github.com/microsoft/PowerToys/issues/24312",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-FancyZones",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 24248,
+    "title": "Win (Right) being mapped to Alt (Left) isn't work in Terminal",
+    "body": "### Microsoft PowerToys version\n\n0.67.1\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nKeyboard Manager\n\n### Steps to reproduce\n\n1) configure Terminal to open a new tab with alt+t (this might already be a default)\r\n2) add a mapping in the keyboard manager from Win (Right) -> Alt (Left)\r\n3) open Terminal as administrator, press Win (Right) key + t\r\n\r\nNotes:\r\n* The mapping does seem to work in other apps, such as VSCode. \r\n* I tested remapping Shift (Left) to Alt (Left) and that does seem to work in Terminal. Likewise, remapping the shortcut \"Win (Right) + t\" -> \"Alt (Left) + t\" works, but only if key mapping is removed. \r\n\n\n### ✔️ Expected Behavior\n\nI expect a new tab to open in the terminal window\n\n### ❌ Actual Behavior\n\nnothing happens\n\n### Other Software\n\nTerminal 1.16.10262.0",
+    "url": "https://github.com/microsoft/PowerToys/issues/24248",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Keyboard Manager",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 23737,
+    "title": "System Tray in v0.67 no recognize taskbar position",
+    "body": "### Microsoft PowerToys version\r\n\r\n0.67\r\n\r\n### Installation method\r\n\r\nPowerToys auto-update\r\n\r\n### Running as admin\r\n\r\nYes\r\n\r\n### Area(s) with issue?\r\n\r\nSystem tray interaction\r\n\r\n### Steps to reproduce\r\n\r\nMove Windows task bar to other position (left, right, top) instead of bottom.\r\n\r\n### ✔️ Expected Behavior\r\n\r\nThe window should  positionized depending of the taskbar position.\r\n\r\n### ❌ Actual Behavior\r\n\r\nThe systray window is always showed in the lower-right position.\r\n\r\n### Other Software\r\n\r\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/23737",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-User Interface",
+      "Issue-Bug",
+      "Priority-2",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 23607,
+    "title": "Keyboard manager - Shortcuts doesn't work anymore for certain key combinations",
+    "body": "### Microsoft PowerToys version\n\n0.66.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nKeyboard Manager\n\n### Steps to reproduce\n\nDefine a shortcut (\"Remap a shortcut\") as `Win (Left)` ``` ` ``` to `Win (Left)` `Shift (Left)` `Right` for All Apps.\r\n\n\n### ✔️ Expected Behavior\n\nWin + ` should move a window by cycling the monitors.\n\n### ❌ Actual Behavior\n\nNothing. If there's a text input focused, it outputs the back-tick character\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/23607",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Keyboard Manager",
+      "Resolution-Duplicate",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  },
+  {
+    "number": 23468,
+    "title": "[Peek] Fix opening special items like Recycling Bin",
+    "body": "",
+    "url": "https://github.com/microsoft/PowerToys/issues/23468",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-2",
+      "Product-Peek"
+    ],
+    "historical_priority_labels": [
+      "Priority-2"
+    ]
+  }
+]

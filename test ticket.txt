@@ -1,0 +1,12 @@
+a faire dan cmd
+cd "C:\Users\amo\Documents\projet dev\ia\ai-product-ops-copilot"
+python -m uvicorn api:app --host 0.0.0.0 --port 8000
+
+a faire dnas powershell:$body = @{
+  id = "1"
+  title = "Fuite de données"
+  description = "Export client accessible sans authentification"
+  labels = "security"
+} | ConvertTo-Json -Compress
+
+Invoke-RestMethod -Method Post -Uri "http://localhost:5678/webhook-test/ticket" -ContentType "application/json; charset=utf-8" -Body $body

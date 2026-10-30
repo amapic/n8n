@@ -1,0 +1,174 @@
+[
+  {
+    "id": "SYN-001",
+    "title": "Abandon du formulaire d'inscription",
+    "analysis_json": {
+      "summary": "Des utilisateurs signalent un blocage à l'étape de vérification de l'adresse e-mail lors de l'inscription, ce qui entraîne un abandon du formulaire. Le problème touche l'activation, avec 18 signalements par semaine.",
+      "facts": [
+        "Plusieurs utilisateurs signalent un blocage à l'étape de vérification de l'adresse e-mail.",
+        "Le ticket mentionne 18 signalements par semaine.",
+        "Le sujet est un abandon du formulaire d'inscription.",
+        "Le ticket est étiqueté « activation »."
+      ],
+      "assumptions": [
+        "Les 18 signalements correspondent à 18 utilisateurs distincts ou à un nombre proche.",
+        "Le blocage est causé par le parcours de vérification e-mail et non par un problème externe (fournisseur d'e-mail, navigateur).",
+        "Le problème touche une part significative des inscriptions, ce qui reste à confirmer."
+      ],
+      "missing_information": [
+        "Nombre total d'inscriptions sur la période et taux d'abandon à cette étape.",
+        "Messages d'erreur exacts ou comportement précis observé par les utilisateurs.",
+        "Navigateurs, appareils et types d'adresse e-mail concernés.",
+        "Date de début du problème et existence d'une éventuelle mise en production récente liée.",
+        "Résultat d'une reproduction interne du bug.",
+        "Logs d'envoi et de validation des e-mails de vérification.",
+        "Estimation de l'effort de correction par l'équipe technique."
+      ],
+      "impact": 4,
+      "urgency": 4,
+      "confidence": 3,
+      "effort": 3,
+      "score": 5.0,
+      "priority": "P2",
+      "escalation_required": false,
+      "rationale": "Le blocage touche directement l'activation, qui conditionne la croissance. Un abandon récurrent à cette étape a un coût qui augmente avec le délai. La confiance est modérée : les signalements sont réels mais le volume total, la cause et la portée ne sont pas quantifiés. L'effort est estimé à 3 faute d'information technique. Aucun élément ne suggère un incident de sécurité, donc pas d'escalade immédiate. Le score est indicatif et ne remplace pas la décision de l'équipe.",
+      "next_action": "Reproduire le blocage avec des comptes de test sur les navigateurs et types d'adresse concernés, croiser avec les données de funnel d'inscription pour quantifier l'abandon, et vérifier les logs d'envoi et de validation des e-mails de vérification. Partager les résultats à l'équipe technique pour estimer l'effort réel et reclasser la priorité si besoin."
+    }
+  },
+  {
+    "id": "SYN-002",
+    "title": "Ajouter un thème sombre",
+    "analysis_json": {
+      "summary": "Demande de fonctionnalité : ajouter un thème sombre, initiée par quelques utilisateurs, sans impact documenté sur la rétention.",
+      "facts": [
+        "Quelques utilisateurs demandent un thème sombre.",
+        "Aucun impact sur la rétention n'est documenté.",
+        "Le ticket est étiqueté « experience-utilisateur »."
+      ],
+      "assumptions": [
+        "L'effort est supposé modéré (2) car le ticket ne décrit ni la portée technique ni les composants concernés.",
+        "Le nombre de demandes est supposé faible, puisque seulement « quelques utilisateurs » sont mentionnés."
+      ],
+      "missing_information": [
+        "Nombre exact d'utilisateurs ayant fait la demande et leur source (support, avis, enquête).",
+        "Estimation d'effort de développement et de design.",
+        "Présence ou absence d'un système de design permettant de générer un thème sombre.",
+        "Impact attendu sur l'usage, l'accessibilité ou la satisfaction.",
+        "Existence d'une échéance ou d'un contexte commercial.",
+        "Mesures actuelles de rétention ou d'engagement permettant de juger un bénéfice futur."
+      ],
+      "impact": 2,
+      "urgency": 1,
+      "confidence": 2,
+      "effort": 2,
+      "score": 3.5,
+      "priority": "P4",
+      "escalation_required": false,
+      "rationale": "Le besoin est exprimé mais reste limité : peu de demandes, aucun impact mesuré sur la rétention, aucune échéance mentionnée. L'urgence est faible et la confiance dans le bénéfice est basse. Le score indicatif (3.5) repose sur un effort supposé et ne remplace pas la décision de l'équipe produit. Sans informations sur l'effort réel et la demande, la priorité P4 reste provisoire.",
+      "next_action": "Recueillir le nombre et la source des demandes, faire estimer l'effort par l'équipe front-end et design, puis réévaluer la priorité avant tout arbitrage de backlog."
+    }
+  },
+  {
+    "id": "SYN-003",
+    "title": "Automatiser le rapport mensuel",
+    "analysis_json": {
+      "summary": "Automatiser la compilation mensuelle de trois fichiers CSV, actuellement réalisée manuellement par une équipe pendant environ six heures par mois.",
+      "facts": [
+        "Une équipe consacre environ six heures par mois à la compilation manuelle de trois fichiers CSV.",
+        "Le ticket est étiqueté « automatisation ».",
+        "Le titre indique qu'il s'agit d'un rapport mensuel."
+      ],
+      "assumptions": [
+        "La compilation est récurrente et suit chaque mois une procédure similaire.",
+        "Les trois fichiers CSV ont une structure stable et peuvent être traités automatiquement.",
+        "Le gain de temps potentiel est d'environ six heures par mois, hors coûts de développement et de maintenance."
+      ],
+      "missing_information": [
+        "Identité de l'équipe concernée et nombre de personnes impliquées.",
+        "Source et format exact des trois fichiers CSV, et leur mode de production.",
+        "Outils disponibles (ETL, scripts, BI, tableur) et contraintes techniques ou de sécurité.",
+        "Destinataires du rapport et conséquences d'une erreur ou d'un retard.",
+        "Échéance de publication du rapport et date souhaitée pour l'automatisation.",
+        "Coût estimé de la mise en place et de la maintenance de la solution."
+      ],
+      "impact": 3,
+      "urgency": 2,
+      "confidence": 4,
+      "effort": 2,
+      "score": 6.0,
+      "priority": "P3",
+      "escalation_required": false,
+      "rationale": "L'impact est modéré : un gain d'environ six heures par mois est réel mais limité. L'urgence est faible, car aucun délai ni risque immédiat n'est mentionné. La confiance est assez bonne sur le besoin, mais le périmètre technique reste à préciser. L'effort est estimé faible à modéré, car la compilation de trois CSV semble automatisable, sans que cela soit confirmé. Le score indicatif de 6,0 correspond à une priorité normale. La décision finale revient à l'équipe produit.",
+      "next_action": "Recueillir auprès de l'équipe concernée les sources, le format des trois fichiers, les outils disponibles et l'échéance du rapport, puis réévaluer le score et la priorité."
+    }
+  },
+  {
+    "id": "SYN-004",
+    "title": "Connexion SSO demandée par un prospect",
+    "analysis_json": {
+      "summary": "Un prospect important demande une connexion SSO avant de signer. L'effort technique et la probabilité de signature sont inconnus, ce qui limite l'évaluation.",
+      "facts": [
+        "Un prospect qualifié d'important demande une connexion SSO.",
+        "Le prospect conditionne la signature à la mise en place du SSO.",
+        "Le ticket est étiqueté « vente »."
+      ],
+      "assumptions": [
+        "Le SSO n'est pas disponible en l'état pour ce prospect (non précisé dans la demande).",
+        "L'évaluation de l'effort (3) est provisoire et doit être validée par l'équipe technique.",
+        "Le SSO pourrait avoir une valeur pour d'autres prospects, mais ce point n'est pas établi."
+      ],
+      "missing_information": [
+        "Estimation de l'effort technique par l'équipe d'ingénierie.",
+        "Probabilité de signature et valeur estimée de l'opportunité.",
+        "Date limite ou calendrier de décision du prospect.",
+        "Protocole SSO demandé (SAML, OIDC, autre) et exigences précises.",
+        "Capacité actuelle de la plateforme en matière de SSO.",
+        "Nombre d'autres demandes similaires ou intérêt produit plus large."
+      ],
+      "impact": 3,
+      "urgency": 3,
+      "confidence": 2,
+      "effort": 3,
+      "score": 3.67,
+      "priority": "P2",
+      "escalation_required": false,
+      "rationale": "Impact modéré : l'opportunité commerciale semble importante, mais sa probabilité de conversion est inconnue. Urgence modérée : la signature dépend du SSO, sans échéance connue. Confiance faible : l'effort et la probabilité de signature ne sont pas documentés. Effort estimé à 3 à titre provisoire, faute d'analyse technique. Score calculé avec la formule indicative : (2×3 + 3 + 2) / 3 = 3,67. Priorité P2 provisoire, car les informations sont insuffisantes pour confirmer le niveau. Ce score ne remplace pas la décision humaine. Aucun incident de sécurité n'est signalé.",
+      "next_action": "Demander à l'équipe technique une estimation d'effort (protocole, périmètre, délai). Demander à l'équipe commerciale la date de décision du prospect, la valeur de l'opportunité et le protocole SSO exigé. Décider ensuite de la priorité finale et de la faisabilité, selon arbitrage humain."
+    }
+  },
+  {
+    "id": "SYN-005",
+    "title": "Suspicion d'accès aux données d'un autre compte",
+    "analysis_json": {
+      "summary": "Signalement de suspicion d'accès aux données d'un autre compte utilisateur, non reproduit à ce stade. Ticket étiqueté sécurité.",
+      "facts": [
+        "Le ticket SYN-005 est intitulé « Suspicion d'accès aux données d'un autre compte ».",
+        "Un signalement indique qu'un utilisateur pourrait voir des données appartenant à un autre compte.",
+        "Le problème n'a pas encore été reproduit.",
+        "Le ticket est étiqueté « securite »."
+      ],
+      "assumptions": [
+        "Le signalement pourrait correspondre à une faille d'autorisation (contrôle d'accès défaillant entre comptes), ce qui reste à vérifier.",
+        "Les données concernées pourraient être personnelles ou sensibles, ce qui reste à confirmer."
+      ],
+      "missing_information": [
+        "Identité ou canal du signalant et contexte exact de l'observation.",
+        "Étapes de reproduction ou captures d'écran éventuelles.",
+        "Comptes, fonctionnalités et types de données concernés.",
+        "Date et heure de l'observation, et si le problème est toujours actif.",
+        "Nombre potentiel d'utilisateurs exposés.",
+        "Journaux d'accès disponibles pour la période concernée.",
+        "Existence éventuelle d'une fuite confirmée vers l'extérieur."
+      ],
+      "impact": 5,
+      "urgency": 5,
+      "confidence": 2,
+      "effort": 3,
+      "score": 5.67,
+      "priority": "P1",
+      "escalation_required": true,
+      "rationale": "Une suspicion d'accès croisé aux données de comptes est un incident de sécurité potentiellement grave, même si elle n'est pas reproduite. L'impact potentiel sur la confidentialité est élevé et l'urgence est forte, car un délai peut prolonger l'exposition. La confiance est faible car les faits sont incomplets et non reproduits. Le score est indicatif et ne remplace pas la décision humaine. Les informations sont insuffisantes pour qualifier précisément l'ampleur de l'incident.",
+      "next_action": "Escalader immédiatement à l'équipe sécurité pour investigation. Préserver les journaux pertinents, recueillir auprès du signalant les détails de l'observation, et laisser à l'équipe sécurité la décision sur d'éventuelles mesures conservatoires. Ne pas tenter de reproduire l'accès sur des comptes réels d'autres utilisateurs."
+    }
+  }
+]

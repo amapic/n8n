@@ -1,0 +1,1123 @@
+[
+  {
+    "number": 44835,
+    "title": "Partial crash when viewing Advanced Paste settings",
+    "body": "### Microsoft PowerToys version\n\n0.97.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Area(s) with issue?\n\nAdvanced Paste\n\n### Steps to reproduce\n\nOpen PowerToys settings. Click on Advanced Paste. The window very briefly hangs and then closes entirely. PowerToys remains running and available in the system tray. \n\n### ✔️ Expected Behavior\n\nThe Advanced Paste settings screen should open. \n\n### ❌ Actual Behavior\n\nThe window very briefly hangs and then closes entirely. PowerToys remains running and available in the system tray. \n\n### Additional Information\n\nWindows 11 Pro 25H2 26200.7462\nEnglish\nRunning as administrator\n\n[PowerToysReport_2026-01-20-09-30-39.zip](https://github.com/user-attachments/files/24742422/PowerToysReport_2026-01-20-09-30-39.zip)\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/44835",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Needs-Triage",
+      "Priority-1",
+      "Product-Advanced Paste"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 43671,
+    "title": "CmdPal: Add extension from WinGet commands work with CmdPal package instead of extension",
+    "body": "### Microsoft PowerToys version\n\n0.96.0\n\n### Installation method\n\nOther (please specify in \"Steps to Reproduce\")\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\n1. Open the \"Add Command Palette Extensions from WinGet\" page.  \n2. Choose any installed extension.  \n3. Run the first Uninstall command (Ctrl+Shift+Del).*  \n4. Notice that you’ve just uninstalled your Command Palette.  \n\n*) I could’ve asked you to run \"Open container folder instead\"... 😂  \n\n<img width=\"1646\" height=\"1234\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/35fa9dba-9e9d-43fe-8cda-e00c6a557a52\" />\n\n### ✔️ Expected Behavior\n\n_No response_\n\n### ❌ Actual Behavior\n\n_No response_\n\n### Additional Information\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/43671",
+    "state": "CLOSED",
+    "current_labels": [
+      "CmdPal - Winget",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette",
+      "Status-In progress"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 42484,
+    "title": "Light Switch utility ignores 'Configure Global Utility' GPO setting",
+    "body": "### Microsoft PowerToys version\n\nMicrosoft PowerToys version: v0.95.0\n\n### Installation method\n\nChocolatey\n\n### Area(s) with issue?\n\nLight Switch\n\n### Steps to reproduce\n\nSteps to reproduce:\n\nConfigure Group Policy to disable \"Configure global utility enabled state\" for PowerToys and \"Light Switch:Configure Enable state' is disabled\n\nApply the GPO setting\n\nOpen PowerToys Settings\n\nObserve that Light Switch utility can still be toggled on/off despite the GPO restriction\n\n### ✔️ Expected Behavior\n\nLight Switch should be disabled and greyed out when the global utility GPO setting is disabled\n\n### ❌ Actual Behavior\n\nActual Behavior: Light Switch can still be toggled and used even when GPO setting is configured to disable it\n\n### Additional Information\n\nWindows 11\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/42484",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Enterprise",
+      "Issue-Bug",
+      "Needs-Repro",
+      "Needs-Triage",
+      "Priority-1",
+      "Product-LightSwitch",
+      "Status-In progress"
+    ],
+    "historical_priority_labels": [
+      "Priority-0",
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 40447,
+    "title": "Exception message in Command Palette on opening",
+    "body": "### Microsoft PowerToys version\n\n0.91.0\n\n### Installation method\n\nMicrosoft Store\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\nI invoke the command palette with hotkey Win+Alt+Space and see an exception message.  \nFunctionality seems intact (for what I use it for, searching for installed apps to launch), but error message is disquieting. \n\n### ✔️ Expected Behavior\n\nClean opening of command palette window.\n\n### ❌ Actual Behavior\n\nOpening Command Palette displays an exception call-stack.\n\n![Image](https://github.com/user-attachments/assets/03d1a86f-067d-4733-9d37-dbb831950901)\n\nA bug occurred in the \"\" extension's code:\nCollection was modified; enumeration operation may not execute.\nSystem.Private.CoreLib\n   at System.Collections.Generic.List`1.Enumerator.MoveNext()\n   at System.Linq.Enumerable.IndexIterator[TSource](IEnumerable`1 source)+MoveNext()\n   at System.Linq.Enumerable.IEnumerableWhereIterator`1.TryGetFirst(Boolean& found)\n   at Microsoft.CmdPal.UI.ViewModels.RecentCommandsManager.GetCommandHistoryWeight(String commandId)\n   at Microsoft.CmdPal.UI.ViewModels.MainPage.MainListPage.ScoreTopLevelItem(String query, IListItem topLevelOrAppItem)\n   at System.Linq.Enumerable.IteratorSelectIterator`2.MoveNext()\n   at System.Linq.Enumerable.IEnumerableWhereIterator`1.ToArray()\n   at System.Linq.Enumerable.IEnumerableWhereIterator`1.ToArray()\n   at System.Linq.Enumerable.OrderedIterator`2.MoveNext()\n   at System.Linq.Enumerable.IteratorSelectIterator`2.GetCount(Boolean onlyIfCheap)\n   at Microsoft.CmdPal.UI.ViewModels.MainPage.MainListPage.UpdateSearchText(String oldSearch, String newSearch)\n   at Microsoft.CmdPal.UI.ViewModels.ListViewModel.<>c__DisplayClass45_0.<OnFilterUpdated>b__0()\n\n\n### Additional Information\n\nWin 11 -- Microsoft Windows [Version 10.0.26100.4351]\nCommand Palette version 0.2.1.0\n\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/40447",
+    "state": "CLOSED",
+    "current_labels": [
+      "CmdPal-HostUX",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 40399,
+    "title": "CmdPal: Whenever we load our app state, we reset it",
+    "body": "### Describe the requested doc changes\n\ncmdpal 0.3.1702, though probably older than this build, and repros on `main` too\n\n1. Open up `%localAppData%\\Packages\\Microsoft.CommandPalette_8wekyb3d8bbwe\\LocalState\\state.json` in an editor that will hotreload the file as it changes, so you can see it happening.\n2. Quit CmdPal. You'll see a `Core4962513576411716816` command get added to the `RecentCommands.History`.\n3. Re-open CmdPal.\n4. Run the All Apps command. (It can be anything). You'll see _the entire history_ reset and replaced with just the `AllApps12262804574918292879` entry.\n\n\nBug is around here:\nhttps://github.com/microsoft/PowerToys/blob/0c425fd1d76f0651b2417cdc5d4c3d8750ab021e/src/modules/cmdpal/Microsoft.CmdPal.UI.ViewModels/AppStateModel.cs#L49-L56\n\nthe `jsonContent` looks perfectly as expected. But `loaded` gets initialized to a default `AppState`, with no `RecenCommands`.\n\n\n----\n\nAppStateModel is also mostly copy-paste from SettingsModel, so I don't know why this is breaking, but settings doesn't.",
+    "url": "https://github.com/microsoft/PowerToys/issues/40399",
+    "state": "CLOSED",
+    "current_labels": [
+      "Needs-Triage",
+      "Priority-1",
+      "Product-Command Palette",
+      "Status-In progress"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 39837,
+    "title": "CmdPal: Memory Leak With Queries",
+    "body": "# Description\n\nThe memory of CmdPal itself and extensions increases after every query input. And it would never go down.\n\n# Details\n\nI encountered a serious memory leak issue while developing a CmdPal extension. I found that the same issue exists in [lin-ycv/EverythingCommandPalette](https://github.com/lin-ycv/EverythingCommandPalette) - this issue was previously opened as https://github.com/lin-ycv/EverythingCommandPalette/issues/22.\n\n# Behaviour\n\n## Expected\nThe memory would rise slightly by query, but should decrease when next query comes since GC collected ListItems from previous query.\n\n## Actual\nThe memory keeps rising with queries.\n\n# Infomation\n\n## System\nOS: Windows 11 Pro \nVersion: 24H2 (26100.4061)\nLanguage: zh_CN\n\n## .NET\nTarget Framework: net9.0-windows10.0.22621.0\n\n## PowerToys\nVersion: v0.91.1 (Latest)\nSystem Installation\nRunning as admin\n\n# Reproduction Procedure\n\n1. Start CmdPal\n2. Navigate to extension page (In this case would be [EverythingCommandPalette](https://github.com/lin-ycv/EverythingCommandPalette) and my underdeveloping extension) which uses `DynamicListPage`.\n3. Type something in to start a query\n4. Wait until the results come up\n5. Redo steps 3,4 for times, you will notice the issue\n\n# Possible Causes\n\nDifference between the snapshots reveals that the counts such as `Windows.Foundation.TypedEventHandler<Object, Microsoft.CommandPalette.Extensions.PropChangedEventArgs>` and `WinRT.EventRegistrationTokenTable` significantly increase with queries. This indicates that event handlers might be registered (subscribed) but not unregistered (unsubscribed) when they are no longer needed.\n\nI will continue to investigate this issue and update further details.",
+    "url": "https://github.com/microsoft/PowerToys/issues/39837",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 39681,
+    "title": "Command Palette window won't open on click",
+    "body": "### Microsoft PowerToys version\n\n0.91.1\n\n### Installation method\n\nMicrosoft Store\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\nWhen you click on Command Palette icon on taskbar or in start menu apps list, the window doesn't open.\n\n### ✔️ Expected Behavior\n\nThe Command Palette window can be opened from start menu or taskbar.\n\n### ❌ Actual Behavior\n\nThe Command Palette window doesn't open from start menu or taskbar.\n\n### Additional Information\n\nThe issue appeared after updating to 0.91.0\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/39681",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 39649,
+    "title": "Nit: Details pane text doesn't wrap by default",
+    "body": "### Microsoft PowerToys version\n\n0.91.1\n\n### Installation method\n\nMicrosoft Store\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\n1. Make the system text size 225%\n2. Navigate to a details pane with lots of text\n\n### ✔️ Expected Behavior\n\nThe Details text would wrap if there's no horizontal scrolling.\n\n### ❌ Actual Behavior\n\n![Image](https://github.com/user-attachments/assets/c26e44ea-cfd4-48c9-bb85-2a51924b77ea)\n\n### Additional Information\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/39649",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Accessibility",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette",
+      "Resolution-Fix Committed",
+      "Status-In progress"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 39301,
+    "title": "[CmaPal] Crash when invoke a selfhost extension",
+    "body": "### Microsoft PowerToys version\n\n0.91.0\n\n### Installation method\n\nGitHub\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\nNot sure how I trigger, but it crashes when I play and set alias\n\n### ✔️ Expected Behavior\n\nWork as normal\n\n### ❌ Actual Behavior\n\nFaulting application name: Microsoft.CmdPal.UI.exe, version: 0.2.0.0, time stamp: 0x67d30000\nFaulting module name: Microsoft.UI.Xaml.dll, version: 3.1.7.0, time stamp: 0xda76db6a\nException code: 0xc000027b\nFault offset: 0x000000000000a320\nFaulting process id: 0x39D4\nFaulting application start time: 0x1DBBFE46A41FA24\nFaulting application path: C:\\Program Files\\WindowsApps\\Microsoft.CommandPalette_0.2.0.0_arm64__8wekyb3d8bbwe\\Microsoft.CmdPal.UI.exe\nFaulting module path: C:\\Program Files\\WindowsApps\\Microsoft.CommandPalette_0.2.0.0_arm64__8wekyb3d8bbwe\\Microsoft.UI.Xaml.dll\nReport Id: e95f88d3-fdac-40bb-9cdf-9e2bea1308bd\nFaulting package full name: Microsoft.CommandPalette_0.2.0.0_arm64__8wekyb3d8bbwe\nFaulting package-relative application ID: App\n\n[Log_2025-05-08.log](https://github.com/user-attachments/files/20098241/Log_2025-05-08.log)\n\n### Additional Information\n\nOS Version: Microsoft Windows NT 10.0.26411.0 \n.NET Version: .NET 9.0.4\nPowerToys is running as admin (elevated)\nInstall scope: per machine (system)\nOperating System Language: English (United States)\nSystem locale: en-US\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/39301",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 39090,
+    "title": "PowerToys Crash when launching camera NullReferenceException for RunFromThreadPoolDispatchLoop",
+    "body": "### Microsoft PowerToys version\n\n0.90.1.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Area(s) with issue?\n\nPowerToys Run\n\n### Steps to reproduce\n\nJust using PT Run to launch Camera. It seems to be an unusual error. Can't reproduce it by myself.\n\n### ✔️ Expected Behavior\n\n_No response_\n\n### ❌ Actual Behavior\n\nHere are the logs : \n\n```\nDate: 25/04/2025 19:34:22\nException:\nSystem.NullReferenceException: Object reference not set to an instance of an object.\n   at Microsoft.Plugin.Program.Programs.UWPApplication.<>c__DisplayClass64_0.<Launch>b__0()\n   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)\n--- End of stack trace from previous location ---\n   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)\n   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)\n--- End of stack trace from previous location ---\n   at Microsoft.Plugin.Program.Programs.UWPApplication.Launch(IPublicAPI api, String queryArguments)\n   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)\n   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)\n   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)\n\n```\n\nPowertoys just asked me to report this issue in the GH so i'm doing it but i dont have any idea what happened. File Explorer restarted.\n\n### Additional Information\n\nVersion: 0.90.1.0\nOS Version: Microsoft Windows NT 10.0.22631.0\nIntPtr Length: 8\nx64: True\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/39090",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-PowerToys Run",
+      "Severity-Medium"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 39045,
+    "title": "CmdPal: There's definitely a leak in the extension template",
+    "body": "### Provide a description of requested docs changes\n\n@manodasanW or @shmuelie may know more about this\n\n![Image](https://github.com/user-attachments/assets/2b49101e-ae57-4ae1-8190-681e140a20ab)\n\nBut something's definitely wrong with the way I ported the extension template to https://github.com/shmuelie/Shmuelie.WinRTServer. It seems like the extensions never re-use the existing COM server if there's already one - it always instantiates a new one. Either that, or it's never fully stopping the original process, so the COM server shuts down, but the process hangs around. \n\nOriginal patch: https://github.com/microsoft/PowerToys/commit/43783d2cffdeade0707374927795428926108a9c\n\nI'm hoping that this is mostly a **me** problem, because I'm reloading extensions frequently, but we definitely don't want to be leaking all those extra processes",
+    "url": "https://github.com/microsoft/PowerToys/issues/39045",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 39035,
+    "title": "`!c` alias in Command Palette opens Settings extension despite being assigned to Calculator extension",
+    "body": "### Microsoft PowerToys version\n\n0.90.1\n\n### Installation method\n\nPowerToys auto-update\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\n1. In Command Palette settings, enable both the \"Windows Settings\" and \"Calculator\" extension.\n2. For \"Windows Settings\", set the alias to `!i` (indirect).\n3. For \"Calculator\", set the alias to `!c` (indirect).\n4. Open the Command Palette window.\n5. Type `!c`. Command Palette directly navigates to \"Windows Settings\".\n\n### ✔️ Expected Behavior\n\nWhen the alias `!i` is assigned to the Windows Settings extension, and the alias `!c` is assigned to the Calculator extension, typing `!c` in Command Palette should open the Calculator extension.\n\n![Image](https://github.com/user-attachments/assets/e3cc89b8-efd6-4817-a389-931b0056f455)\n\n### ❌ Actual Behavior\n\nWhen the alias `!i` is assigned to the Windows Settings extension, and the alias `!c` is assigned to the Calculator extension, typing `!c` in Command Palette directly opens the Windows Settings search extension. This renders any alias starting `!c` inoperable. However, `!i` correctly opens Settings, and Command Palette clearly shows the assigned aliases.\n\nhttps://github.com/user-attachments/assets/0f7cafe4-c333-4b59-9710-a0295bd08387\n\n### Additional Information\n\nOS version: Windows 11, version 23H2 (build 22631.5189)\nSystem Language: English (United Kingdom) as primary language, Japanese as secondary input language\nRunning as admin: No\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/39035",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette",
+      "Resolution-Duplicate"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 38966,
+    "title": "[CmdPal] `Collection was modified; enumeration operation may not execute.`",
+    "body": "### Microsoft PowerToys version\n\n0.90.1\n\n### Installation method\n\nPowerToys auto-update\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\n![Image](https://github.com/user-attachments/assets/db006e76-4732-4be4-b88a-dffc7ed9489f)\n\n1. Open Command Palette as usual\n\nThis error appeared on Command Palette's window:\n```c\nError(s) on page:\nA bug occurred in the \"\" extension's code:\nCollection was modified; enumeration operation may not execute.\nSystem.Private.CoreLib\n   at System.Collections.Generic.List`1.Enumerator.MoveNext()\n   at System.Linq.Enumerable.IndexIterator[TSource](IEnumerable`1 source)+MoveNext()\n   at System.Linq.Enumerable.IEnumerableWhereIterator`1.TryGetFirst(Boolean& found)\n   at Microsoft.CmdPal.UI.ViewModels.RecentCommandsManager.GetCommandHistoryWeight(String commandId)\n   at Microsoft.CmdPal.UI.ViewModels.MainPage.MainListPage.ScoreTopLevelItem(String query, IListItem topLevelOrAppItem)\n   at Microsoft.CommandPalette.Extensions.Toolkit.ListHelpers.<>c__DisplayClass2_0`1.<FilterList>b__0(T li)\n   at System.Linq.Utilities.<>c__DisplayClass2_0`3.<CombineSelectors>b__0(TSource x)\n   at System.Linq.Enumerable.IteratorSelectIterator`2.MoveNext()\n   at System.Linq.Enumerable.IEnumerableWhereIterator`1.ToArray()\n   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)\n   at System.Linq.Enumerable.OrderedIterator`2.MoveNext()\n   at System.Linq.Enumerable.IteratorSelectIterator`2.MoveNext()\n   at System.Linq.Enumerable.IEnumerableWhereIterator`1.ToArray()\n   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)\n   at System.Linq.Enumerable.OrderedIterator`2.MoveNext()\n   at System.Linq.Enumerable.IteratorSelectIterator`2.MoveNext()\n   at System.Linq.Enumerable.IEnumerableWhereIterator`1.ToArray()\n   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)\n   at System.Linq.Enumerable.OrderedIterator`2.MoveNext()\n   at System.Linq.Enumerable.IteratorSelectIterator`2.GetCount(Boolean onlyIfCheap)\n   at Microsoft.CmdPal.UI.ViewModels.MainPage.MainListPage.UpdateSearchText(String oldSearch, String newSearch)\n   at Microsoft.CmdPal.UI.ViewModels.ListViewModel.<>c__DisplayClass40_0.<OnFilterUpdated>b__0()\n```\n\n### ✔️ Expected Behavior\n\nThe error to not appear\n\n### ❌ Actual Behavior\n\nThe error appearing\n\n### Additional Information\n\n* Microsoft Windows NT 10.0.26100.0 x64\n* .NET Framework Version: 4.8.1 or later\n* English US\n* User Installation\n* Running as admin\n\nCommand Palette continues to work normally even with this error\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38966",
+    "state": "CLOSED",
+    "current_labels": [
+      "CmdPal-HostUX",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette",
+      "Resolution-Duplicate"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 38846,
+    "title": "CmdPal: Command palette breaks Gamepass games updates",
+    "body": "### Microsoft PowerToys version\n\n0.90.1\n\n### Installation method\n\nPowerToys auto-update\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\nFor about 2 weeks I was fighting with Gamepass issue. Games installed fine but when updating download process hang eventually giving code 0x80070020. After reading around I've found [this Reddid post](https://www.reddit.com/r/XboxGamePass/comments/pye82b/constant_0x80070020_errors_when_updating_games/) suggesting that I should check what's locking appmanifest.xml in game installation folder. Few clicks in File Locksmith later revealed that culprit is cmdpal.exe. Disabling command palette in powertoys settings and reboot fixed my issue.\n\n### ✔️ Expected Behavior\n\nGamepass games should update fine regardless if powertoys are installed\n\n### ❌ Actual Behavior\n\ncmdpal.exe is locking .xml files in gamepass game folders causing updates to fail.\n\n### Additional Information\n\nWindows 11, all latest updates from windows update. Not running powertoys as an admin.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38846",
+    "state": "CLOSED",
+    "current_labels": [
+      "CmdPal-Feature Parity",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 38783,
+    "title": "setting a alias crashes command palette",
+    "body": "### Microsoft PowerToys version\n\n0.90.1\n\n### Installation method\n\nPowerToys auto-update\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\nwhen I am trying to set a alias to my own extension ( https://github.com/mantikafasi/CommandPaletteExtensions/tree/master/YTDLPExtension ) command palette freezes and then crashes, I checked logs in AppData\\Local\\Microsoft\\PowerToys\\CmdPal\\Logs\\0.90.1.0 but nothing related to crash was there\n\n### ✔️ Expected Behavior\n\nset the alias for command\n\n### ❌ Actual Behavior\n\nfreeze and crash\n\n### Additional Information\n\nWindows 10 \nLanguage: Turkish\n\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38783",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 38770,
+    "title": "Awake Icon in tray is missing after windows update",
+    "body": "### Microsoft PowerToys version\n\n0.90.1\n\n### Installation method\n\nPowerToys auto-update\n\n### Area(s) with issue?\n\nAwake\n\n### Steps to reproduce\n\nHi @dend,\nAgain, the same problem is happening after updating windows patch and it happened previous month also the icon in tray not able initialize but in 0.87.0, 0.87.1 version I don't think it happen at the time everything works fine after window update too but now it is happening again.\n\n### ✔️ Expected Behavior\n\nWhether normal restart or after windows update restart the awake icon should be loaded in taskbar tray\n\n### ❌ Actual Behavior\n\nBut now after windows update reboot the awake icon can't be able to initialize in taskbar tray but in normal restart it loads properly, I need to initialize the tray icon manually by disable and enable the awake option\n\n[PowerToysReport_2025-04-11-19-59-38.zip](https://github.com/user-attachments/files/19708088/PowerToysReport_2025-04-11-19-59-38.zip)\n\n### Additional Information\n\nWindows 11 23H2 (OS Build 22631.5189)\n.Net Framework Version 4.8.9032.0\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38770",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Awake",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 38659,
+    "title": "Some display errors with Command Palette after theme color change",
+    "body": "### Microsoft PowerToys version\n\n0.90.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\nUse keyboard shortcut to activate it after a theme color change (from dark to light or from light to dark).\nAfter I opened Command Palette Settings, it became normal.\n\n### ✔️ Expected Behavior\n\nNormally change the theme.\n\n### ❌ Actual Behavior\n\nSome display errors.\nHere are the screenshots:\n\n![Image](https://github.com/user-attachments/assets/2f3fdf99-273f-4c54-83c8-9eda0808143f)\n![Image](https://github.com/user-attachments/assets/8c7d98f6-dd4c-44b2-85c6-da22abf041aa)\n\n### Other Software\n\nNo.",
+    "url": "https://github.com/microsoft/PowerToys/issues/38659",
+    "state": "CLOSED",
+    "current_labels": [
+      "Help Wanted",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 38594,
+    "title": "CmdPal: High input latency",
+    "body": "### Microsoft PowerToys version\n\n0.90.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\n1. Activate CmdPal.\n2. Enter some text.\n\n\n\n### ✔️ Expected Behavior\n\nEach keystroke is registered with minimal latency.\n\n### ❌ Actual Behavior\n\nKeystrokes are registered with high latency. The input is registered in pieces/chunks.\n\n2x slowed down:\n\nhttps://github.com/user-attachments/assets/4112686b-3827-4fb6-a27e-8ce61d7aeb88\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38594",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 38453,
+    "title": "Windows Command Palette Defaults to \"Run in Command Window\" Instead of Opening the App",
+    "body": "### Microsoft PowerToys version\n\nv0.90.0\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\nOpen Windows Command Palette (default shortcut: Win + alt+ space).\n\nType the name of an installed application (e.g., 网易云音乐).\n\nObserve that the default selection is \"Run in command window\" instead of directly launching the app.\n\nYou have to manually select the correct option using the arrow keys before pressing Enter.\n\n### ✔️ Expected Behavior\n\n![Image](https://github.com/user-attachments/assets/56a4846d-7310-4bc5-8277-e44d86e1b1a1)\n\n![Image](https://github.com/user-attachments/assets/020103de-1bcb-42bb-8799-5654c3610632)\n\n### ❌ Actual Behavior\n\n![Image](https://github.com/user-attachments/assets/56a4846d-7310-4bc5-8277-e44d86e1b1a1)\n![Image](https://github.com/user-attachments/assets/da0088c1-4f99-4fbc-b786-efa1b63035ae)\n\n### Other Software\n\n_No response_\n\n\n------\n\n_posted by @GanMocai_ in #38650\n\n### Description of the new feature / enhancement\n\nI would like to propose a feature enhancement for the CmdPal search functionality to better integrate with the Microsoft Pinyin input method, particularly for Chinese language users. Currently, when using Pinyin to input Chinese characters, the search results do not align with the expected behavior for selection. When the full Chinese characters are entered, the selection should automatically highlight the first item in the search results list, allowing for a seamless selection of the intended option.\n\n![Image](https://github.com/user-attachments/assets/3ecd87eb-0267-485e-b95e-5c45eb56fa78)\n\n### Scenario when this would be used?\n\nThis feature would significantly improve the user experience for Chinese speakers by making the search function more intuitive and efficient. It would eliminate the need for users to manually navigate to the desired item in the search results, thus streamlining the search process.\n\n### Supporting information\n\nWhen inputting Chinese characters using the Microsoft Pinyin input method, the search functionality in CmdPal does not provide the best selection in the search results. Upon typing the corresponding pinyin, the search results are prematurely narrowed down to only “Run” and “Web Search”. As the full Chinese characters are entered, the selection does not automatically default to the first item in the list, which is the intended selection. Instead, it defaults to “Run”, which is not the optimal choice.",
+    "url": "https://github.com/microsoft/PowerToys/issues/38453",
+    "state": "OPEN",
+    "current_labels": [
+      "CmdPal - All Apps",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 38395,
+    "title": "[Command Palette, Accessibility]: Issues related to accessibility labels for controls.",
+    "body": "### Microsoft PowerToys version\n\n0.90.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\n1. \n\n![Image](https://github.com/user-attachments/assets/ee08a537-1510-4019-9c27-c825ee46af28)\n\n![Image](https://github.com/user-attachments/assets/26ee8893-129b-483b-9065-efd3677eeac0)\n\n\n2. \n\n![Image](https://github.com/user-attachments/assets/7f8fedca-308e-4a2c-906f-7f3e45cf2227)\n\n### ✔️ Expected Behavior\n\n1. Correct command list item accessibility label.\n2. Buttons have accessibility labels.\n\nBy the way, if #38392 is fixed, this action should be reported to the screen reader when navigating via the up/down arrows to commands that have other action buttons.\n\n### ❌ Actual Behavior\n\n1. The accessibility label for a command list item is incorrect.\n2. The button has no accessibility label.\n\n### Other Software\n\nNVDA Version: alpha-35670, a71589de (2025.1.0.35670)",
+    "url": "https://github.com/microsoft/PowerToys/issues/38395",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Accessibility",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 38392,
+    "title": "[Command Palette, Accessibility]: Focus Related Issues.",
+    "body": "### Microsoft PowerToys version\n\n0.90.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\n1. \n\nhttps://github.com/user-attachments/assets/ebde1b8a-3cab-4fb0-ac4a-c5ba5f885b83\n\n2. \n\nhttps://github.com/user-attachments/assets/0e812b40-3e4f-41c8-b52e-fea5f9da4306\n\n3. \n\nhttps://github.com/user-attachments/assets/ba0c1065-5cbd-467e-a74c-f039de9f1345\n\n4. \n\nhttps://github.com/user-attachments/assets/a72c6afe-82cf-4d73-a584-612912819d7d\n\n### ✔️ Expected Behavior\n\n1. When navigating through the list of commands by pressing the up/down arrows while the focus is on the search box, the screen reader reports the selected command.\n2. When pressing `Tab` to cut to the list of commands, press `Enter` to activate the selected command.\n3. Remove excess focus.\n4. buttons can be activated by the keyboard.\n\n### ❌ Actual Behavior\n\n1. When navigating through the list of commands by pressing the up/down arrows while the focus is on the search box, the screen reader does not report the contents.\n2. When pressing `Tab` to cut to the command list, pressing `Enter` does not activate the selected command.\n3. Excess tab focus exists for command items.\n4. The buttons cannot be activated from the keyboard.\n\n### Other Software\n\nNVDA Version: alpha-35670, a71589de (2025.1.0.35670)",
+    "url": "https://github.com/microsoft/PowerToys/issues/38392",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Accessibility",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 38389,
+    "title": "CmdPal - Doesn't follow \"Application language\" from PowerToys Settings",
+    "body": "### Microsoft PowerToys version\n\n0.70.0\n\n### Installation method\n\nWinGet\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nCommand Palette\n\n### Steps to reproduce\n\n1. Open \"PowerToys Settings\", in \"General\" set \"Application language\" to any other than \"Windows default\".\n2. Open Command Pallete\n\n### ✔️ Expected Behavior\n\nCommand Palette follows the Application language setting.\n\n### ❌ Actual Behavior\n\nCommand Palette uses the Windows default language.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38389",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette",
+      "Status-In progress"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 38199,
+    "title": "[PT Run] Crash in thumbnail provider",
+    "body": "### Microsoft PowerToys version\n\n0.90.0-DEV\n\n### Installation method\n\nDev build in Visual Studio\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nPowerToys Run\n\n### Steps to reproduce\n\n![Image](https://github.com/user-attachments/assets/9a35fdca-4195-4864-af1e-bc812b7cc9c8)\n\n![Image](https://github.com/user-attachments/assets/2f7432d2-107e-4c54-8af7-5edc013a712b)\n\n### ✔️ Expected Behavior\n\n_No response_\n\n### ❌ Actual Behavior\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38199",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-PowerToys Run",
+      "Severity-Medium",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 38190,
+    "title": "CmdPal: File search - typing too fast for the file name will have problem",
+    "body": "### Microsoft PowerToys version\n\n0.90.0\n\n### Installation method\n\nDev build in Visual Studio\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nPowerToys Run\n\n### Steps to reproduce\n\nFor file search, if I am typing very fast.\nOr the most simple will be copy a long file name first, and then just keep hit the \"backspace\" to delete the char\n\n### ✔️ Expected Behavior\n\nNot a problem\n\n### ❌ Actual Behavior\n\nThe search box try to retain some time in the past typing (probably the type with search result) and change what I enter.\n\nhttps://github.com/user-attachments/assets/85785582-cdaa-46c9-a7e0-80cf6a1f2c34\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/38190",
+    "state": "CLOSED",
+    "current_labels": [
+      "CmdPal-Core",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Command Palette"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 37875,
+    "title": "Update dependencies CsWinRT and BuildTools",
+    "body": "Update the version of `Microsoft.Windows.CsWinRT` and `Microsoft.Windows.SDK.BuildTools`.\n\nRequired for the new dependency `HexBox.WinUI` in\n#37689 (Issue #36877).",
+    "url": "https://github.com/microsoft/PowerToys/issues/37875",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Build",
+      "External Dependency",
+      "Priority-1",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 37544,
+    "title": "File Explorer .svg thumbnail preview plugin Memory Leak",
+    "body": "### Microsoft PowerToys version\n\n0.88.0\n\n### Installation method\n\nWinGet\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nFile Explorer: Thumbnail preview\n\n### Steps to reproduce\n\nThere seems to be a memory leak in the File Explorer .svg thumbnail preview plugin. \n\n\n### ✔️ Expected Behavior\n\nThe File Explorer .svg thumbnail preview handler shouldn't fill up all ram on the machine.\n\n### ❌ Actual Behavior\n\nPlacing the <s>attached</s> [https://openclipart.org/download/289287/ht28.svg](https://openclipart.org/download/289287/ht28.svg) file in a folder open in Explorer with medium or larger icon view causes a WebView2 process to chew up ram until it completely fills all available ram.\n\nThe .svg file came from: https://openclipart.org/detail/289287/houndstooth-15\n\n### Other Software\n\nWindows 11 24H2 (OS Build 26120.3281)",
+    "url": "https://github.com/microsoft/PowerToys/issues/37544",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-File Explorer"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 37200,
+    "title": "ZoomIt Draw Activation Shortcut - Ctrl+Alt+4 still actives even if change to different keypress",
+    "body": "### Microsoft PowerToys version\n\n0.88.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nZoomIt\n\n### Steps to reproduce\n\nZoomIt Draw Activation Shortcut - Ctrl+Alt+4 still actives even if change to different keypress\n\nEnable ZoomIt & Draw. Change keyboard shortcut from default to Ctrl+Alt+Shift+2 (as Ctrl+2 & Ctrl+Alt+2 clash with starred and headings in OneNote).\nPress Ctrl+Alt+2. Expect OneNote to change text heading. Instead ZoomIt Draw activates and shows red dot to draw on screen.\n\n### ✔️ Expected Behavior\n\nNothing. ZoomIt Draw should not activate when Ctrl+Alt+2 is pressed.\n\n### ❌ Actual Behavior\n\nZoomIt Draw activates and shows red dot to draw on screen.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/37200",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-ZoomIt"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 37197,
+    "title": "ZoomIt prevent typing left square bracket character AltGr + 5",
+    "body": "### Microsoft PowerToys version\n\n0.88.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nZoomIt\n\n### Steps to reproduce\n\nJust try to type the left square bracket. First time it does nothing. If you try a second time, then you get a ZoomIt recording error box.\n\n### ✔️ Expected Behavior\n\nLet me type the left square bracket character (using AltGr + 5) even when ZoomIt is running.\n\n### ❌ Actual Behavior\n\nSince the new Power Toys version, ZoomIt is now part of Power Toys (which is GREAT). But I can no longer type the left square bracket character (using AltGr + 5), as it says that \"Cannot save as ZoomIt recording is not started\". That's super annoying. I cannot find how to change this in the settings. Any help would be appreciated. Thanks in advance.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/37197",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-ZoomIt"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 36853,
+    "title": "Quick Accent not properly working when using on-screen keyboard",
+    "body": "### Microsoft PowerToys version\n\n0.87.1\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nQuick Accent\n\n### Steps to reproduce\n\n1 Enable Quick Accent\n2 Launch on-screen keyboard\n3 Open word (or other text input application)\n4 Use your mouse to click on a character using the onscreen keyboard e.g.\"a\" and simultaneously click on spacebar or one of the arrow keys to launch the Quick Accent tool.\n5 the Quick Accent tool is launched correctly but the character is inserted in multitudes (as long as one interacts with the Quick Accent tool).\n\n### ✔️ Expected Behavior\n\nSame as with using the physical keyboard, I expect the character not to be inserted in multitudes/but a single time. \n\nOne might wonder when/how someone would enable this feature when using the on-screen keyboard given that the spacebar or arrow keys can not be triggered at the same time using the onscreen keyboard. However, the adaptive accessories allows someone to program the arrow keys to a physical button. In fact, I am helping a user who would greatly benefit from fixing this bug.\n\n### ❌ Actual Behavior\n\nThe Quick Accent menu can be triggered but the character is inserted in multitudes/as long as the Quick Accent menu is active.\n\nIn the video I select the arrow keys on my physical keyboard to mimic triggering the Accent Tool with the button using the adaptive hub. I have confirmed actually doing this with the hub and external button gives the same result as reproducing it using the arrow keys on the keyboard.\n\nhttps://github.com/user-attachments/assets/d4866bcc-d5b5-4228-80ba-4e45e62c7e97\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/36853",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Accessibility",
+      "Issue-Bug",
+      "PowerToys_Win32",
+      "Priority-1",
+      "Product-Quick Accent",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 36319,
+    "title": "[Power toys]: Screen reader announces irrelevant information instead of available options in the Advanced Paste menu.",
+    "body": "### Microsoft PowerToys version\n\n0.86.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nAdvanced Paste\n\n### Steps to reproduce\n\n**Test environment: **\nOS Build: Windows 11 Enterprise Insider Preview 24H2 (26120.1340)\nPower toys version: v0.86.0\nScreen Reader: Narrator\n\n**Repro Steps**\n\n1. Launch Power Toys and ensure the Advanced Paste feature is enabled.\n2. Open any text editor (e.g., Notepad) and copy some text to the clipboard.\n3. Press Win + Shift + V to open the Advanced Paste menu.\n4. Navigate through the options (e.g., \"Paste as plain text,\" \"Paste as markdown\") using the arrow keys.\n5. Attempt to select the highlighted option by pressing Enter or Space.\n6. Test with the corresponding shortcut (e.g., Ctrl+1) for the same option.\n\n**User Experience: **\nScreen reader users cannot perceive the available options in the Advanced Paste menu due to irrelevant announcements. Additionally, users relying on the keyboard cannot select highlighted options using Enter or Space, limiting operability and causing frustration.\n\n**Note: **\nScreen Reader only announces Button on 'Clipboard History' button.\n\n**Guideline reference: **\nhttps://www.w3.org/WAI/WCAG22/Understanding/name-role-value\n\n### ✔️ Expected Behavior\n\nScreen reader should announce the available options in the Advanced Paste menu, such as \"Paste as plain text\" or \"Paste as markdown,\" as the user navigates through them. Users should also be able to select a highlighted option by pressing Enter or Space, in addition to using the keyboard shortcuts.\n\n### ❌ Actual Behavior\n\nscreen reader fails to announce the available options in the Advanced Paste menu and instead reads the menu as blank. Additionally, pressing Enter or Space does not select the highlighted option. The only way to select an option is by using the corresponding keyboard shortcuts, such as Ctrl+1.\n\n### Other Software\n\nhttps://github.com/user-attachments/assets/8a20a0bd-2ab9-4b2b-a0fc-f7284974f440\n\nhttps://github.com/user-attachments/assets/355b01bf-c161-491b-a3a7-0df3609f4b82\n\n",
+    "url": "https://github.com/microsoft/PowerToys/issues/36319",
+    "state": "CLOSED",
+    "current_labels": [
+      "A11yE+D",
+      "A11ySev1",
+      "A11yTTValidated",
+      "A11yWCAG",
+      "Area-Accessibility",
+      "Issue-Bug",
+      "PowerToys_Win32",
+      "Priority-1",
+      "Resolution-Already Fixed/Doesn't Apply"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 36041,
+    "title": "[PT Run] Crash - System.OutOfMemoryException was thrown",
+    "body": "### Microsoft PowerToys version\n\n0.85.1.0\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nGeneral\n\n### Steps to reproduce\n\nVersion: 0.85.1.0\nOS Version: Microsoft Windows NT 10.0.22631.0\nIntPtr Length: 8\nx64: True\nDate: 2024/11/21 19:33:41\nException:\nSystem.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.\n   at System.Collections.Generic.List`1.Enumerator.MoveNext()\n   at System.Windows.Shell.WindowChromeWorker._WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)\n   at System.Windows.Interop.HwndSource.PublicHooksFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)\n   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)\n   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)\n   at System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)\n   at MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)\n\n\n\n### ✔️ Expected Behavior\n\n_No response_\n\n### ❌ Actual Behavior\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/36041",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-PowerToys Run",
+      "Severity-Medium"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 35667,
+    "title": "Shotcuts on Dashboard screen changes based on the current keyboard layout",
+    "body": "### Microsoft PowerToys version\n\n0.85.1\n\n### Installation method\n\nWinGet\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nGeneral\n\n### Steps to reproduce\n\nI'll be using Thai keyboard layout (Kedmanee, to be exact) to reproduce the issue. Not 100% sure if other non-English would exhibit the same behavior or not.\n\n1. Switch to Thai keyboard layout on Windows.\n2. Open the Dashboard screen by either\n2.1 Open PowerToys Settings from the PowerToys icon inside Windows' notification area, or\n2.2 From any page on PowerToys Settings, switch to Dashboard screen.\n\n### ✔️ Expected Behavior\n\nShortcut key should remains the same regardless of the current keyboard layout. \n\nFor example, \"Always On Top\" should display \"⊞ Ctrl T\" or \"Screen Ruler\" should be \"⊞ Ctrl Shift M\".\n\n![Image](https://github.com/user-attachments/assets/f6429c5c-8ade-409f-afd4-b99c5af68bbd)\n\n\n### ❌ Actual Behavior\n\nShortcut key (except the modifier) is different when different keyboard layout is active.\n\n\"Always on Top\" becomes \"⊞ Ctrl ธ\" or \"Screen Ruler\" becomes \"⊞ Shift ?\".\n![Image](https://github.com/user-attachments/assets/fe7a08e9-f9af-4226-8108-e801cc1c03a0)\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/35667",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Settings"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 35454,
+    "title": "[PT Run] crash - System.Windows.Markup.XamlParseException: Set property 'Wpf.Ui.Controls.FluentWindow.ExtendsContentIntoTitleBar' ",
+    "body": "### Microsoft PowerToys version\n\n0.85.1.0\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nGeneral\n\n### Steps to reproduce\n\ncrash on windows start\nn/a\n\n### ✔️ Expected Behavior\n\nno crash\n\n### ❌ Actual Behavior\n\n\n\nVersion: 0.85.1.0\nOS Version: Microsoft Windows NT 10.0.22631.0\nIntPtr Length: 8\nx64: True\nDate: 16.10.2024 15:30:43\nException:\nSystem.Windows.Markup.XamlParseException: Set property 'Wpf.Ui.Controls.FluentWindow.ExtendsContentIntoTitleBar' threw an exception.\n ---> System.TypeInitializationException: The type initializer for 'System.ComponentModel.DependencyPropertyDescriptor' threw an exception.\n ---> System.BadImageFormatException: A valid typedef or typeref token is expected to follow a ELEMENT_TYPE_GENERICINST. The format of the file 'C:\\Users\\Utilisateur\\AppData\\Local\\PowerToys\\System.Private.CoreLib.dll' is invalid.\n   at System.ComponentModel.DependencyPropertyDescriptor..cctor()\n   --- End of inner exception stack trace ---\n   at System.ComponentModel.DependencyPropertyDescriptor.FromProperty(DependencyProperty dependencyProperty, Type targetType)\n   at System.Windows.Shell.WindowChromeWorker._SetWindow(Window window)\n   at System.Windows.FrameworkElement.OnPropertyChanged(DependencyPropertyChangedEventArgs e)\n   at System.Windows.DependencyObject.NotifyPropertyChange(DependencyPropertyChangedEventArgs args)\n   at System.Windows.DependencyObject.UpdateEffectiveValue(EntryIndex entryIndex, DependencyProperty dp, PropertyMetadata metadata, EffectiveValueEntry oldEntry, EffectiveValueEntry& newEntry, Boolean coerceWithDeferredReference, Boolean coerceWithCurrentValue, OperationType operationType)\n   at System.Windows.DependencyObject.SetValueCommon(DependencyProperty dp, Object value, PropertyMetadata metadata, Boolean coerceWithDeferredReference, Boolean coerceWithCurrentValue, OperationType operationType, Boolean isInternal)\n   at System.Windows.DependencyObject.SetValue(DependencyProperty dp, Object value)\n   at System.Windows.Shell.WindowChrome._OnChromeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)\n   at System.Windows.FrameworkElement.OnPropertyChanged(DependencyPropertyChangedEventArgs e)\n   at System.Windows.DependencyObject.NotifyPropertyChange(DependencyPropertyChangedEventArgs args)\n   at System.Windows.DependencyObject.UpdateEffectiveValue(EntryIndex entryIndex, DependencyProperty dp, PropertyMetadata metadata, EffectiveValueEntry oldEntry, EffectiveValueEntry& newEntry, Boolean coerceWithDeferredReference, Boolean coerceWithCurrentValue, OperationType operationType)\n   at System.Windows.DependencyObject.SetValueCommon(DependencyProperty dp, Object value, PropertyMetadata metadata, Boolean coerceWithDeferredReference, Boolean coerceWithCurrentValue, OperationType operationType, Boolean isInternal)\n   at System.Windows.DependencyObject.SetValue(DependencyProperty dp, Object value)\n   at Wpf.Ui.Controls.FluentWindow.OnExtendsContentIntoTitleBarChanged(Boolean oldValue, Boolean newValue)\n   at Wpf.Ui.Controls.FluentWindow.OnExtendsContentIntoTitleBarChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)\n   at System.Windows.FrameworkElement.OnPropertyChanged(DependencyPropertyChangedEventArgs e)\n   at System.Windows.DependencyObject.NotifyPropertyChange(DependencyPropertyChangedEventArgs args)\n   at System.Windows.DependencyObject.UpdateEffectiveValue(EntryIndex entryIndex, DependencyProperty dp, PropertyMetadata metadata, EffectiveValueEntry oldEntry, EffectiveValueEntry& newEntry, Boolean coerceWithDeferredReference, Boolean coerceWithCurrentValue, OperationType operationType)\n   at System.Windows.DependencyObject.SetValueCommon(DependencyProperty dp, Object value, PropertyMetadata metadata, Boolean coerceWithDeferredReference, Boolean coerceWithCurrentValue, OperationType operationType, Boolean isInternal)\n   at System.Windows.DependencyObject.SetValue(DependencyProperty dp, Object value)\n   at MS.Internal.Xaml.Runtime.ClrObjectRuntime.SetValue(Object inst, XamlMember property, Object value)\n   --- End of inner exception stack trace ---\n   at System.Windows.Markup.XamlReader.RewrapException(Exception e, IXamlLineInfo lineInfo, Uri baseUri)\n   at System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)\n   at System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)\n   at System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)\n   at System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)\n   at PowerLauncher.MainWindow.InitializeComponent()\n   at PowerLauncher.MainWindow..ctor()\n   at PowerLauncher.MainWindow..ctor(PowerToysRunSettings settings, MainViewModel mainVM, CancellationToken nativeWaiterCancelToken)\n   at PowerLauncher.App.<>c__DisplayClass19_0.<OnStartup>b__0()\n   at Wox.Infrastructure.Stopwatch.Normal(String message, Action action)\n   at PowerLauncher.App.OnStartup(Object sender, StartupEventArgs e)\n   at System.Windows.Application.<.ctor>b__1_0(Object unused)\n   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)\n   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)\n\n\n\n### Other Software\n\n[2024-10-16.txt](https://github.com/user-attachments/files/17396473/2024-10-16.txt)\n",
+    "url": "https://github.com/microsoft/PowerToys/issues/35454",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-PowerToys Run",
+      "Resolution-Already Fixed/Doesn't Apply"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 35214,
+    "title": "[New+] Not able to create new files in folders that require higher privilege",
+    "body": "### Microsoft PowerToys version\r\n\r\n0.85\r\n\r\n### Installation method\r\n\r\nGitHub\r\n\r\n### Running as admin\r\n\r\nYes\r\n\r\n### Area(s) with issue?\r\n\r\nNew+\r\n\r\n### Steps to reproduce\r\n\r\n1. Go to a folder that require higher privileges (Like program files)\r\n2. Right click and choose a template\r\n3. A dialog will come up asking for privileges to copy\r\n![image](https://github.com/user-attachments/assets/7c205e68-5479-481a-8038-e43f76b5e417)\r\n4. Click continue\r\n\r\n### ✔️ Expected Behavior\r\n\r\nAfter giving permission the file should be created there.\r\n\r\n### ❌ Actual Behavior\r\n\r\nThe progress dialog freezes after some time and the template does not get created in the selected folder\r\n\r\n### Other Software\r\n\r\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/35214",
+    "state": "OPEN",
+    "current_labels": [
+      "Cost-Medium",
+      "Issue-Bug",
+      "Needs-Prioritization",
+      "Priority-1",
+      "Product-New+",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 35037,
+    "title": "[Settings > New+] Crash when enabling utility in Dev build of settings project",
+    "body": "### Microsoft PowerToys version\n\npre-0.85.0 (Commit: 734b0f8a54a8714c1478c62046200e6920da6b01)\n\n### Installation method\n\nDev build in Visual Studio\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nSettings\n\n### Steps to reproduce\n\n1. Make debug build of settings UI.\r\n2. Manually try to enable New+ in Settings UI.\r\n\r\nEnabling the utility using the policy works without crash.\n\n### ✔️ Expected Behavior\n\nNo crash.\n\n### ❌ Actual Behavior\n\n![image](https://github.com/user-attachments/assets/fbdd4821-3d42-4d27-ba03-4284a9ea8c3b)\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/35037",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Settings",
+      "Resolution-Fix Committed",
+      "Severity-Medium"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 35001,
+    "title": "[Enterprise] Multiple policies behave wrong and react on the GlobalUtility policy",
+    "body": "### Microsoft PowerToys version\n\npre-0.85.0 (cf470a6dbf36aa20bb17c18289425596a11f3c53)\n\n### Installation method\n\nDev build in Visual Studio\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nGeneral\n\n### Steps to reproduce\n\nMultiple policies for settings in the modules using the wrong code for checking the policy value.\r\n\r\nThe use `getUtilityEnabledValue` instead of `getConfiguredValue`. This causes that policies also act on `ConfigureGlobalUtilityEnabledState` policy value.\n\n### ✔️ Expected Behavior\n\nThis does not happen.\n\n### ❌ Actual Behavior\n\nIt happens.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/35001",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Enterprise",
+      "Issue-Bug",
+      "Priority-1",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 34470,
+    "title": "OpenAI key modal in settings need min-height.",
+    "body": "### Provide a description of requested docs changes\n\nI am a windows 10 user and while trying to enable the AI feature (by trying to add the api key) but the field for the key is not available .\r\n![image](https://github.com/user-attachments/assets/d96a17c6-da45-4fde-82ab-cd8961e19017)\r\n",
+    "url": "https://github.com/microsoft/PowerToys/issues/34470",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-User Interface",
+      "Cost-Small",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Advanced Paste",
+      "Product-Settings",
+      "Resolution-Fix Committed",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 33593,
+    "title": "Memory leak when previewing images with Peek",
+    "body": "### Microsoft PowerToys version\n\n0.81.1\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nPeek\n\n### Steps to reproduce\n\n1. Navigate to a folder containing a selection of images. (The bug seems to occur with any number of images in the folder.)\r\n2. Click on any image and use the Ctrl+Space shortcut to open Peek.\r\n3. Use the arrow keys to navigate through the images in the folder.\n\n### ✔️ Expected Behavior\n\nPeek navigates through the images contained within the folder and uses a reasonable amount of memory, related to the size of the individual images being previewed. Subsequent navigations through the same images use the same amount of memory, i.e. the maximum memory used for previewing the folder images does not increase.\n\n### ❌ Actual Behavior\n\nThe memory used by the application increases and is never reclaimed, leading to increased memory pressure on the system.\r\n\r\nWhen the first image is displayed, the tool uses ~150MB:\r\n\r\n![image](https://github.com/microsoft/PowerToys/assets/7127766/77670741-14b8-4ec8-93cf-fa0bc0983a55)\r\n\r\nAfter navigating through 500 images using the arrow keys, the tool uses ~1.4GB:\r\n\r\n![image](https://github.com/microsoft/PowerToys/assets/7127766/0a1a57f1-78e7-4d57-bf78-6ffb75b2d205)\r\n\r\nSome notes:\r\n1. Closing the tool does not free up the used memory.\r\n2. Leaving the system idle does not free up the used memory (I waited 30 minutes).\r\n3. Using Peek again after closing it does not free up the used memory.\r\n4. I am using default settings and PowerToys is running in User mode.\r\n\r\nBug report logs: [PowerToysReport_2024-07-02-12-19-16.zip](https://github.com/user-attachments/files/16067326/PowerToysReport_2024-07-02-12-19-16.zip)\r\n\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/33593",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Peek",
+      "Resolution-Fix Committed",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 33548,
+    "title": "Margins for Fancy Zones set to 0. After hibernate margins appear on windows.",
+    "body": "### Microsoft PowerToys version\n\n0.81.1\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nFancyZones\n\n### Steps to reproduce\n\nThis issue goes back years. Multi monitor setup. Set fancy zones with zero margin. Hibernate computer, when it wakes all your windows now have a margin around them and need resnapping.\n\n### ✔️ Expected Behavior\n\nThat no margin would remain as intended. There's no reason to suddenly add a margin after hibernate.\n\n### ❌ Actual Behavior\n\nMargins were added.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/33548",
+    "state": "OPEN",
+    "current_labels": [
+      "Area-Quality",
+      "FancyZones-Settings",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-FancyZones"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 33065,
+    "title": "[CommandNotFound] - breaks powershell when internet is disconnected",
+    "body": "### Microsoft PowerToys version\n\n0.81.0\n\n### Installation method\n\nOther (please specify in \"Steps to Reproduce\")\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nCommand not found\n\n### Steps to reproduce\n\ninstall command not found module\r\ndisconnect the internet\r\nStart powershell\r\nPowershell throws this error\r\n![image](https://github.com/microsoft/PowerToys/assets/39211144/fce8de91-086e-477f-8650-ff79c7cf9e0b)\r\n\n\n### ✔️ Expected Behavior\n\nPowershell should work without throwing an error\n\n### ❌ Actual Behavior\n\nPowershell refuses to start up and crashes every time its opened\n\n### Other Software\n\nWindows 10 version 22H2 (OS Build 19045.4412)",
+    "url": "https://github.com/microsoft/PowerToys/issues/33065",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-CommandNotFound",
+      "Resolution-Duplicate"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 33061,
+    "title": "CommandNotFound crashes pwsh if DNS server is not found",
+    "body": "### Microsoft PowerToys version\n\n0.81.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nCommand not found\n\n### Steps to reproduce\n\n1. Configure an invalid DNS server, or somehow break communication with the DNS server.\r\n2. Open pwsh.exe\r\n3. Press ENTER\n\n### ✔️ Expected Behavior\n\nNothing will happen.\n\n### ❌ Actual Behavior\n\npwsh.exe crashes, leaving the following stacktrace in Windows Event Log:\r\n```\r\nApplication: pwsh.exe\r\nCoreCLR Version: 8.0.424.16909\r\n.NET Version: 8.0.4\r\nDescription: The process was terminated due to an unhandled exception.\r\nException Info: System.Management.Automation.CmdletInvocationException: An error occurred while connecting to the catalog.\r\n ---> Microsoft.WinGet.Client.Engine.Exceptions.CatalogConnectException: An error occurred while connecting to the catalog.\r\n   at Microsoft.WinGet.Client.Engine.Commands.Common.FinderCommand.GetPackageCatalog(CompositeSearchBehavior behavior)\r\n   at Microsoft.WinGet.Client.Engine.Commands.Common.FinderCommand.FindPackages(CompositeSearchBehavior behavior, UInt32 limit, PackageFieldMatchOption match)\r\n   at Microsoft.WinGet.Client.Engine.Commands.Common.FinderExtendedCommand.FindPackages(CompositeSearchBehavior behavior, PackageFieldMatchOption match)\r\n   at Microsoft.WinGet.Client.Engine.Commands.FinderPackageCommand.<>c__DisplayClass1_0.<Find>b__0()\r\n   at Microsoft.WinGet.Client.Engine.Commands.Common.ManagementDeploymentCommand.Execute[TResult](Func`1 func)\r\n   at Microsoft.WinGet.Client.Engine.Commands.FinderPackageCommand.Find(String psPackageFieldMatchOption)\r\n   at Microsoft.WinGet.Client.Commands.FindPackageCmdlet.ProcessRecord()\r\n   at System.Management.Automation.CommandProcessor.ProcessRecord()\r\n   --- End of inner exception stack trace ---\r\n   at System.Management.Automation.Runspaces.AsyncResult.EndInvoke()\r\n   at System.Management.Automation.PowerShell.EndInvoke(IAsyncResult asyncResult)\r\n   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)\r\n--- End of stack trace from previous location ---\r\n   at Microsoft.WinGet.CommandNotFound.WinGetCommandNotFoundFeedbackPredictor.WarmUp()\r\n   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_1(Object state)\r\n   at System.Threading.QueueUserWorkItemCallback.Execute()\r\n   at System.Threading.ThreadPoolWorkQueue.Dispatch()\r\n   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()\r\n```\n\n### Other Software\n\nWindows 11 23H2\r\nPowerShell 7.4.2\r\nOh My Posh 20.2.0",
+    "url": "https://github.com/microsoft/PowerToys/issues/33061",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-CommandNotFound",
+      "Resolution-External"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 32945,
+    "title": "[Advanced Paste] GPO for clipboard history is ignored (in the ux)",
+    "body": "### Microsoft PowerToys version\r\n\r\n0.81.0\r\n\r\n### Installation method\r\n\r\nPowerToys auto-update\r\n\r\n### Running as admin\r\n\r\nNone\r\n\r\n### Area(s) with issue?\r\n\r\nAdvanced Paste\r\n\r\n### Steps to reproduce\r\n\r\nSet the policy and see in PT settings that you can change the settings.\r\n\r\n### ✔️ Expected Behavior\r\n\r\nThe value of the GPO is respected and the setting can't be changed.\r\n\r\nGPO: https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.OSPolicy::AllowClipboardHistory\r\n\r\n### ❌ Actual Behavior\r\n\r\nThere is no hint about the policy, you can change the setting in PT and changing the setting ~overrides/~ manipulates the setting in Windows.\r\n\r\n![image](https://github.com/microsoft/PowerToys/assets/61519853/21efabb5-30a1-4ae8-8494-a1347beedca5)\r\n\r\n![image](https://github.com/microsoft/PowerToys/assets/61519853/776be18c-fc07-4a8d-beb1-31dfc5b71d43) \r\n\r\n### Other Software\r\n\r\n_No response_\r\n\r\n---\r\n\r\nEDIT (2024-05-22 00:59 UTC+2): Added second screenshot for clarification.",
+    "url": "https://github.com/microsoft/PowerToys/issues/32945",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Enterprise",
+      "Hot Fix",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Advanced Paste",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 32869,
+    "title": "The title of the \"Always On Top\" tool missing translation and the translation is not very reasonable.",
+    "body": "### Microsoft PowerToys version\n\n0.80.1\n\n### Utility with translation issue\n\nAlways on Top\n\n### 🌐 Language affected\n\nChinese (Simplified)\n\n### ❌ Actual phrase(s)\n\n![屏幕截图 2024-05-15 151746](https://github.com/microsoft/PowerToys/assets/89643991/368223d8-ab05-4b82-9f4b-254b084e1009)\r\n\n\n### ✔️ Expected phrase(s)\n\nI think \"Always on Top\" can be translated as \"始终置顶\", which better reflects the function of the tool.\r\nThis translation also seems to have appeared in the previous version [#30816](https://github.com/microsoft/PowerToys/issues/30816), but I think the translation [#30816](https://github.com/microsoft/PowerToys/issues/30816) (窗口置顶器) is a bit redundant.\n\n### ℹ Why is the current translation wrong\n\nI think the title of the tool should also be translated, just like any other tool.\r\nAnd I think the current Chinese translation (前端显示) is not quite in line with the understanding of ordinary people when using computers, and the word \"前端\" does not reflect \"Top\" well.",
+    "url": "https://github.com/microsoft/PowerToys/issues/32869",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Localization",
+      "Issue-Bug",
+      "Issue-Translation",
+      "Loc-Sent To Team",
+      "Priority-1"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 31566,
+    "title": "my keybinds are changed forever",
+    "body": "### Microsoft PowerToys version\n\n0.78.0\n\n### Installation method\n\nGitHub, Microsoft Store\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nKeyboard Manager\n\n### Steps to reproduce\n\ni replaced TAB with the key ' and the reason i did it its bc i have a 50% keyboard and i needed to use that key, and now whatever i do it wont go back, i turned off ''enable keyboard manager'', i tried turning off the app, turning off the run as admin, uninstalling the program. the keys were still switched one another.\n\n### ✔️ Expected Behavior\n\nthe keys to be switched temporary\n\n### ❌ Actual Behavior\n\nthey are switched whatever i do \n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/31566",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Needs-Triage",
+      "Priority-1",
+      "Product-Keyboard Manager"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 31449,
+    "title": "[RunPlugin] PNG icons do not display correctly in dark mode",
+    "body": "### Microsoft PowerToys version\n\n0.78.0\n\n### Installation method\n\nWinGet\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nPowerToys Run\n\n### Steps to reproduce\n\nPlugin used in following example: https://github.com/8LWXpg/TestPlugin, installed at `~\\AppData\\Local\\Microsoft\\PowerToys\\PowerToys Run\\Plugins`\r\n\r\n1. Close PowerToys and delete `~\\AppData\\Local\\Microsoft\\PowerToys\\PowerToys Run\\Settings\\ImageCache.json`.\r\n2. Open PowerToysRun and type `kw`\r\n![before](https://github.com/microsoft/PowerToys/assets/105704427/4884a85c-c075-475b-bdf6-b8008107a4ee)\r\n3. Restart PowerToys and open PowerToysRun then type `kw`\r\n![after](https://github.com/microsoft/PowerToys/assets/105704427/5e301d34-3cd5-4803-8108-916e7cf4814b)\r\n\r\nnote: I'm unable to reproduce this issue in light mode.\n\n### ✔️ Expected Behavior\n\n![before](https://github.com/microsoft/PowerToys/assets/105704427/4884a85c-c075-475b-bdf6-b8008107a4ee)\n\n### ❌ Actual Behavior\n\n![after](https://github.com/microsoft/PowerToys/assets/105704427/5e301d34-3cd5-4803-8108-916e7cf4814b)\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/31449",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-PowerToys Run",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 31375,
+    "title": "Keyboard Manager doesn't work when starts Windows.",
+    "body": "### Microsoft PowerToys version\r\n\r\n0.77.0\r\n\r\n### Installation method\r\n\r\nMicrosoft Store\r\n\r\n### Running as admin\r\n\r\nYes\r\n\r\n### Area(s) with issue?\r\n\r\nKeyboard Manager\r\n\r\n### Steps to reproduce\r\n\r\nWhen Windows starts.\r\n\r\n### ✔️ Expected Behavior\r\n\r\nKeyboard manager remapped ALT+W to send CTRL+F4 and ALT+Q to send ALT+F4\r\n\r\n### ❌ Actual Behavior\r\n\r\nWhen I start Windows, and I use a remapped key, it doesn't work. I must go to Power Toys, turn the Keyboard Manager toggle off and on. It back works normally again.\r\n\r\nEvery time I start Windows. NO EXCEPTION\r\n\r\nUPDATE: It's a bug \"added\" in 0.77 version. Doesn't happen up to 0.76.\r\n\r\n### Other Software\r\n\r\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/31375",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Keyboard Manager"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 31323,
+    "title": "Regression: `SelectedValue.ShowHeight` doesn't show/hide input in Image Resizer UI",
+    "body": "### Microsoft PowerToys version\n\ndev\n\n### Installation method\n\nDev build in Visual Studio\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nImage Resizer\n\n### Steps to reproduce\n\n- Debug Image Resizer (main branch) in Visual Studio\r\n- Change _unit_ to _percentage_ and back\n\n### ✔️ Expected Behavior\n\n\"Height\" input should be hidden when unit == percentage\n\n### ❌ Actual Behavior\n\nNot hidden\r\n![Image Resizer input](https://github.com/microsoft/PowerToys/assets/65828559/ae7f84f2-ce83-4f12-98a9-2ebf48053c15)\r\n",
+    "url": "https://github.com/microsoft/PowerToys/issues/31323",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-User Interface",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Image Resizer",
+      "Resolution-Fix Committed",
+      "Severity-Regression"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 31301,
+    "title": "[Run] Crash (`COMException`) when trying drag and drop when other DnD is already in progress",
+    "body": "### Microsoft PowerToys version\n\n0.77.0.0\n\n### Installation method\n\nGitHub\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nPowerToys Run\n\n### Steps to reproduce\n\n- Start a lengthy drag-n-drop process; for example by extracting a big zip in winrar by dragging the contents to another folder\r\n- Open PT Run, search for a file\r\n- Try to drag-n-drop that file to anywhere\r\n\r\nException + tracelog:\r\n```\r\nSystem.Runtime.InteropServices.COMException: A drag operation is already in progress\r\n\r\n   Source: \r\n   TargetAssembly: WindowsBase, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\r\n   TargetModule: WindowsBase.dll\r\n   TargetSite: Void DoDragDrop(System.Runtime.InteropServices.ComTypes.IDataObject, IOleDropSource, Int32, Int32[])\r\n   at MS.Win32.UnsafeNativeMethods.DoDragDrop(IDataObject dataObject, IOleDropSource dropSource, Int32 allowedEffects, Int32[] finalEffect)\r\n   at System.Windows.OleServicesContext.OleDoDragDrop(IDataObject dataObject, IOleDropSource dropSource, Int32 allowedEffects, Int32[] finalEffect)\r\n   at System.Windows.DragDrop.OleDoDragDrop(DependencyObject dragSource, DataObject dataObject, DragDropEffects allowedEffects)\r\n   at System.Windows.DragDrop.DoDragDrop(DependencyObject dragSource, Object data, DragDropEffects allowedEffects)\r\n   at PowerLauncher.MainWindow.SuggestionsList_MouseMove(Object sender, MouseEventArgs e)\r\n   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)\r\n   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)\r\n   at System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)\r\n   at System.Windows.UIElement.RaiseTrustedEvent(RoutedEventArgs args)\r\n   at System.Windows.Input.InputManager.ProcessStagingArea()\r\n   at System.Windows.Interop.HwndMouseInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawMouseActions actions, Int32 x, Int32 y, Int32 wheel)\r\n   at System.Windows.Interop.HwndMouseInputProvider.FilterMessage(IntPtr hwnd, WindowMessage msg, IntPtr wParam, IntPtr lParam, Boolean& handled)\r\n   at System.Windows.Interop.HwndSource.InputFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)\r\n   at MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)\r\n   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)\r\n   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)\r\n```\n\n### ✔️ Expected Behavior\n\nI would expect the drag-drop to work, but I can imagine that might not be possible due to Windows constraints. But then at the very least I would expect PTRun to not crash (or even nicer - show a cross cursor or something to indicate you can't drag-drop)\n\n### ❌ Actual Behavior\n\nPTRun crashes\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/31301",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Needs-Prioritization",
+      "Priority-1",
+      "Product-PowerToys Run"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 31227,
+    "title": "PowerRename no longer has a keyboard shortcut on context menu",
+    "body": "### Microsoft PowerToys version\r\n\r\n0.78.0\r\n\r\n### Installation method\r\n\r\nPowerToys auto-update\r\n\r\n### Running as admin\r\n\r\nYes\r\n\r\n### Area(s) with issue?\r\n\r\nPowerRename\r\n\r\n### Steps to reproduce\r\n\r\n1. Select file(s) in Windows Explorer\r\n2. Right-click to open context menu\r\n3. The \"Rename with PowerRename\" option no longer has a keyboard shortcut; one must use the mouse to select and launch the program.\r\n\r\n![powerrename_no_keyboard_shortcut](https://github.com/microsoft/PowerToys/assets/2213836/a28341c5-6a3e-47fd-8eb9-44042624e7d8)\r\n\r\nOnce launched, PowerRename does work as expected.\r\n\r\n\r\n### ✔️ Expected Behavior\r\n\r\nIn version `v0.76.0` and earlier, one could press `w` in the context menu to launch PowerRename.  I believe the `w` in `with` was underlined, but no longer have that version installed to check.\r\n\r\n### ❌ Actual Behavior\r\n\r\nWith the update from `v0.76.0` to `v0.78.0`, pressing `w` in the context menu no longer launches PowerRename, and the `w` in `with` is no longer underlined.\r\n\r\nThis may be related to the change noted in the [v0.78.0 release notes](https://github.com/microsoft/PowerToys/releases/tag/v0.78.0):\r\n\r\n> Improved and added localization to the context menu entry caption\r\n\r\nI use this excellent utility frequently, and usually via keyboard only.  Losing the `w` keyboard shortcut reduces my efficiency, since I either need to up/down arrow multiple times, or use mouse to select the program from the menu.\r\n\r\n### Other Software\r\n\r\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/31227",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Resolution-Fix Committed",
+      "Severity-Regression"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 30834,
+    "title": "[Run] ExternalException: A generic error occurred in GDI+.",
+    "body": "### Microsoft PowerToys version\n\n0.77.0.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nInstaller\n\n### Steps to reproduce\n\n[runner-log_2024-01-09.txt](https://github.com/microsoft/PowerToys/files/13878184/runner-log_2024-01-09.txt)\r\n[2024-01-09.txt](https://github.com/microsoft/PowerToys/files/13878197/2024-01-09.txt)\r\n\n\n### ✔️ Expected Behavior\n\n_No response_\n\n### ❌ Actual Behavior\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/30834",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-PowerToys Run",
+      "Resolution-Fix Committed",
+      "Severity-High"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 29644,
+    "title": "Preview Pane displaying \"Unable to preview file\"",
+    "body": "### Microsoft PowerToys version\n\n0.75.1\n\n### Installation method\n\nWinGet\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nFile Explorer: Preview Pane\n\n### Steps to reproduce\n\n1. Selecting a file to preview not handled by windows or thind party tools display \"Preview not avaiable\" in the pane\r\n2. Enable preview pane handlers in Powertoys\r\n3. The preview pane now shows \"Unable to preview file\"\r\n\r\nWebview2 Runtime is installed.\r\n[PowerToysReport_2023-11-02-17-04-22.zip](https://github.com/microsoft/PowerToys/files/13242285/PowerToysReport_2023-11-02-17-04-22.zip)\r\n\n\n### ✔️ Expected Behavior\n\nTo preview files like in peek but in the preview pane\n\n### ❌ Actual Behavior\n\npreview pane is showing the error \"Unable to preview file\" when handled by powertoys\r\nIt happens with Monaco, md files, svg, ecc. \r\nNot sure for Pdf since I use Adobe Acrobat.\n\n### Other Software\n\nAdobe Acrobat is used to preview PDF and I disabled PDF previews in PowerToys\r\n",
+    "url": "https://github.com/microsoft/PowerToys/issues/29644",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-File Explorer"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 29302,
+    "title": "[Build]PowerToys doesn't build with Visual Studio 17.8",
+    "body": "### Microsoft PowerToys version\n\n0.75-dev\n\n### Installation method\n\nDev build in Visual Studio\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nGeneral\n\n### Steps to reproduce\n\nBuilding PowerToys with Visual Studio 2022 17.8 preview 4 fails with lots of C++ compile errors.\n\n### ✔️ Expected Behavior\n\nFor PowerToys to build.\n\n### ❌ Actual Behavior\n\nCompile errors.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/29302",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Build",
+      "Issue-Bug",
+      "Priority-1",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 29273,
+    "title": "KBM off by default",
+    "body": "### Description of the new feature / enhancement\n\nNo need for KBM to be on by default as it requires a user to set adjustments anyways.\n\n### Scenario when this would be used?\n\nreduce process load\n\n### Supporting information\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/29273",
+    "state": "CLOSED",
+    "current_labels": [
+      "Priority-1",
+      "Product-Keyboard Manager",
+      "Product-Settings",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 28715,
+    "title": "Peek doesn't close on Escape after clicking inside a text file that can be previewed",
+    "body": "### Microsoft PowerToys version\n\n0.73.0\n\n### Installation method\n\nGitHub\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nPeek\n\n### Steps to reproduce\n\n1. Preview a text file that Peek can actually preview (a `.txt` or a `.ini`)\r\n2. Click somewhere in the file, so that it places your text cursor\r\n3. Press <kbd>Esc</kbd>\r\n\r\nI couldn't get a screen recording of this, but I hope that you will be able to reproduce this from the provided steps.\n\n### ✔️ Expected Behavior\n\nThe Peek window should close\n\n### ❌ Actual Behavior\n\nThe window doesn't close\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/28715",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Peek",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 28684,
+    "title": "The shortcut key for switch between window can't be edited",
+    "body": "### Microsoft PowerToys version\n\n0.73.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nFancyZones, FancyZones Editor\n\n### Steps to reproduce\n\nThe shortcut key for switch between window next and previous can't be edited. The any key pressed will not reflect the GUI nor it will save. \r\n\r\nThe activation shortcut however still works. \r\n\r\nThis has been tested for both running as admin and not. \n\n### ✔️ Expected Behavior\n\nThe UI should reflect the key pressed, key pressed is ctrl + arrow.\n\n### ❌ Actual Behavior\n\nThe UI did not reflect the key pressed, and the shortcut did not get updated\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/28684",
+    "state": "CLOSED",
+    "current_labels": [
+      "FancyZones-Settings",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-FancyZones",
+      "Product-Settings",
+      "Resolution-Fix Committed",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 28418,
+    "title": "Language packet bleed",
+    "body": "### Microsoft PowerToys version\n\n0.73.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nGeneral\n\n### Steps to reproduce\n\nMy current machine has several language packs installed, namely Finnish (suomi/suomi), Russia (Russia/russia), English (US/US), German (German/German) (ie. the standard packs). Side note: Russian was installed in fear of Russian malware recognizing what language packs are installed and not attacking if Russia was installed.\r\n\r\nWindows 11 UI is in Finnish, PowerToys is in English. For whatever reason, a seemingly arbitrary selection of the PowerToys-elements is in Russian.\r\n\r\n\r\n\n\n### ✔️ Expected Behavior\n\nIn PowerToys and PowerToys settings panel: All PowerToys-related screen elements should be in English. (unless they are pulled from the UI, which is in Finnish - this is fine)\n\n### ❌ Actual Behavior\n\nSome elements are in Russian.\r\nListed:\r\nPowerToys Settings > General > Under: Administrator mode the first item is named in Russian\r\n![Näyttökuva 2023-09-07 095234](https://github.com/microsoft/PowerToys/assets/15365614/4e5bb0ef-5b74-4c6b-a73b-c7d86dd03159)\r\n\r\nPowerToys Settings > Image Resizer > Under: Image sizes have their size descriptions in Russian\r\n![Näyttökuva 2023-09-07 095223](https://github.com/microsoft/PowerToys/assets/15365614/7a6e4042-a87b-49b8-b310-c6b0c3a2403e)\r\n\r\nPowerToys Peek > the edit/open-button is in Russian\r\nPowerToys Peek > the tooltip is in Russian\r\n![Näyttökuva 2023-09-07 103850](https://github.com/microsoft/PowerToys/assets/15365614/fb0b0878-3c82-4074-b1c7-6690f94ca01e)\r\n\r\n[PowerToysReport_2023-09-07-10-25-10.zip](https://github.com/microsoft/PowerToys/files/12546058/PowerToysReport_2023-09-07-10-25-10.zip)\r\n\r\nAlso another bug:\r\nPowerToys Peek > the upper resize window does not resize but moves the window\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/28418",
+    "state": "OPEN",
+    "current_labels": [
+      "Area-Localization",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-General"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 28085,
+    "title": "number calculation error in powertoys run",
+    "body": "### Microsoft PowerToys version\n\n0.72.0\n\n### Installation method\n\nGitHub, PowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nPowerToys Run\n\n### Steps to reproduce\n\n1. activate power toys run by key shortcut\r\n2. enter `=2^50`\n\n### ✔️ Expected Behavior\n\nexpected answer is 1125899906842624\n\n### ❌ Actual Behavior\n\nactual answer is 1125899906842620\r\n\r\nactually, any answer of 2^x would not be multiply of 10.\r\nunder any x >= 50, answer from powertoys run will be a wrong answer.\r\nI guess the floating-point number introduced errors. \r\nBut if the error could not be avoided, users should be notified explicitly on the UI.\n\n### Other Software\n\nwindows calculator(11.2210.0.0): 1,125,899,906,842,624\r\n\r\npython 3.8.10: python -c \"print(2**50)\" shows 1125899906842624",
+    "url": "https://github.com/microsoft/PowerToys/issues/28085",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-Quality",
+      "External Dependency",
+      "Issue-Bug",
+      "Priority-1",
+      "Resolution-Duplicate",
+      "Run-Plugin"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 28082,
+    "title": "PowerToys DSC Resource",
+    "body": "### Description of the new feature / enhancement\r\n\r\nI would like a PowerShell DSC Resource for configuring PowerToys to my preferences.\r\n\r\n### Scenario when this would be used?\r\n\r\nWhen I want to use PowerShell DSC to configure an environment, I would like to be able to apply the configuration for PowerToys in that environment.\r\n\r\n### Supporting information\r\n\r\nRelated to:\r\n* https://github.com/microsoft/winget-cli/issues/2845\r\n\r\n[Desired State Configuration v3](https://devblogs.microsoft.com/powershell/powershell-openssh-team-investments-for-2023/#desired-state-configuration-v3)",
+    "url": "https://github.com/microsoft/PowerToys/issues/28082",
+    "state": "CLOSED",
+    "current_labels": [
+      "Idea-New PowerToy",
+      "Priority-1",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 27963,
+    "title": "[PT Run > Window Walker] System.InvalidOperationException when searching",
+    "body": "### Microsoft PowerToys version\n\n0.73.0-Dev\n\n### Installation method\n\nDev build in Visual Studio\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nPowerToys Run\n\n### Steps to reproduce\n\n```\r\n[2023-08-13 18:59:51.2217] [ERROR] [D:\\AppDev\\Github\\htcfreek\\PT_PluginGpo\\src\\modules\\launcher\\PowerLauncher\\Plugin\\PluginManager.cs::225]\r\n-------------------------- Begin exception --------------------------\r\nMessage: Exception for plugin <Window Walker> when query <<iii>\r\n\r\nException full name  : System.InvalidOperationException\r\nException message    : Collection was modified; enumeration operation may not execute.\r\nException stack trace:\r\n   at System.Collections.Generic.List`1.Enumerator.MoveNextRare()\r\n   at Microsoft.Plugin.WindowWalker.Components.SearchController.FuzzySearchOpenWindows(List`1 openWindows) in D:\\AppDev\\Github\\htcfreek\\PT_PluginGpo\\src\\modules\\launcher\\Plugins\\Microsoft.Plugin.WindowWalker\\Components\\SearchController.cs:line 122\r\n   at Microsoft.Plugin.WindowWalker.Components.SearchController.SyncOpenWindowsWithModel() in D:\\AppDev\\Github\\htcfreek\\PT_PluginGpo\\src\\modules\\launcher\\Plugins\\Microsoft.Plugin.WindowWalker\\Components\\SearchController.cs:line 108\r\n   at Microsoft.Plugin.WindowWalker.Components.SearchController.UpdateSearchText(String searchText) in D:\\AppDev\\Github\\htcfreek\\PT_PluginGpo\\src\\modules\\launcher\\Plugins\\Microsoft.Plugin.WindowWalker\\Components\\SearchController.cs:line 90\r\n   at Microsoft.Plugin.WindowWalker.Main.Query(Query query) in D:\\AppDev\\Github\\htcfreek\\PT_PluginGpo\\src\\modules\\launcher\\Plugins\\Microsoft.Plugin.WindowWalker\\Main.cs:line 49\r\n   at PowerLauncher.Plugin.PluginManager.<>c__DisplayClass22_1.<QueryForPlugin>b__0() in D:\\AppDev\\Github\\htcfreek\\PT_PluginGpo\\src\\modules\\launcher\\PowerLauncher\\Plugin\\PluginManager.cs:line 195\r\n   at Wox.Infrastructure.Stopwatch.Debug(String message, Action action) in D:\\AppDev\\Github\\htcfreek\\PT_PluginGpo\\src\\modules\\launcher\\Wox.Infrastructure\\Stopwatch.cs:line 29\r\n   at PowerLauncher.Plugin.PluginManager.QueryForPlugin(PluginPair pair, Query query, Boolean delayedExecution) in D:\\AppDev\\Github\\htcfreek\\PT_PluginGpo\\src\\modules\\launcher\\PowerLauncher\\Plugin\\PluginManager.cs:line 187\r\nException source     : System.Private.CoreLib\r\nException target site: Void ThrowInvalidOperationException_InvalidOperation_EnumFailedVersion()\r\nException HResult    : -2146233079\r\n-------------------------- End exception --------------------------\r\n```\n\n### ✔️ Expected Behavior\n\n_No response_\n\n### ❌ Actual Behavior\n\n_No response_\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/27963",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Resolution-Fix Committed",
+      "Run-Plugin",
+      "Severity-Regression",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 27899,
+    "title": "Right click menu in system tray doesn't follow dark mode ",
+    "body": "### Microsoft PowerToys version\r\n\r\n0.72.0\r\n\r\n### Installation method\r\n\r\nWinGet\r\n\r\n### Running as admin\r\n\r\nNo\r\n\r\n### Area(s) with issue?\r\n\r\nSystem tray interaction\r\n\r\n### Steps to reproduce\r\n\r\nright click on the icon in the system tray of PT or any PT's tool\r\n\r\n### ✔️ Expected Behavior\r\n\r\nThe menu is displayed in dark mode if it's dark mode is on, like: \r\n<img width=\"205\" alt=\"image\" src=\"https://github.com/microsoft/PowerToys/assets/92474350/b0d1a521-7f26-46ab-9ebf-e6dbd3e67ab5\">\r\n\r\n\r\n### ❌ Actual Behavior\r\n\r\nThe menu is in white mode anyway\r\n<img width=\"290\" alt=\"image\" src=\"https://github.com/microsoft/PowerToys/assets/92474350/8a2f4e50-ac28-4160-acf7-db28f56e6de2\">\r\n(not just with the main icon)\r\n<img width=\"274\" alt=\"image\" src=\"https://github.com/microsoft/PowerToys/assets/92474350/52cc9d3a-e57d-4bfc-8271-0f4028233ed4\">\r\n\r\n\r\n### Other Software\r\n\r\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/27899",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Settings",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 27871,
+    "title": "[Peek] Wrong file/folder size (unit)",
+    "body": "### Microsoft PowerToys version\r\n\r\n0.72.0\r\n\r\n### Installation method\r\n\r\nGitHub\r\n\r\n### Running as admin\r\n\r\nYes\r\n\r\n### Area(s) with issue?\r\n\r\nPeek\r\n\r\n### Steps to reproduce\r\n\r\n1. Preview a file or folder which size in bytes isn't in any of these ranges: 0 - 1049, 1076 - 1150, 1178 - 1249, 1280 - 1349, 1383 - 1450, 1485 - 1549, 1588 - 1650, 1690 - 1749, 1792 - 1849, 1895 - 1950, 1997 - 2050, 2100 - 2150, 2202 - 2249, 2304 - 2349, 2407 - 2449, 2509 - 2550, 2612 - 2650, 2714 - 2749, 2816 - 2849, 2919 - 2949, 3021 - 3050, 3124 - 3150, 3226 - 3249, 3328 - 3349, 3431 - 3449, 3533 - 3550, 3636 - 3650, 3738 - 3749, 3840 - 3849, 3943 - 3949, 4045 - 4050, 4148 - 4149, 1048576 - 1049999, 1101005 - 1150000, 1205863 - 1249999, 1310720 - 1349999, 1415578 - 1450000, 1520436 - 1549999, 1625293 - 1650000, 1730151 - 1749999, 1835008 - 1849999, 1939866 - 1950000, 2044724 - 2050000, 2149581 - 2150000 (and probably some more, but the code I wrote for generating these numbers is really bad and it would take ages to generate more)\r\n2. Look at the \"Size\" field\r\n\r\n### ✔️ Expected Behavior\r\n\r\nShould display the correct size.\r\n\r\n### ❌ Actual Behavior\r\n\r\nIt displays the size in kibibytes (or mebibytes, gibibytes) but shows the unit as kilobytes. It shows the same size that File Explorer shows in properties, but that is also incorrect (10,000 B = 10 KB = 9.765625 KiB).\r\n\r\n<img width=\"659\" alt=\"image\" src=\"https://github.com/microsoft/PowerToys/assets/127593627/921e3679-1a82-4f18-a830-693f2b88f70a\">\r\n\r\n\r\nI understand that it might be confusing if Peek shows something else than Explorer does, but that could be solved in a couple ways:\r\n1. Show both (something like \"**Size: 10 KB (9.8 KiB)**\")\r\n2. Also show the actual number of bytes, to clarify what you mean by KB\r\n3. Add an option in settings to choose what unit to measure in\r\n\r\n### Other Software\r\n\r\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/27871",
+    "state": "CLOSED",
+    "current_labels": [
+      "Idea-Enhancement",
+      "Priority-1",
+      "Product-Peek",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 27795,
+    "title": "Registry Preview crashes/closes selecting Save As, without file name or text",
+    "body": "### Microsoft PowerToys version\n\n0.72\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nRegistry Preview\n\n### Steps to reproduce\n\n- Open Registry Preview\r\n- Have no file and no text in the textbox\r\n- Select Save As\n\n### ✔️ Expected Behavior\n\nEither a dialog, or a disabled button\n\n### ❌ Actual Behavior\n\nApp freezes and closes\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/27795",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Registry Preview",
+      "Resolution-Can't Repro",
+      "Severity-High"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 27773,
+    "title": "Settings window title bar caption controls (when using dark mode) remain black",
+    "body": "### Microsoft PowerToys version\n\n0.72.0\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nGeneral\n\n### Steps to reproduce\n\nI'm not certain if this is a PowerToys bug or a WinUI 3 framework bug.\r\n\r\nI've had Dark Mode set for several versions.  After updating from 0.71.0 to 0.72.0 and the settings window opened for the first time (after the new update installed), the caption controls (minimize, maximize, close) were black (0x1b1b1b) when they should be a lighter gray (0x909090), making them basically impossible to see against the dark titlebar.  Switching to Light Mode, then back to Dark Mode made the caption controls light gray again, but they don't stay colored this way.\n\n### ✔️ Expected Behavior\n\nThe Settings caption control colors dull/darken when losing focus and return to \"focused\" caption control colors upon the Settings window regaining focus or being opened from the system tray.\n\n### ❌ Actual Behavior\n\nWhen the PowerToys Settings window loses focus or is opened from the system tray, the caption controls are drawn in black (the caption controls dimming to a different/darker color upon losing focus is expected and normal behavior).  Upon regaining focus, the caption controls remain black, or they turn back to black if they were redrawn by hovering the mouse over a control(s); hovering the mouse over a caption control(s), regardless if the PowerToys Settings window has focus or not, redraws that caption control with the correct color.  This behavior doesn't occur in light mode.\r\n\r\nToggling Dark Mode to Light Mode, then relaunching the application, then toggling Dark Mode back doesn't resolve the issue.\r\n\r\nThe 4x attachments illustrate the caption controls (using Dark Mode) in different states:\r\n  - Settings window loses/regains focus (caption controls are basically invisible)\r\n  - Settings window, regardless of focused state, after hovering the mouse over the 'Minimize' button (only minimize button is visible)\r\n  - Settings window with all 3x caption controls drawn with the expected (and lighter gray) color.\r\n  - A screen capture of the behavior\r\n![PowerToys Dark Mode Caption Controls (lost or regained focus)](https://github.com/microsoft/PowerToys/assets/57874058/5beacd72-854a-4503-9921-47ab08ffb9d0)\r\n![PowerToys Dark Mode Caption Controls (lost or regained focus, after mouse hovered over minimize btn)](https://github.com/microsoft/PowerToys/assets/57874058/6fba3042-9400-4075-b74c-4ecd8f194b9a)\r\n![PowerToys Dark Mode Caption Controls (Normal)](https://github.com/microsoft/PowerToys/assets/57874058/558496b5-813a-4fd6-9db1-77302686788a)\r\n![Screen Capture](https://github.com/microsoft/PowerToys/assets/57874058/57667e39-bd5f-4d52-abaf-c1bf8af7cb4b)\r\n\r\n\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/27773",
+    "state": "CLOSED",
+    "current_labels": [
+      "External Dependency-WinUI 3",
+      "Issue-Bug",
+      "Needs-Repro",
+      "Priority-1",
+      "Product-Settings",
+      "Resolution-Duplicate"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 27692,
+    "title": "[peek] Shell32.IShellFolderViewDual2 casting failure",
+    "body": "### Microsoft PowerToys version\n\n0.71.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nPeek\n\n### Steps to reproduce\n\nNo matter what I do it doesn't work. Change the shortcut, run elevated and not elevated, run as admin or not. \r\n\r\n[PowerToysReport_2023-07-30-10-48-04.zip](https://github.com/microsoft/PowerToys/files/12209610/PowerToysReport_2023-07-30-10-48-04.zip)\r\n\n\n### ✔️ Expected Behavior\n\nFor it to work.\n\n### ❌ Actual Behavior\n\nNothing happens.\n\n### Other Software\n\nQuickLook (but it Peek doesen't work even when this is off)\r\nDirectory Opus (but it also doesn't work in Exolporer)",
+    "url": "https://github.com/microsoft/PowerToys/issues/27692",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Peek",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 27555,
+    "title": "Fancy Zones causing performance issues",
+    "body": "### Microsoft PowerToys version\n\n0.71.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nFancyZones\n\n### Steps to reproduce\n\nTurn on fancy zones and open task view from the start menu or switch back and forth between multiple desktops using \"Ctrl + Windows Key + Right\" keyboard shortcut\n\n### ✔️ Expected Behavior\n\nWindows should switch task view or other desktops instantly\n\n### ❌ Actual Behavior\n\nwindows takes multiple seconds (ie 5 seconds) to switch other desktops\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/27555",
+    "state": "OPEN",
+    "current_labels": [
+      "FancyZones-VirtualDesktop",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-FancyZones"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 27508,
+    "title": "Swap for underscore and mouse key doesn't work",
+    "body": "### Microsoft PowerToys version\n\n0.71.0\n\n### Installation method\n\nGitHub\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nKeyboard Manager\n\n### Steps to reproduce\n\n**Steps**:\r\n* Make mapping:\r\n**\"SHIFT\" + \"-\"** to **\"-\"**\r\n**\"-\"** to **\"SHIFT\" + \"-\"** \r\n\r\n* Go to any text editor\r\n* Type \"-\"\n\n### ✔️ Expected Behavior\n\n\"_\" (underscore) is typed in the editor\n\n### ❌ Actual Behavior\n\n\"-\" is typed in the editor.\n\n### Other Software\n\nNotepad++ 8.5.3",
+    "url": "https://github.com/microsoft/PowerToys/issues/27508",
+    "state": "OPEN",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Keyboard Manager",
+      "Status-Reproducible"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 27366,
+    "title": "Backup Save Location cannot be Changed",
+    "body": "### Microsoft PowerToys version\n\n0.71.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nGeneral\n\n### Steps to reproduce\n\nI've setup a backup location directory with a lengthy path (some 145 characters) and as a result the button to change the location is kicked out of the location and becomes inaccessible.\r\n\r\nI think this issue might exist in previous versions too; I have not checked.\r\n\r\n\r\n![image](https://github.com/microsoft/PowerToys/assets/16124883/5b9f262a-da6a-47d6-9942-dfba4c94ecc1)\r\n\n\n### ✔️ Expected Behavior\n\nThere should be a 'change backup location' button.\n\n### ❌ Actual Behavior\n\nThere is no 'change backup location' button.\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/27366",
+    "state": "CLOSED",
+    "current_labels": [
+      "Area-User Interface",
+      "Issue-Bug",
+      "Priority-1",
+      "Product-Settings",
+      "Status-In progress"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  },
+  {
+    "number": 27276,
+    "title": "File Explorer Preview Pane: System.InvalidOperationException: CoreWebView2 members cannot be accessed after the WebView2 control is disposed.",
+    "body": "### Microsoft PowerToys version\n\n0.71.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nFile Explorer: Preview Pane\n\n### Steps to reproduce\n\nNot happening consistently. In this case:\r\n1. Navigated a new File Explorer window to downloads\r\n2. Previewed a PowerShell script\r\n\r\nJudging from the stack trace, perhaps I was moving or resizing the File Explorer window in the midst of rendering, or at some sensitive transition?\r\n[PowerToysReport_2023-07-07-14-50-29.zip](https://github.com/microsoft/PowerToys/files/11985420/PowerToysReport_2023-07-07-14-50-29.zip)\r\n\n\n### ✔️ Expected Behavior\n\nPreview rendered\n\n### ❌ Actual Behavior\n\nUnhandled .NET exception dialog:\r\n\r\n```\r\nSee the end of this message for details on invoking \r\njust-in-time (JIT) debugging instead of this dialog box.\r\n\r\n************** Exception Text **************\r\nSystem.InvalidOperationException: CoreWebView2 members cannot be accessed after the WebView2 control is disposed.\r\n ---> System.Runtime.InteropServices.COMException (0x8007139F): The group or resource is not in the correct state to perform the requested operation. (0x8007139F)\r\n   at Microsoft.Web.WebView2.Core.Raw.ICoreWebView2Controller.NotifyParentWindowPositionChanged()\r\n   at Microsoft.Web.WebView2.Core.CoreWebView2Controller.NotifyParentWindowPositionChanged()\r\n   --- End of inner exception stack trace ---\r\n   at Microsoft.Web.WebView2.Core.CoreWebView2Controller.NotifyParentWindowPositionChanged()\r\n   at Microsoft.Web.WebView2.WinForms.WebView2.WebView2_WindowPositionChanged(Object sender, EventArgs e)\r\n   at System.Windows.Forms.Control.UpdateBounds(Int32 x, Int32 y, Int32 width, Int32 height, Int32 clientWidth, Int32 clientHeight)\r\n   at System.Windows.Forms.Control.UpdateBounds()\r\n   at System.Windows.Forms.Control.WmCreate(Message& m)\r\n   at System.Windows.Forms.Control.WndProc(Message& m)\r\n   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)\r\n   at System.Windows.Forms.Form.WmCreate(Message& m)\r\n   at System.Windows.Forms.Form.WndProc(Message& m)\r\n   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)\r\n   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, WM msg, IntPtr wparam, IntPtr lparam)\r\n\r\n\r\n************** Loaded Assemblies **************\r\nSystem.Private.CoreLib\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Private.CoreLib.dll\r\n----------------------------------------\r\nPowerToys.MonacoPreviewHandler\r\n    Assembly Version: 0.71.0.0\r\n    Win32 Version: 0.71.0.0\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/PowerToys.MonacoPreviewHandler.dll\r\n----------------------------------------\r\nSystem.Runtime\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Runtime.dll\r\n----------------------------------------\r\nWinRT.Runtime\r\n    Assembly Version: 2.0.0.0\r\n    Win32 Version: 2.0.2.42201\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/WinRT.Runtime.dll\r\n----------------------------------------\r\nSystem.Collections\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Collections.dll\r\n----------------------------------------\r\nSystem.Collections.Concurrent\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Collections.Concurrent.dll\r\n----------------------------------------\r\nSystem.Threading\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Threading.dll\r\n----------------------------------------\r\nSystem.Drawing.Primitives\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Drawing.Primitives.dll\r\n----------------------------------------\r\nPowerToys.ManagedCommon\r\n    Assembly Version: 0.71.0.0\r\n    Win32 Version: 0.71.0.0\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/PowerToys.ManagedCommon.dll\r\n----------------------------------------\r\nSystem.Windows.Forms\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31802\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Windows.Forms.dll\r\n----------------------------------------\r\nPowerToys.PreviewHandlerCommon\r\n    Assembly Version: 0.71.0.0\r\n    Win32 Version: 0.71.0.0\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/PowerToys.PreviewHandlerCommon.dll\r\n----------------------------------------\r\nSystem.ComponentModel.Primitives\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.ComponentModel.Primitives.dll\r\n----------------------------------------\r\nSystem.Windows.Forms.Primitives\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31802\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Windows.Forms.Primitives.dll\r\n----------------------------------------\r\nSystem.Runtime.InteropServices\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Runtime.InteropServices.dll\r\n----------------------------------------\r\nSystem.Collections.Specialized\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Collections.Specialized.dll\r\n----------------------------------------\r\nPowerToys.Interop\r\n    Assembly Version: 0.71.0.0\r\n    Win32 Version: 0.71.0.0\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/PowerToys.Interop.dll\r\n----------------------------------------\r\nSystem.Runtime.Extensions\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Runtime.Extensions.dll\r\n----------------------------------------\r\nSystem.Collections.NonGeneric\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Collections.NonGeneric.dll\r\n----------------------------------------\r\nWindowsBase\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31803\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/WindowsBase.dll\r\n----------------------------------------\r\nPowerToys.Common.UI\r\n    Assembly Version: 0.71.0.0\r\n    Win32 Version: 0.71.0.0\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/PowerToys.Common.UI.dll\r\n----------------------------------------\r\nSystem.IO.Abstractions\r\n    Assembly Version: 17.0.0.0\r\n    Win32 Version: 17.2.3.42299\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.IO.Abstractions.dll\r\n----------------------------------------\r\nSystem.Security.AccessControl\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Security.AccessControl.dll\r\n----------------------------------------\r\nSystem.Diagnostics.TraceSource\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Diagnostics.TraceSource.dll\r\n----------------------------------------\r\nSystem.Diagnostics.TextWriterTraceListener\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Diagnostics.TextWriterTraceListener.dll\r\n----------------------------------------\r\nSystem.Diagnostics.FileVersionInfo\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Diagnostics.FileVersionInfo.dll\r\n----------------------------------------\r\nSystem.Drawing.Common\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Drawing.Common.dll\r\n----------------------------------------\r\nMicrosoft.Win32.Primitives\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/Microsoft.Win32.Primitives.dll\r\n----------------------------------------\r\nSystem.ComponentModel.EventBasedAsync\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.ComponentModel.EventBasedAsync.dll\r\n----------------------------------------\r\nSystem.Threading.Thread\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Threading.Thread.dll\r\n----------------------------------------\r\nAccessibility\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 7.0.823.31802\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/Accessibility.dll\r\n----------------------------------------\r\nMicrosoft.Win32.SystemEvents\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/Microsoft.Win32.SystemEvents.dll\r\n----------------------------------------\r\nSystem.Diagnostics.StackTrace\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Diagnostics.StackTrace.dll\r\n----------------------------------------\r\nSystem.Text.Encoding.Extensions\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Text.Encoding.Extensions.dll\r\n----------------------------------------\r\nControlzEx\r\n    Assembly Version: 5.0.0.0\r\n    Win32 Version: 5.0.1.15\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/ControlzEx.dll\r\n----------------------------------------\r\nPresentationCore\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31803\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/PresentationCore.dll\r\n----------------------------------------\r\nPresentationFramework\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31803\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/PresentationFramework.dll\r\n----------------------------------------\r\nDirectWriteForwarder\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7,0,823,31803 @Commit: b10173d88dc484c1462d387c131bdd4c639927e9\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/DirectWriteForwarder.dll\r\n----------------------------------------\r\nSystem.Diagnostics.Debug\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Diagnostics.Debug.dll\r\n----------------------------------------\r\nSystem.Runtime.CompilerServices.VisualC\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Runtime.CompilerServices.VisualC.dll\r\n----------------------------------------\r\nMicrosoft.Win32.Registry\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/Microsoft.Win32.Registry.dll\r\n----------------------------------------\r\nSystem.Memory\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Memory.dll\r\n----------------------------------------\r\nSystem.ObjectModel\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.ObjectModel.dll\r\n----------------------------------------\r\nSystem.ComponentModel.TypeConverter\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.ComponentModel.TypeConverter.dll\r\n----------------------------------------\r\nSystem.ComponentModel\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.ComponentModel.dll\r\n----------------------------------------\r\nSystem.Xaml\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31803\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Xaml.dll\r\n----------------------------------------\r\nSystem.Private.Uri\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Private.Uri.dll\r\n----------------------------------------\r\nSystem.Configuration.ConfigurationManager\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Configuration.ConfigurationManager.dll\r\n----------------------------------------\r\nSystem.Xml.ReaderWriter\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Xml.ReaderWriter.dll\r\n----------------------------------------\r\nSystem.Private.Xml\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Private.Xml.dll\r\n----------------------------------------\r\nSystem.Net.WebClient\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Net.WebClient.dll\r\n----------------------------------------\r\nSystem.Linq\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Linq.dll\r\n----------------------------------------\r\nPresentationFramework-SystemXml\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31803\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/PresentationFramework-SystemXml.dll\r\n----------------------------------------\r\nMicrosoft.Web.WebView2.Core\r\n    Assembly Version: 1.0.1722.45\r\n    Win32 Version: 1.0.1722.45\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/Microsoft.Web.WebView2.Core.dll\r\n----------------------------------------\r\nmscorlib\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/mscorlib.dll\r\n----------------------------------------\r\nMicrosoft.Web.WebView2.WinForms\r\n    Assembly Version: 1.0.1722.45\r\n    Win32 Version: 1.0.1722.45\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/Microsoft.Web.WebView2.WinForms.dll\r\n----------------------------------------\r\nSystem.Runtime.CompilerServices.Unsafe\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Runtime.CompilerServices.Unsafe.dll\r\n----------------------------------------\r\nSystem.Numerics.Vectors\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Numerics.Vectors.dll\r\n----------------------------------------\r\nSystem.Drawing\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Drawing.dll\r\n----------------------------------------\r\nPowerToys.Settings.UI.Lib\r\n    Assembly Version: 0.71.0.0\r\n    Win32 Version: 0.71.0.0\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/PowerToys.Settings.UI.Lib.dll\r\n----------------------------------------\r\nSystem.Security.Principal.Windows\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Security.Principal.Windows.dll\r\n----------------------------------------\r\nSystem.Security.Claims\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Security.Claims.dll\r\n----------------------------------------\r\nSystem.Text.Json\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Text.Json.dll\r\n----------------------------------------\r\nSystem.Text.Encodings.Web\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Text.Encodings.Web.dll\r\n----------------------------------------\r\nSystem.Reflection.Emit.Lightweight\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Reflection.Emit.Lightweight.dll\r\n----------------------------------------\r\nSystem.Reflection.Primitives\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Reflection.Primitives.dll\r\n----------------------------------------\r\nSystem.Reflection.Emit.ILGeneration\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Reflection.Emit.ILGeneration.dll\r\n----------------------------------------\r\nSystem.Runtime.Intrinsics\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Runtime.Intrinsics.dll\r\n----------------------------------------\r\nPowerToys.FilePreviewCommon\r\n    Assembly Version: 0.71.0.0\r\n    Win32 Version: 0.71.0.0\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/PowerToys.FilePreviewCommon.dll\r\n----------------------------------------\r\nSystem\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.dll\r\n----------------------------------------\r\nSystem.Threading.ThreadPool\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Threading.ThreadPool.dll\r\n----------------------------------------\r\nSystem.Threading.Tasks\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Threading.Tasks.dll\r\n----------------------------------------\r\nSystem.Runtime.Loader\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Runtime.Loader.dll\r\n----------------------------------------\r\nSystem.Reflection.Metadata\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Reflection.Metadata.dll\r\n----------------------------------------\r\nSystem.Collections.Immutable\r\n    Assembly Version: 7.0.0.0\r\n    Win32 Version: 7.0.823.31807\r\n    CodeBase: file:///C:/Users/alex.savage/AppData/Local/PowerToys/modules/FileExplorerPreview/System.Collections.Immutable.dll\r\n----------------------------------------\r\n\r\n************** JIT Debugging **************\r\n```\n\n### Other Software\n\n_No response_",
+    "url": "https://github.com/microsoft/PowerToys/issues/27276",
+    "state": "CLOSED",
+    "current_labels": [
+      "Issue-Bug",
+      "Priority-1",
+      "Product-File Explorer",
+      "Resolution-Fix Committed"
+    ],
+    "historical_priority_labels": [
+      "Priority-1"
+    ]
+  }
+]

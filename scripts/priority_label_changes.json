@@ -1,0 +1,20 @@
+[
+  {
+    "number": 51489,
+    "title": "Can't open & always remind to reboot (After an update)...ðŸ˜•",
+    "url": "https://github.com/microsoft/PowerToys/issues/51489",
+    "current_labels": [
+      "Issue-Bug",
+      "Needs-Triage",
+      "Needs-Team-Response",
+      "Product-General"
+    ],
+    "removed_priority_labels": [
+      {
+        "date": "2026-10-22T14:10:59Z",
+        "label": "Needs-Author-Feedback",
+        "actor": "microsoft-github-policy-service[bot]"
+      }
+    ]
+  }
+]
